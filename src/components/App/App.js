@@ -4,7 +4,7 @@ import MainSectionContent from '../MainSectionContent/MainSectionContent'
 
 const App = () => {
   return (
-    <section>
+    <section className='container'>
       <Nav />
       <MainSectionContent />
     </section>

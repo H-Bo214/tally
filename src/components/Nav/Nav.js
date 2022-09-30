@@ -12,10 +12,10 @@ const Nav = () => {
           height='45'
         />
       </section>
-      <ul>
-        <li>Inventory</li>
-        <li>Orders</li>
-        <li>Customers</li>
+      <ul className='nav-list'>
+        <li className='inventory'>Inventory</li>
+        <li className='orders'>Orders</li>
+        <li className='customers'>Customers</li>
       </ul>
     </nav>
   )

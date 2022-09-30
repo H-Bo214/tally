@@ -1,3 +1,5 @@
 .main-section-content-container {
-  border: 2px solid green;
+  border-left: 0.188rem solid #92bdff;
+  border-top: 0.188rem solid #92bdff;
+  background: #f7fafb;
 }

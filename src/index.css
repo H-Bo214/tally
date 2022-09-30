@@ -5,10 +5,13 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 1440px;
+  max-height: 1024px;
+  width: 85%;
 }
 
 button {
@@ -16,5 +19,9 @@ button {
 }
 
 input {
+  font-family: inherit;
+}
+
+ul {
   font-family: inherit;
 }

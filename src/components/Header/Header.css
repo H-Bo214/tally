@@ -1,7 +1,22 @@
 .header {
-  border: 2px solid red;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #1162dd;
+  height: 5.5rem;
 }
 
 .user-info-container {
-  border: 2px solid orange;
+  color: #fff;
+  margin-right: 2rem;
+  margin-left: 0.5rem;
+}
+
+.user-info-container > h2 {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.user-info-container > p {
+  margin: 0;
 }
