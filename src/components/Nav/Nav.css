@@ -1,0 +1,83 @@
+.nav {
+  background: #1162dd;
+}
+
+.title-container {
+  display: flex;
+  padding: 2.6rem 7.634rem 5.555rem 2.5rem;
+}
+
+.nav-list {
+  padding: 0 1.938rem 0 1.938rem;
+}
+
+.nav-list > li {
+  list-style: none;
+  list-style-position: inside;
+  padding: 1.25rem;
+  height: 3.875rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.25rem;
+  border-radius: 0.313rem;
+}
+
+.nav-list > li:hover {
+  background-color: #5c9dff;
+}
+
+.inventory::before {
+  content: url('../../assets/icons/inventory-icon-inactive.svg');
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.inventory:hover::before {
+  content: url('../../assets/icons/inventory-icon-active.svg');
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.orders::before {
+  content: url('../../assets/icons/orders-icon-inactive.svg');
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.orders:hover::before {
+  content: url('../../assets/icons/orders-icon-active.svg');
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.orders::before {
+  content: url('../../assets/icons/orders-icon-inactive.svg');
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.orders:hover::before {
+  content: url('../../assets/icons/orders-icon-active.svg');
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.customers::before {
+  content: url('../../assets/icons/customers-icon-inactive.svg');
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.customers:hover::before {
+  content: url('../../assets/icons/customers-icon-active.svg');
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+}
