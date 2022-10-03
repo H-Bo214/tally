@@ -1,10 +1,11 @@
 import iphone from '../../assets/productImages/iphone13.png'
 import './Product.css'
 
-const Product = () => {
+const Product = (props) => {
+  console.log('props in Product: ', props)
   return (
     <section className='single-product-container'>
-      <img src={iphone} alt='' width='54' height='50' />
+      {/* <img src={iphone} alt='' width='54' height='50' />
       <div className='product-container'>
         <h3>iPhone 13 Pro Rose Gold</h3>
         <p>894873672</p>
@@ -20,7 +21,7 @@ const Product = () => {
         <p>$200.00</p>
         <p>120</p>
         <p className='stock-status'>In stock</p>
-      </div>
+      </div> */}
     </section>
   )
 }
