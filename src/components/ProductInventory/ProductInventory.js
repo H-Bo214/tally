@@ -6,19 +6,23 @@ const ProductInventory = () => {
   return (
     <main>
       <section className='add-new-product-container'>
-        <h2>Inventory</h2>
-        <button>+ New product</button>
+        <h2 className='inventory-heading'>Inventory</h2>
+        <button className='new-product-button'>New product</button>
       </section>
-      <section>
+      <section className='products-container'>
         <ul className='product-list-headings'>
           <li>Product</li>
-          <li>Description</li>
-          <li>Price</li>
-          <li>Quantity</li>
-          <li>Status</li>
+          <li className='description-heading'>Description</li>
+          <li className='price-heading'>Price</li>
+          <li className='quantity-heading'>Quantity</li>
+          <li className='status-heading'>Status</li>
         </ul>
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
       </section>
-      <Product />
     </main>
   )
 }
