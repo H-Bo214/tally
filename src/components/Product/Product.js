@@ -1,11 +1,12 @@
 import iphone from '../../assets/productImages/iphone13.png'
 import './Product.css'
+
 const Product = () => {
   return (
     <section className='single-product-container'>
-      <img src={iphone} alt='' width='53' height='53' />
+      <img src={iphone} alt='' width='54' height='50' />
       <div className='product-container'>
-        <h5>iPhone 13 Pro Rose Gold</h5>
+        <h3>iPhone 13 Pro Rose Gold</h3>
         <p>894873672</p>
       </div>
       <div className='product-description-container'>

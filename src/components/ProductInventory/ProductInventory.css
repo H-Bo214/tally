@@ -43,6 +43,7 @@ main {
 .new-product-button:hover {
   background-color: #5c9dff;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .product-list-headings {
@@ -53,7 +54,6 @@ main {
   background: #edeeee;
   border-radius: 12px 12px 0 0;
   height: 52px;
-  /* margin-bottom: 0.688rem; */
 }
 
 .product-list-headings > li {
@@ -62,5 +62,14 @@ main {
 }
 
 .description-heading {
-  margin-left: 13.5rem;
+  margin-left: 13.7rem;
+  margin-right: 14.7rem;
+}
+
+.price-heading {
+  margin-right: 3.7rem;
+}
+
+.quantity-heading {
+  margin-right: 3.2rem;
 }

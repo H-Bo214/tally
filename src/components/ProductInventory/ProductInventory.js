@@ -1,5 +1,4 @@
 import './ProductInventory.css'
-import plusIcon from '../../assets/icons/plus.svg'
 /// product state will most likely live here
 import Product from '../Product/Product'
 
