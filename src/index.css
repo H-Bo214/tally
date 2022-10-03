@@ -11,7 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   max-width: 1440px;
   max-height: 1024px;
-  width: 85%;
+  /* width: 85%; */
 }
 
 button {

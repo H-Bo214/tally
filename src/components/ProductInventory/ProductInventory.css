@@ -15,9 +15,9 @@ main {
   font-size: 2rem;
 }
 
-.product-list-headings {
-  list-style: none;
-  display: flex;
+.products-container {
+  box-shadow: 0px 0px 4px 1px #dadada;
+  border-radius: 12px;
 }
 
 .new-product-button::before {
@@ -45,13 +45,22 @@ main {
   transition: all 0.3s ease;
 }
 
-.product-list-headings-container {
+.product-list-headings {
+  list-style: none;
+  display: flex;
+  font-weight: 500;
+  margin: 0;
   background: #edeeee;
   border-radius: 12px 12px 0 0;
   height: 52px;
+  /* margin-bottom: 0.688rem; */
 }
 
-.product-list-headings {
-  font-weight: 500;
-  margin: 0;
+.product-list-headings > li {
+  display: flex;
+  align-items: center;
+}
+
+.description-heading {
+  margin-left: 13.5rem;
 }
