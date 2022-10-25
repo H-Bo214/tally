@@ -2,11 +2,13 @@
   display: flex;
   color: #1c1d22;
   border-bottom: 1px solid #dadada;
-  margin: 0.688rem 2.5rem 0.688rem 2.5rem;
+  padding-top: 11px;
+  padding-left: 40px;
+  padding-bottom: 10px;
 }
 
-.product-container {
-  margin-left: 10px;
+.single-product-container:hover {
+  background-color: #dff7ff;
 }
 
 .product-container > h3 {
@@ -14,11 +16,11 @@
   padding-top: 6px;
   font-size: 15px;
   font-weight: 700;
-  margin-right: 40px;
+  padding-right: 40px;
 }
 
 .product-container > p {
-  margin-top: 5px;
+  margin: 0;
   font-weight: 400;
   font-size: 14px;
   color: #1c1d22;
@@ -27,6 +29,7 @@
 .product-container:last-child {
   border-bottom: none;
 }
+
 /* CSS to clamp text and truncate */
 .product-description-container {
   width: 17.063rem;
@@ -58,4 +61,11 @@
   background-color: #98f2b4;
   font-size: 14px;
   line-height: 14.52px;
+}
+
+.edit-button {
+  background: url('../../assets/edit-button.svg') no-repeat;
+  border: none;
+  width: 33px;
+  height: 33px;
 }

@@ -1,0 +1,32 @@
+.product-list-headings {
+  display: flex;
+  font-weight: 500;
+  margin: 0;
+  background: #edeeee;
+  border-radius: 12px 12px 0 0;
+  padding: 0 2.5rem;
+  position: sticky;
+  top: 0;
+}
+
+.product-list-headings > li {
+  display: flex;
+  align-items: center;
+}
+
+.description-heading {
+  padding-left: 13rem;
+  padding-right: 14rem;
+}
+
+.price-heading {
+  padding-right: 4.7rem;
+}
+
+.quantity-heading {
+  margin-right: 3.2rem;
+}
+
+.edit-button {
+  cursor: pointer;
+}

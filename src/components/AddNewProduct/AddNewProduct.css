@@ -1,0 +1,35 @@
+.add-new-product-container {
+  display: flex;
+  padding: 0.938rem 2rem 0 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inventory-heading {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.new-product-button::before {
+  content: url('../../assets/icons/plus.svg');
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+}
+
+.new-product-button {
+  text-align: center;
+  background-color: #1162dd;
+  border-radius: 0.75rem;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  padding: 0.82rem 1.6rem;
+  font-size: 1rem;
+}
+
+.new-product-button:hover {
+  background-color: #5c9dff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
