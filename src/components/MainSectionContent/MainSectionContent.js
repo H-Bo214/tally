@@ -31,6 +31,11 @@ const MainSectionContent = () => {
     fetchProducts()
   }, [])
 
+  // const handleAddNewProduct = () => {
+  //   console.log('clicked save to add new product')
+  //   create logic to add the new product to the existing products array
+  // }
+
   const handleOpenModal = () => {
     setOpenModal(true)
   }

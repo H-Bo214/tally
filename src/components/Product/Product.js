@@ -15,7 +15,7 @@ const Product = ({ product }) => {
         <p>${product.price}</p>
         <p>{product.quantity}</p>
         <p className='stock-status'>{product.status}</p>
-        <button className='edit-button' name='edit button'></button>
+        <button className='edit-button' name='edit button' />
       </div>
     </section>
   )

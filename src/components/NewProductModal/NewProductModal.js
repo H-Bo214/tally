@@ -1,8 +1,22 @@
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import './NewProductModal.css'
 const NewProductModal = () => {
-  // create a controlled component to handle the form data.
-  //on save of the form I need to pass the data back up to the MainSectionContent parent and add the product object to the list of existing products and render the new product listed
+  const { register, handleSubmit } = useForm()
 
-  return <div>NewProductModal Component</div>
+  const handleData = (data) => {
+    console.log(data)
+  }
+
+  return (
+    <>
+      <section className='modal-heading'>
+        <h1>New Product</h1>
+        <button className='close-button' name='close button' />
+      </section>
+      <form onSubmit={handleSubmit(handleData)}></form>
+    </>
+  )
 }
 
 export default NewProductModal
