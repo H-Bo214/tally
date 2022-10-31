@@ -31,10 +31,19 @@ const MainSectionContent = () => {
     fetchProducts()
   }, [])
 
-  // const handleAddNewProduct = () => {
-  //   console.log('clicked save to add new product')
-  //   create logic to add the new product to the existing products array
-  // }
+  const handleAddNewProduct = async (newProductData) => {
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify(newProductData),
+    }
+
+    const res = await fetch('http://localhost:5000/products', options)
+    const data = await res.json()
+    setProducts([...products, data])
+  }
 
   const handleOpenModal = () => {
     setOpenModal(true)
@@ -48,7 +57,12 @@ const MainSectionContent = () => {
     <section className='main-section-content-container'>
       <Header />
       <AddNewProduct handleOpenModal={handleOpenModal} />
-      {openModal && <NewProductModal handleCloseModal={handleCloseModal} />}
+      {openModal && (
+        <NewProductModal
+          handleCloseModal={handleCloseModal}
+          handleAddNewProduct={handleAddNewProduct}
+        />
+      )}
       <ProductInventory
         products={products}
         error={error}
