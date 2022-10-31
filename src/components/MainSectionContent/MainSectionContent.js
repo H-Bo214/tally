@@ -40,11 +40,15 @@ const MainSectionContent = () => {
     setOpenModal(true)
   }
 
+  const handleCloseModal = () => {
+    setOpenModal(false)
+  }
+
   return (
     <section className='main-section-content-container'>
       <Header />
       <AddNewProduct handleOpenModal={handleOpenModal} />
-      {openModal && <NewProductModal />}
+      {openModal && <NewProductModal handleCloseModal={handleCloseModal} />}
       <ProductInventory
         products={products}
         error={error}
