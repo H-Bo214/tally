@@ -1,5 +1,4 @@
 .container {
   display: flex;
-  /* min-height: 49rem;
-  max-height: 64rem; */
+  min-width: 64rem;
 }

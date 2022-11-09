@@ -89,16 +89,6 @@
       "price": 200,
       "quantity": 120,
       "status": "In stock"
-    },
-    {
-      "id": 10,
-      "img": "/productImages/iphone13.png",
-      "name": "iPhone 13 Pro Rose Gold",
-      "sku": "00422001",
-      "description": "A super bright display in a durable design. Hollywood-worthy video shooting made easy. A lightning-fast chip. And a big boost in battery life you’ll notice every day.",
-      "price": 200,
-      "quantity": 120,
-      "status": "In stock"
     }
   ]
 }

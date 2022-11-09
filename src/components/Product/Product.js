@@ -12,8 +12,8 @@ const Product = ({ product }) => {
         <p>{product.description}</p>
       </div>
       <div className='single-product-status-container'>
-        <p>${product.price}</p>
-        <p>{product.quantity}</p>
+        <p className='price'>${product.price}</p>
+        <p className='quantity'>{product.quantity}</p>
         <p className='stock-status'>{product.status}</p>
         <button className='edit-button' name='edit button' />
       </div>
