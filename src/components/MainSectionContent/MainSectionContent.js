@@ -45,6 +45,13 @@ const MainSectionContent = () => {
     setProducts([...products, data])
   }
 
+  const handleEditProduct = async (id) => {
+    console.log('id clicked', id)
+    // I need to filter through the products array
+    // locate the product clicked via ID
+    // need to open up the modal and prepopulate the text currently in the object
+  }
+
   const handleOpenModal = () => {
     setOpenModal(true)
   }
@@ -67,6 +74,7 @@ const MainSectionContent = () => {
         products={products}
         error={error}
         isLoading={isLoading}
+        handleEditProduct={handleEditProduct}
       />
     </section>
   )

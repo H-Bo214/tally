@@ -9,9 +9,18 @@ const override: CSSProperties = {
   margin: '5rem auto',
 }
 
-const ProductInventory = ({ products, error, isLoading }) => {
+const ProductInventory = ({
+  products,
+  error,
+  isLoading,
+  handleEditProduct,
+}) => {
   const productList = products.map((product) => (
-    <Product product={product} key={product.id} />
+    <Product
+      product={product}
+      key={product.id}
+      handleEditProduct={handleEditProduct}
+    />
   ))
 
   return (

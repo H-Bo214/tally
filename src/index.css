@@ -9,8 +9,8 @@ body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 1440px;
-  min-height: 900px;
+  /* max-width: 1440px;
+  min-height: 900px; */
 }
 
 button {

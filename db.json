@@ -89,6 +89,16 @@
       "price": 200,
       "quantity": 120,
       "status": "In stock"
+    },
+    {
+      "img": "https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-l8uufh59rr68jaaqhgvht9ld34-20190605110013.Medi.jpeg",
+      "name": "Samsung 60\" OLED 8K Television with extended warenty",
+      "sku": "67120387456344526289AFJHFFD67",
+      "description": "You really think you can fly that thing? I was part of something special. God creates dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man creates Dinosaurs. Yes, Yes, without the oops! Did he just throw my cat out of the window?\n\nHey, take a look at the earthlings. Goodbye! I gave it a cold? I gave it a virus. A computer virus. This thing comes fully loaded. AM/FM radio, reclining bucket seats, and... power windows. You're a very talented young man, with your own clever thoughts and ideas. Do you need a manager?",
+      "price": "10,000",
+      "quantity": "555",
+      "status": "Low stock",
+      "id": 10
     }
   ]
 }

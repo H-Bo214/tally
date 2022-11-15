@@ -16,14 +16,15 @@
   min-width: 16.9375rem;
 }
 
-.price-heading {
-  padding-right: 4.7rem;
-  margin-left: 2.5rem;
-  min-width: 4.9274375rem;
+.price-quantity-status-container {
+  display: flex;
+  margin-left: 4.6875rem;
 }
 
-.quantity-heading {
-  margin-left: 2rem;
-  margin-right: 2rem;
+.price-heading,
+.quantity-heading,
+.status-heading {
+  margin-right: 3.7rem;
+  /* margin-left: 2.5rem; */
   min-width: 4.9274375rem;
 }
