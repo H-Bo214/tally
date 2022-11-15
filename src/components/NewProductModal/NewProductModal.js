@@ -1,17 +1,23 @@
 import { useForm } from 'react-hook-form'
 import './NewProductModal.css'
 
-const NewProductModal = ({ handleCloseModal, handleAddNewProduct }) => {
+const NewProductModal = ({
+  handleCloseModal,
+  handleAddNewProduct,
+  dataToEdit,
+}) => {
   const { register, handleSubmit } = useForm({
-    defaultValues: {
-      img: '',
-      name: '',
-      sku: '',
-      description: '',
-      price: '',
-      quantity: '',
-      status: '',
-    },
+    defaultValues: dataToEdit
+      ? dataToEdit
+      : {
+          img: '',
+          name: '',
+          sku: '',
+          description: '',
+          price: '',
+          quantity: '',
+          status: '',
+        },
   })
 
   const handleData = (data) => {

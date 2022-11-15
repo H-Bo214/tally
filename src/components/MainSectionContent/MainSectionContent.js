@@ -10,7 +10,7 @@ const MainSectionContent = () => {
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(true)
   const [openModal, setOpenModal] = useState(false)
-
+  const [dataToEdit, setDataToEdit] = useState(null)
   // Modal functionality
   // when I click on the + new Product button I need to render the
   // NewProductModal Component over the 'container'  <section /> section element
@@ -50,6 +50,12 @@ const MainSectionContent = () => {
     // I need to filter through the products array
     // locate the product clicked via ID
     // need to open up the modal and prepopulate the text currently in the object
+    const res = await fetch(`http://localhost:5000/products/${id}`)
+    const data = await res.json()
+    setDataToEdit(data)
+    // call setProducts locate the correct object to update and update the product list.
+    handleOpenModal()
+    console.log('data', data)
   }
 
   const handleOpenModal = () => {
@@ -57,6 +63,7 @@ const MainSectionContent = () => {
   }
 
   const handleCloseModal = () => {
+    setDataToEdit(null)
     setOpenModal(false)
   }
 
@@ -68,6 +75,7 @@ const MainSectionContent = () => {
         <NewProductModal
           handleCloseModal={handleCloseModal}
           handleAddNewProduct={handleAddNewProduct}
+          dataToEdit={dataToEdit}
         />
       )}
       <ProductInventory
