@@ -89,3 +89,7 @@
   height: 33px;
   cursor: pointer;
 }
+
+.edit-button:hover {
+  background: url('../../assets/edit-hover-button.svg') no-repeat;
+}
