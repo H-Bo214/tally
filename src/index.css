@@ -5,13 +5,12 @@
 }
 
 body {
-  /* margin: 0 auto; */
+  margin: 0 auto;
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* max-width: 1440px;
-  max-height: 1024px; */
-  /* width: 85%; */
+  min-height: 900px; */
 }
 
 button {

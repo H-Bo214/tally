@@ -1,42 +1,30 @@
 import './ProductInventory.css'
 import Product from '../Product/Product'
-import AddNewProduct from '../AddNewProduct/AddNewProduct'
 import ProductHeadings from '../ProductHeadings/ProductHeadings'
 import MoonLoader from 'react-spinners/MoonLoader'
-import { useState, useEffect, CSSProperties } from 'react'
+import { CSSProperties } from 'react'
 
 const override: CSSProperties = {
   display: 'block',
   margin: '5rem auto',
 }
 
-const ProductInventory = () => {
-  const [products, setProducts] = useState([])
-  const [error, setError] = useState('')
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const res = await fetch('http://localhost:5000/products')
-        const data = await res.json()
-        setProducts(data)
-        setIsLoading(false)
-      } catch (error) {
-        console.error(error.message)
-        setError('An error occurred, please refresh the page.')
-      }
-    }
-    fetchProducts()
-  }, [])
-
+const ProductInventory = ({
+  products,
+  error,
+  isLoading,
+  handleEditProduct,
+}) => {
   const productList = products.map((product) => (
-    <Product product={product} key={product.id} />
+    <Product
+      product={product}
+      key={product.id}
+      handleEditProduct={handleEditProduct}
+    />
   ))
 
   return (
     <main>
-      <AddNewProduct />
       <section className='products-container'>
         <ProductHeadings />
         <MoonLoader

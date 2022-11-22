@@ -1,8 +1,23 @@
 import './Product.css'
+import { useState } from 'react'
 
-const Product = ({ product }) => {
+const Product = ({ product, handleEditProduct }) => {
+  const [isHovering, setIsHovering] = useState(false)
+
+  const handleMouseEnter = () => {
+    setIsHovering(true)
+  }
+
+  const handleMouseLeave = () => {
+    setIsHovering(false)
+  }
+
   return (
-    <section className='single-product-container'>
+    <section
+      className='single-product-container'
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <img src={product.img} alt={product.name} width='54' height='50' />
       <div className='product-container'>
         <h3>{product.name}</h3>
@@ -12,10 +27,14 @@ const Product = ({ product }) => {
         <p>{product.description}</p>
       </div>
       <div className='single-product-status-container'>
-        <p>${product.price}</p>
-        <p>{product.quantity}</p>
+        <p className='price'>${product.price}</p>
+        <p className='quantity'>{product.quantity}</p>
         <p className='stock-status'>{product.status}</p>
-        <button className='edit-button' name='edit button'></button>
+        <button
+          className={isHovering ? 'edit-button' : 'no-display'}
+          name='edit button'
+          onClick={() => handleEditProduct(product.id)}
+        />
       </div>
     </section>
   )

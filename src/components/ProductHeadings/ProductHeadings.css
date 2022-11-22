@@ -8,25 +8,23 @@
   position: sticky;
   top: 0;
 }
-
-.product-list-headings > li {
-  display: flex;
-  align-items: center;
+.product-heading {
+  min-width: 16.9375rem;
 }
 
 .description-heading {
-  padding-left: 13rem;
-  padding-right: 14rem;
+  min-width: 16.9375rem;
 }
 
-.price-heading {
-  padding-right: 4.7rem;
+.price-quantity-status-container {
+  display: flex;
+  margin-left: 4.6875rem;
 }
 
-.quantity-heading {
-  margin-right: 3.2rem;
-}
-
-.edit-button {
-  cursor: pointer;
+.price-heading,
+.quantity-heading,
+.status-heading {
+  margin-right: 3.7rem;
+  /* margin-left: 2.5rem; */
+  min-width: 4.9274375rem;
 }
