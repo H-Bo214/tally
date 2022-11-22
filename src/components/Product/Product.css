@@ -5,6 +5,7 @@
   padding-top: 11px;
   padding-left: 40px;
   padding-bottom: 10px;
+  position: relative;
 }
 
 .single-product-container:hover {

@@ -1,8 +1,9 @@
 import './Product.css'
 import { useState } from 'react'
-
+import EditDeleteModal from '../EditDeleteModal/EditDeleteModal'
 const Product = ({ product, handleEditProduct }) => {
   const [isHovering, setIsHovering] = useState(false)
+  const [editDeleteModalOpen, setEditDeleteModalOpen] = useState(false)
 
   const handleMouseEnter = () => {
     setIsHovering(true)
@@ -10,6 +11,16 @@ const Product = ({ product, handleEditProduct }) => {
 
   const handleMouseLeave = () => {
     setIsHovering(false)
+    setEditDeleteModalOpen(false)
+  }
+
+  const handleOpenEditModal = () => {
+    console.log('id', product.id)
+    setEditDeleteModalOpen(true)
+  }
+
+  const handleCloseEditModal = () => {
+    setEditDeleteModalOpen(false)
   }
 
   return (
@@ -33,9 +44,18 @@ const Product = ({ product, handleEditProduct }) => {
         <button
           className={isHovering ? 'edit-button' : 'no-display'}
           name='edit button'
-          onClick={() => handleEditProduct(product.id)}
+          onClick={
+            editDeleteModalOpen ? handleCloseEditModal : handleOpenEditModal
+          }
         />
       </div>
+      {editDeleteModalOpen && (
+        <EditDeleteModal
+          handleCloseEditModal={handleCloseEditModal}
+          handleEditProduct={handleEditProduct}
+          id={product.id}
+        />
+      )}
     </section>
   )
 }
