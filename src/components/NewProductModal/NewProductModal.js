@@ -4,6 +4,7 @@ import './NewProductModal.css'
 const NewProductModal = ({
   handleCloseModal,
   handleAddNewProduct,
+  handleUpdateExistingProduct,
   dataToEdit,
 }) => {
   const { register, handleSubmit } = useForm({
@@ -21,10 +22,13 @@ const NewProductModal = ({
   })
 
   const handleData = (data) => {
-    handleAddNewProduct(data)
+    if (dataToEdit) {
+      handleUpdateExistingProduct(data.id, data)
+    } else {
+      handleAddNewProduct(data)
+    }
     handleCloseModal()
   }
-
   return (
     <>
       <div className='modal-overlay' />
@@ -77,6 +81,9 @@ const NewProductModal = ({
               </select>
             </label>
           </div>
+          <button type='button' onClick={handleCloseModal}>
+            Cancel
+          </button>
           <button type='submit'>Save</button>
         </form>
       </section>

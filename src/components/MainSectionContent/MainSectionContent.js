@@ -11,9 +11,6 @@ const MainSectionContent = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [openModal, setOpenModal] = useState(false)
   const [dataToEdit, setDataToEdit] = useState(null)
-  // Modal functionality
-  // when I click on the + new Product button I need to render the
-  // NewProductModal Component over the 'container'  <section /> section element
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -32,7 +29,7 @@ const MainSectionContent = () => {
   }, [])
 
   const handleAddNewProduct = async (newProductData) => {
-    const options = {
+    const postOptions = {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -40,22 +37,37 @@ const MainSectionContent = () => {
       body: JSON.stringify(newProductData),
     }
 
-    const res = await fetch('http://localhost:5000/products', options)
+    const res = await fetch('http://localhost:5000/products', postOptions)
     const data = await res.json()
     setProducts([...products, data])
   }
 
-  const handleEditProduct = async (id) => {
-    console.log('id clicked', id)
-    // I need to filter through the products array
-    // locate the product clicked via ID
-    // need to open up the modal and prepopulate the text currently in the object
+  const fetchSingleProduct = async (id) => {
     const res = await fetch(`http://localhost:5000/products/${id}`)
     const data = await res.json()
-    setDataToEdit(data)
-    // call setProducts locate the correct object to update and update the product list.
+    return data
+  }
+
+  const handleUpdateExistingProduct = async (id, newData) => {
+    const putOptions = {
+      method: 'PUT',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify(newData),
+    }
+    const res = await fetch(`http://localhost:5000/products/${id}`, putOptions)
+    const data = await res.json()
+    setProducts(
+      products.map((product) => (product.id === data.id ? data : product))
+    )
+    setDataToEdit(null)
+  }
+
+  const handleEditProduct = async (id) => {
+    const productToEdit = await fetchSingleProduct(id)
+    setDataToEdit(productToEdit)
     handleOpenModal()
-    console.log('data', data)
   }
 
   const handleOpenModal = () => {
@@ -63,8 +75,8 @@ const MainSectionContent = () => {
   }
 
   const handleCloseModal = () => {
-    setDataToEdit(null)
     setOpenModal(false)
+    setDataToEdit(null)
   }
 
   return (
@@ -75,6 +87,7 @@ const MainSectionContent = () => {
         <NewProductModal
           handleCloseModal={handleCloseModal}
           handleAddNewProduct={handleAddNewProduct}
+          handleUpdateExistingProduct={handleUpdateExistingProduct}
           dataToEdit={dataToEdit}
         />
       )}
