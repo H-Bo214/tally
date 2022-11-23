@@ -70,6 +70,11 @@ const MainSectionContent = () => {
     handleOpenModal()
   }
 
+  const handleDeleteProduct = async (id) => {
+    await fetch(`http://localhost:5000/products/${id}`, { method: 'DELETE' })
+    setProducts(products.filter((product) => product.id !== id))
+  }
+
   const handleOpenModal = () => {
     setOpenModal(true)
   }
@@ -96,6 +101,7 @@ const MainSectionContent = () => {
         error={error}
         isLoading={isLoading}
         handleEditProduct={handleEditProduct}
+        handleDeleteProduct={handleDeleteProduct}
       />
     </section>
   )

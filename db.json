@@ -109,16 +109,6 @@
       "quantity": "22",
       "status": "On order",
       "id": 12
-    },
-    {
-      "img": "some photo",
-      "name": "new",
-      "sku": "new",
-      "description": "new",
-      "price": "10000",
-      "quantity": "1000",
-      "status": "On order",
-      "id": 13
     }
   ]
 }

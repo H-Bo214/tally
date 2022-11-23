@@ -1,6 +1,11 @@
 import './EditDeleteModal.css'
 
-const EditDeleteModal = ({ handleCloseEditModal, handleEditProduct, id }) => {
+const EditDeleteModal = ({
+  handleCloseEditModal,
+  handleEditProduct,
+  handleDeleteProduct,
+  id,
+}) => {
   return (
     <section
       className='edit-delete-modal-container'
@@ -12,7 +17,9 @@ const EditDeleteModal = ({ handleCloseEditModal, handleEditProduct, id }) => {
         </button>
       </div>
       <div>
-        <button className='delete'>Delete</button>
+        <button className='delete' onClick={() => handleDeleteProduct(id)}>
+          Delete
+        </button>
       </div>
     </section>
   )
