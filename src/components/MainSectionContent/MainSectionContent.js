@@ -4,6 +4,7 @@ import ProductInventory from '../ProductInventory/ProductInventory'
 import AddNewProduct from '../AddNewProduct/AddNewProduct'
 import NewProductModal from '../NewProductModal/NewProductModal'
 import { useState, useEffect } from 'react'
+import ConfirmationModal from '../ConfirmationModal/ConfirmationModal'
 
 const MainSectionContent = () => {
   const [products, setProducts] = useState([])
@@ -11,6 +12,7 @@ const MainSectionContent = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [openModal, setOpenModal] = useState(false)
   const [dataToEdit, setDataToEdit] = useState(null)
+  const [confirmModalIsOpen, setConfirmModalIsOpen] = useState(false)
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -28,6 +30,12 @@ const MainSectionContent = () => {
     fetchProducts()
   }, [])
 
+  const fetchSingleProduct = async (id) => {
+    const res = await fetch(`http://localhost:5000/products/${id}`)
+    const data = await res.json()
+    return data
+  }
+
   const handleAddNewProduct = async (newProductData) => {
     const postOptions = {
       method: 'POST',
@@ -40,12 +48,6 @@ const MainSectionContent = () => {
     const res = await fetch('http://localhost:5000/products', postOptions)
     const data = await res.json()
     setProducts([...products, data])
-  }
-
-  const fetchSingleProduct = async (id) => {
-    const res = await fetch(`http://localhost:5000/products/${id}`)
-    const data = await res.json()
-    return data
   }
 
   const handleUpdateExistingProduct = async (id, newData) => {
@@ -79,8 +81,15 @@ const MainSectionContent = () => {
     setOpenModal(true)
   }
 
+  const handleConfirmModalIsOpen = () => {
+    setOpenModal(false)
+    setConfirmModalIsOpen(true)
+    console.log('dataToEdit', dataToEdit)
+  }
+
   const handleCloseModal = () => {
     setOpenModal(false)
+    // possible if conditional to hold state of dataToEdit in the event the user decides to keep editing instead of canceling the edits
     setDataToEdit(null)
   }
 
@@ -93,7 +102,13 @@ const MainSectionContent = () => {
           handleCloseModal={handleCloseModal}
           handleAddNewProduct={handleAddNewProduct}
           handleUpdateExistingProduct={handleUpdateExistingProduct}
+          handleConfirmModalIsOpen={handleConfirmModalIsOpen}
           dataToEdit={dataToEdit}
+        />
+      )}
+      {confirmModalIsOpen && (
+        <ConfirmationModal
+          handleConfirmModalIsOpen={handleConfirmModalIsOpen}
         />
       )}
       <ProductInventory
