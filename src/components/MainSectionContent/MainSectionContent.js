@@ -108,3 +108,5 @@ const MainSectionContent = () => {
 }
 
 export default MainSectionContent
+
+// next steps work on confirmation modal when editing possibly also when adding new product.

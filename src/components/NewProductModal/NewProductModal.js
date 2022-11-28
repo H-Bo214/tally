@@ -34,7 +34,7 @@ const NewProductModal = ({
       <div className='modal-overlay' />
       <section className='modal'>
         <section className='modal-heading'>
-          <h1>New Product</h1>
+          {dataToEdit ? <h1>Edit Product</h1> : <h1>New Product</h1>}
           <button
             className='close-button'
             name='close button'
