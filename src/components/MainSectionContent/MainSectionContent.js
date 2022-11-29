@@ -81,10 +81,15 @@ const MainSectionContent = () => {
     setOpenModal(true)
   }
 
-  const handleConfirmModalIsOpen = () => {
+  const handleOpenConfirmationModal = () => {
     setOpenModal(false)
     setConfirmModalIsOpen(true)
-    console.log('dataToEdit', dataToEdit)
+    // console.log('dataToEdit', dataToEdit)
+  }
+
+  const handleCloseConfirmationModal = () => {
+    setDataToEdit(null)
+    setConfirmModalIsOpen(false)
   }
 
   const handleCloseModal = () => {
@@ -102,13 +107,13 @@ const MainSectionContent = () => {
           handleCloseModal={handleCloseModal}
           handleAddNewProduct={handleAddNewProduct}
           handleUpdateExistingProduct={handleUpdateExistingProduct}
-          handleConfirmModalIsOpen={handleConfirmModalIsOpen}
+          handleOpenConfirmationModal={handleOpenConfirmationModal}
           dataToEdit={dataToEdit}
         />
       )}
       {confirmModalIsOpen && (
         <ConfirmationModal
-          handleConfirmModalIsOpen={handleConfirmModalIsOpen}
+          handleCloseConfirmationModal={handleCloseConfirmationModal}
         />
       )}
       <ProductInventory

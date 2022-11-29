@@ -5,7 +5,7 @@ const NewProductModal = ({
   handleCloseModal,
   handleAddNewProduct,
   handleUpdateExistingProduct,
-  handleConfirmModalIsOpen,
+  handleOpenConfirmationModal,
   dataToEdit,
 }) => {
   const { register, handleSubmit } = useForm({
@@ -49,7 +49,7 @@ const NewProductModal = ({
             className='close-button'
             name='close button'
             // onClick={handleCloseModal}
-            onClick={handleConfirmModalIsOpen}
+            onClick={handleOpenConfirmationModal}
           />
         </section>
         <form onSubmit={handleSubmit(handleData)}>
@@ -95,7 +95,7 @@ const NewProductModal = ({
           <button
             type='button'
             // onClick={handleCloseModal}
-            onClick={handleConfirmModalIsOpen}
+            onClick={handleOpenConfirmationModal}
           >
             Cancel
           </button>

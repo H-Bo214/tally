@@ -1,7 +1,7 @@
 import './ConfirmationModal.css'
 import Button from '../Button/index'
 
-const ConfirmationModal = () => {
+const ConfirmationModal = ({ handleCloseConfirmationModal }) => {
   return (
     <>
       <div className='confirmation-modal-overlay' />
@@ -10,7 +10,11 @@ const ConfirmationModal = () => {
         <p>Your changes to this product will be lost if you don't save them.</p>
         <section className='buttons-container'>
           <Button name='Keep editing' className='keep-editing-button' />
-          <Button name='Discard' className='discard-button' />
+          <Button
+            name='Discard'
+            className='discard-button'
+            onClick={handleCloseConfirmationModal}
+          />
           <Button name='Save' className='save-button' />
         </section>
       </section>
