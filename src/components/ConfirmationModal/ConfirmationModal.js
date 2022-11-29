@@ -1,4 +1,5 @@
 import './ConfirmationModal.css'
+import Button from '../Button/index'
 
 const ConfirmationModal = () => {
   return (
@@ -8,9 +9,9 @@ const ConfirmationModal = () => {
         <h3 className='confirmation-heading'>Save your edits?</h3>
         <p>Your changes to this product will be lost if you don't save them.</p>
         <section className='buttons-container'>
-          <button className='keep-editing'>Keep editing</button>
-          <button className='discard'>Discard</button>
-          <button className='save'>Save</button>
+          <Button name='Keep editing' className='keep-editing-button' />
+          <Button name='Discard' className='discard-button' />
+          <Button name='Save' className='save-button' />
         </section>
       </section>
     </>
