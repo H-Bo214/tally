@@ -78,13 +78,13 @@ const MainSectionContent = () => {
   }
 
   const handleOpenModal = () => {
+    setConfirmModalIsOpen(false)
     setOpenModal(true)
   }
 
   const handleOpenConfirmationModal = () => {
     setOpenModal(false)
     setConfirmModalIsOpen(true)
-    // console.log('dataToEdit', dataToEdit)
   }
 
   const handleCloseConfirmationModal = () => {
@@ -94,8 +94,12 @@ const MainSectionContent = () => {
 
   const handleCloseModal = () => {
     setOpenModal(false)
-    // possible if conditional to hold state of dataToEdit in the event the user decides to keep editing instead of canceling the edits
     setDataToEdit(null)
+  }
+
+  const handlePartialEdit = (data) => {
+    setDataToEdit(data)
+    handleOpenConfirmationModal()
   }
 
   return (
@@ -108,12 +112,16 @@ const MainSectionContent = () => {
           handleAddNewProduct={handleAddNewProduct}
           handleUpdateExistingProduct={handleUpdateExistingProduct}
           handleOpenConfirmationModal={handleOpenConfirmationModal}
+          handlePartialEdit={handlePartialEdit}
           dataToEdit={dataToEdit}
         />
       )}
       {confirmModalIsOpen && (
         <ConfirmationModal
           handleCloseConfirmationModal={handleCloseConfirmationModal}
+          dataToEdit={dataToEdit}
+          handleUpdateExistingProduct={handleUpdateExistingProduct}
+          handleOpenModal={handleOpenModal}
         />
       )}
       <ProductInventory
@@ -128,5 +136,3 @@ const MainSectionContent = () => {
 }
 
 export default MainSectionContent
-
-// next steps work on confirmation modal when editing possibly also when adding new product.

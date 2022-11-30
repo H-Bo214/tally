@@ -5,10 +5,10 @@ const NewProductModal = ({
   handleCloseModal,
   handleAddNewProduct,
   handleUpdateExistingProduct,
-  handleOpenConfirmationModal,
+  handlePartialEdit,
   dataToEdit,
 }) => {
-  const { register, handleSubmit } = useForm({
+  const { register, handleSubmit, getValues } = useForm({
     defaultValues: dataToEdit
       ? dataToEdit
       : {
@@ -31,13 +31,10 @@ const NewProductModal = ({
     handleCloseModal()
   }
 
-  // when I click the 'x' icon or the 'cancel' button
-  // this will call handleCloseModal to close the current edit modal and will also handle the confirmation modal display
-
-  // a new modal will pop up with
-  // 'keep editing'  button    -> will take you back to the currently open edit window
-  //  'Discard' button         -> will cancel all of the edits and return the user to the home screen
-  // 'Save' button             -> will save the current edits and reflect these changes on the home screen
+  const handleFormEditValues = () => {
+    const values = getValues()
+    handlePartialEdit(values)
+  }
 
   return (
     <>
@@ -48,8 +45,7 @@ const NewProductModal = ({
           <button
             className='close-button'
             name='close button'
-            // onClick={handleCloseModal}
-            onClick={handleOpenConfirmationModal}
+            onClick={handleFormEditValues}
           />
         </section>
         <form onSubmit={handleSubmit(handleData)}>
@@ -92,11 +88,7 @@ const NewProductModal = ({
               </select>
             </label>
           </div>
-          <button
-            type='button'
-            // onClick={handleCloseModal}
-            onClick={handleOpenConfirmationModal}
-          >
+          <button type='button' onClick={handleFormEditValues}>
             Cancel
           </button>
           <button type='submit'>Save</button>

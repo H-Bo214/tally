@@ -3,17 +3,17 @@
     {
       "id": 1,
       "img": "/productImages/iphone13.png",
-      "name": "iPhone 17 Pro Max",
+      "name": "iPhone 5001 Pro Max",
       "sku": "10101",
       "description": "Hollywood-worthy video shooting made easy. A lightning-fast chip. And a big boost in battery life you’ll notice every day.",
-      "price": "2000",
-      "quantity": "12",
+      "price": "2001",
+      "quantity": "99",
       "status": "On order"
     },
     {
       "id": 2,
       "img": "/productImages/iphone13.png",
-      "name": "iPhone 13 Pro Rose Gold",
+      "name": "iPhone 999 AR brain implant",
       "sku": "00422001",
       "description": "A super bright display in a durable design. Hollywood-worthy video shooting made easy. A lightning-fast chip. And a big boost in battery life you’ll notice every day.",
       "price": 200,
@@ -33,20 +33,10 @@
     {
       "id": 4,
       "img": "/productImages/iphone13.png",
-      "name": "iPhone 14 Pro Black",
+      "name": "iPhone Pro navy blue",
       "sku": "00422001",
       "description": "A super bright display in a durable design. Hollywood-worthy video shooting made easy. A lightning-fast chip. And a big boost in battery life you’ll notice every day.",
       "price": "250",
-      "quantity": 120,
-      "status": "In stock"
-    },
-    {
-      "id": 5,
-      "img": "/productImages/iphone13.png",
-      "name": "iPhone 13 Pro Rose Gold",
-      "sku": "00422001",
-      "description": "A super bright display in a durable design. Hollywood-worthy video shooting made easy. A lightning-fast chip. And a big boost in battery life you’ll notice every day.",
-      "price": 200,
       "quantity": 120,
       "status": "In stock"
     },
@@ -91,24 +81,14 @@
       "status": "In stock"
     },
     {
-      "img": "https://www.powermax.com/wp-content/uploads/2017/12/1033402946_1500.jpg",
-      "name": "New Product test 5000",
-      "sku": "8978567239jl",
-      "description": "You're a very talented young man, with your own clever thoughts and ideas. Do you need a manager? Jaguar shark! So tell me - does it really exist? Do you have any idea how long it takes those cups to decompose. Remind me to thank John for a lovely weekend.\n\nI gave it a cold? I gave it a virus. A computer virus. Eventually, you do plan to have dinosaurs on your dinosaur tour, right? What do they got in there? King Kong? You're a very talented young man, with your own clever thoughts and ideas. Do you need a manager?",
-      "price": "1000",
-      "quantity": "2200",
+      "img": "photo",
+      "name": "b",
+      "sku": "dfksdfkskl",
+      "description": "kldfklasklfaskldjf",
+      "price": "1000000",
+      "quantity": "9393",
       "status": "On order",
-      "id": 11
-    },
-    {
-      "img": "https://macfinder.co.uk/wp-content/uploads/2019/06/img-iMac-Slim-27-Inch-95192.jpg",
-      "name": "new product 19000",
-      "sku": "dkfjalsdfjlkj",
-      "description": "skdfjklas jdflkasjdfklj asdfjklasjdflkasjdfklj",
-      "price": "100",
-      "quantity": "22",
-      "status": "On order",
-      "id": 12
+      "id": 10
     }
   ]
 }

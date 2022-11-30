@@ -12,7 +12,13 @@ const EditDeleteModal = ({
       onMouseLeave={handleCloseEditModal}
     >
       <div>
-        <button className='edit' onClick={() => handleEditProduct(id)}>
+        <button
+          className='edit'
+          onClick={() => {
+            handleCloseEditModal()
+            handleEditProduct(id)
+          }}
+        >
           Edit
         </button>
       </div>

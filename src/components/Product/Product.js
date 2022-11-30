@@ -1,6 +1,7 @@
 import './Product.css'
 import { useState } from 'react'
 import EditDeleteModal from '../EditDeleteModal/EditDeleteModal'
+
 const Product = ({ product, handleEditProduct, handleDeleteProduct }) => {
   const [isHovering, setIsHovering] = useState(false)
   const [editDeleteModalOpen, setEditDeleteModalOpen] = useState(false)
@@ -15,7 +16,6 @@ const Product = ({ product, handleEditProduct, handleDeleteProduct }) => {
   }
 
   const handleOpenEditModal = () => {
-    console.log('id', product.id)
     setEditDeleteModalOpen(true)
   }
 
@@ -43,10 +43,8 @@ const Product = ({ product, handleEditProduct, handleDeleteProduct }) => {
         <p className='stock-status'>{product.status}</p>
         <button
           className={isHovering ? 'edit-button' : 'no-display'}
-          name='edit button'
-          onClick={
-            editDeleteModalOpen ? handleCloseEditModal : handleOpenEditModal
-          }
+          name='edit menu button'
+          onClick={handleOpenEditModal}
         />
       </div>
       {editDeleteModalOpen && (
