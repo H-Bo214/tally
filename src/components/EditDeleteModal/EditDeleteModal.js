@@ -6,19 +6,18 @@ const EditDeleteModal = ({
   handleDeleteProduct,
   id,
 }) => {
+  const handleModalClose = () => {
+    handleCloseEditModal()
+    handleEditProduct(id)
+  }
+
   return (
     <section
       className='edit-delete-modal-container'
       onMouseLeave={handleCloseEditModal}
     >
       <div>
-        <button
-          className='edit'
-          onClick={() => {
-            handleCloseEditModal()
-            handleEditProduct(id)
-          }}
-        >
+        <button className='edit' onClick={handleModalClose}>
           Edit
         </button>
       </div>

@@ -79,16 +79,6 @@
       "price": 200,
       "quantity": 120,
       "status": "In stock"
-    },
-    {
-      "img": "photo",
-      "name": "b",
-      "sku": "dfksdfkskl",
-      "description": "kldfklasklfaskldjf",
-      "price": "1000000",
-      "quantity": "9393",
-      "status": "On order",
-      "id": 10
     }
   ]
 }
