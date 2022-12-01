@@ -5,6 +5,7 @@
   padding-top: 11px;
   padding-left: 40px;
   padding-bottom: 10px;
+  position: relative;
 }
 
 .single-product-container:hover {
@@ -88,4 +89,8 @@
   width: 33px;
   height: 33px;
   cursor: pointer;
+}
+
+.edit-button:hover {
+  background: url('../../assets/edit-hover-button.svg') no-repeat;
 }

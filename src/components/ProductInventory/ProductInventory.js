@@ -14,12 +14,14 @@ const ProductInventory = ({
   error,
   isLoading,
   handleEditProduct,
+  handleDeleteProduct,
 }) => {
   const productList = products.map((product) => (
     <Product
       product={product}
       key={product.id}
       handleEditProduct={handleEditProduct}
+      handleDeleteProduct={handleDeleteProduct}
     />
   ))
 

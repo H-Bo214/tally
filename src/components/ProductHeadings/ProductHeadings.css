@@ -7,6 +7,7 @@
   padding: 0 2.5rem;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 .product-heading {
   min-width: 16.9375rem;
@@ -25,6 +26,5 @@
 .quantity-heading,
 .status-heading {
   margin-right: 3.7rem;
-  /* margin-left: 2.5rem; */
   min-width: 4.9274375rem;
 }

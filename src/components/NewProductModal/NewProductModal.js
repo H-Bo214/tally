@@ -5,9 +5,10 @@ const NewProductModal = ({
   handleCloseModal,
   handleAddNewProduct,
   handleUpdateExistingProduct,
+  handlePartialEdit,
   dataToEdit,
 }) => {
-  const { register, handleSubmit } = useForm({
+  const { register, handleSubmit, getValues } = useForm({
     defaultValues: dataToEdit
       ? dataToEdit
       : {
@@ -29,16 +30,22 @@ const NewProductModal = ({
     }
     handleCloseModal()
   }
+
+  const handleFormEditValues = () => {
+    const values = getValues()
+    handlePartialEdit(values)
+  }
+
   return (
     <>
       <div className='modal-overlay' />
       <section className='modal'>
         <section className='modal-heading'>
-          <h1>New Product</h1>
+          {dataToEdit ? <h1>Edit Product</h1> : <h1>New Product</h1>}
           <button
             className='close-button'
             name='close button'
-            onClick={handleCloseModal}
+            onClick={handleFormEditValues}
           />
         </section>
         <form onSubmit={handleSubmit(handleData)}>
@@ -81,7 +88,7 @@ const NewProductModal = ({
               </select>
             </label>
           </div>
-          <button type='button' onClick={handleCloseModal}>
+          <button type='button' onClick={handleFormEditValues}>
             Cancel
           </button>
           <button type='submit'>Save</button>
