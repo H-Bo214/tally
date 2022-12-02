@@ -5,6 +5,7 @@ import AddNewProduct from '../AddNewProduct/AddNewProduct'
 import NewProductModal from '../NewProductModal/NewProductModal'
 import { useState, useEffect } from 'react'
 import ConfirmationModal from '../ConfirmationModal/ConfirmationModal'
+import { getProducts, getSingleProduct } from '../../apiCalls'
 
 const MainSectionContent = () => {
   const [products, setProducts] = useState([])
@@ -17,8 +18,7 @@ const MainSectionContent = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch('http://localhost:5000/products')
-        const data = await res.json()
+        const data = await getProducts()
         setProducts(data)
         setIsLoading(false)
       } catch (error) {
@@ -29,12 +29,6 @@ const MainSectionContent = () => {
     }
     fetchProducts()
   }, [])
-
-  const fetchSingleProduct = async (id) => {
-    const res = await fetch(`http://localhost:5000/products/${id}`)
-    const data = await res.json()
-    return data
-  }
 
   const handleAddNewProduct = async (newProductData) => {
     const postOptions = {
@@ -67,7 +61,7 @@ const MainSectionContent = () => {
   }
 
   const handleEditProduct = async (id) => {
-    const productToEdit = await fetchSingleProduct(id)
+    const productToEdit = await getSingleProduct(id)
     setDataToEdit(productToEdit)
     handleOpenModal()
   }
