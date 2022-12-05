@@ -5,7 +5,13 @@ import AddNewProduct from '../AddNewProduct/AddNewProduct'
 import NewProductModal from '../NewProductModal/NewProductModal'
 import { useState, useEffect } from 'react'
 import ConfirmationModal from '../ConfirmationModal/ConfirmationModal'
-import { getProducts, getSingleProduct } from '../../apiCalls'
+import {
+  deleteProduct,
+  getProducts,
+  getSingleProduct,
+  updateProduct,
+  addNewProduct,
+} from '../../apiCalls'
 
 const MainSectionContent = () => {
   const [products, setProducts] = useState([])
@@ -31,29 +37,12 @@ const MainSectionContent = () => {
   }, [])
 
   const handleAddNewProduct = async (newProductData) => {
-    const postOptions = {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json',
-      },
-      body: JSON.stringify(newProductData),
-    }
-
-    const res = await fetch('http://localhost:5000/products', postOptions)
-    const data = await res.json()
+    const data = await addNewProduct(newProductData)
     setProducts([...products, data])
   }
 
   const handleUpdateExistingProduct = async (id, newData) => {
-    const putOptions = {
-      method: 'PUT',
-      headers: {
-        'Content-type': 'application/json',
-      },
-      body: JSON.stringify(newData),
-    }
-    const res = await fetch(`http://localhost:5000/products/${id}`, putOptions)
-    const data = await res.json()
+    const data = await updateProduct(id, newData)
     setProducts(
       products.map((product) => (product.id === data.id ? data : product))
     )
@@ -67,7 +56,7 @@ const MainSectionContent = () => {
   }
 
   const handleDeleteProduct = async (id) => {
-    await fetch(`http://localhost:5000/products/${id}`, { method: 'DELETE' })
+    await deleteProduct(id)
     setProducts(products.filter((product) => product.id !== id))
   }
 
