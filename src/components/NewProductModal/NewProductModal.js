@@ -28,7 +28,7 @@ const NewProductModal = ({
   })
 
   const handleData = (data) => {
-    if (dataToEdit.id) {
+    if (dataToEdit?.id) {
       handleUpdateExistingProduct(data.id, data)
     } else {
       handleAddNewProduct(data)

@@ -59,6 +59,16 @@
       "price": 200,
       "quantity": 120,
       "status": "In stock"
+    },
+    {
+      "img": "https://i5.walmartimages.com/asr/4122a43d-a8ee-42c4-81da-2428810627d6_1.aea763d910708017eacab2c9010a6137.jpeg",
+      "name": "ipad Pro Rose Gold 2021",
+      "sku": "sdfjasjfkj242424",
+      "description": "Ipad 2021 version Rose Gold",
+      "price": "1000",
+      "quantity": "2",
+      "status": "Low stock",
+      "id": 9
     }
   ]
 }
