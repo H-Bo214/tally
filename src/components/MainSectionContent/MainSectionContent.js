@@ -46,7 +46,6 @@ const MainSectionContent = () => {
     setProducts(
       products.map((product) => (product.id === data.id ? data : product))
     )
-    setDataToEdit(null)
   }
 
   const handleEditProduct = async (id) => {
@@ -61,12 +60,11 @@ const MainSectionContent = () => {
   }
 
   const handleOpenModal = () => {
-    setConfirmModalIsOpen(false)
     setOpenModal(true)
   }
 
   const handleOpenConfirmationModal = () => {
-    setOpenModal(false)
+    handleCloseModal()
     setConfirmModalIsOpen(true)
   }
 
@@ -77,12 +75,20 @@ const MainSectionContent = () => {
 
   const handleCloseModal = () => {
     setOpenModal(false)
-    setDataToEdit(null)
   }
 
   const handlePartialEdit = (data) => {
     setDataToEdit(data)
     handleOpenConfirmationModal()
+  }
+
+  const handleKeepEditing = () => {
+    setConfirmModalIsOpen(false)
+    handleOpenModal()
+  }
+
+  const handleDataToEdit = (dataState) => {
+    setDataToEdit(dataState)
   }
 
   return (
@@ -94,8 +100,8 @@ const MainSectionContent = () => {
           handleCloseModal={handleCloseModal}
           handleAddNewProduct={handleAddNewProduct}
           handleUpdateExistingProduct={handleUpdateExistingProduct}
-          handleOpenConfirmationModal={handleOpenConfirmationModal}
           handlePartialEdit={handlePartialEdit}
+          handleDataToEdit={handleDataToEdit}
           dataToEdit={dataToEdit}
         />
       )}
@@ -104,7 +110,7 @@ const MainSectionContent = () => {
           handleCloseConfirmationModal={handleCloseConfirmationModal}
           dataToEdit={dataToEdit}
           handleUpdateExistingProduct={handleUpdateExistingProduct}
-          handleOpenModal={handleOpenModal}
+          handleKeepEditing={handleKeepEditing}
         />
       )}
       <ProductInventory

@@ -6,6 +6,7 @@ const NewProductModal = ({
   handleAddNewProduct,
   handleUpdateExistingProduct,
   handlePartialEdit,
+  handleDataToEdit,
   dataToEdit,
 }) => {
   const {
@@ -34,6 +35,7 @@ const NewProductModal = ({
       handleAddNewProduct(data)
     }
     handleCloseModal()
+    handleDataToEdit(null)
   }
 
   const handleFormEditValues = () => {
