@@ -26,9 +26,9 @@ const NewProductModal = ({
           status: '',
         },
   })
-  console.log('form Errors', errors)
+
   const handleData = (data) => {
-    if (dataToEdit) {
+    if (dataToEdit.id) {
       handleUpdateExistingProduct(data.id, data)
     } else {
       handleAddNewProduct(data)
@@ -46,7 +46,7 @@ const NewProductModal = ({
       <div className='modal-overlay' />
       <section className='modal'>
         <section className='modal-heading'>
-          {dataToEdit ? <h1>Edit Product</h1> : <h1>New Product</h1>}
+          {dataToEdit?.id ? <h1>Edit Product</h1> : <h1>New Product</h1>}
           <button
             className='close-button'
             name='close button'
