@@ -4,7 +4,7 @@ import Button from '../Button/Button'
 const ConfirmationModal = ({
   handleCloseConfirmationModal,
   handleUpdateExistingProduct,
-  handleOpenModal,
+  handleKeepEditing,
   dataToEdit,
 }) => {
   return (
@@ -17,7 +17,7 @@ const ConfirmationModal = ({
           <Button
             name='Keep editing'
             className='keep-editing-button'
-            onClick={handleOpenModal}
+            onClick={handleKeepEditing}
           />
           <Button
             name='Discard'
@@ -27,9 +27,10 @@ const ConfirmationModal = ({
           <Button
             name='Save'
             className='save-button'
-            onClick={() =>
+            onClick={() => {
               handleUpdateExistingProduct(dataToEdit.id, dataToEdit)
-            }
+              handleCloseConfirmationModal()
+            }}
           />
         </section>
       </section>

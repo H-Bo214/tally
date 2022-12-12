@@ -5,6 +5,13 @@ import AddNewProduct from '../AddNewProduct/AddNewProduct'
 import NewProductModal from '../NewProductModal/NewProductModal'
 import { useState, useEffect } from 'react'
 import ConfirmationModal from '../ConfirmationModal/ConfirmationModal'
+import {
+  deleteProduct,
+  getProducts,
+  getSingleProduct,
+  updateProduct,
+  addNewProduct,
+} from '../../apiCalls'
 
 const MainSectionContent = () => {
   const [products, setProducts] = useState([])
@@ -17,8 +24,7 @@ const MainSectionContent = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch('http://localhost:5000/products')
-        const data = await res.json()
+        const data = await getProducts()
         setProducts(data)
         setIsLoading(false)
       } catch (error) {
@@ -30,60 +36,35 @@ const MainSectionContent = () => {
     fetchProducts()
   }, [])
 
-  const fetchSingleProduct = async (id) => {
-    const res = await fetch(`http://localhost:5000/products/${id}`)
-    const data = await res.json()
-    return data
-  }
-
   const handleAddNewProduct = async (newProductData) => {
-    const postOptions = {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json',
-      },
-      body: JSON.stringify(newProductData),
-    }
-
-    const res = await fetch('http://localhost:5000/products', postOptions)
-    const data = await res.json()
+    const data = await addNewProduct(newProductData)
     setProducts([...products, data])
   }
 
   const handleUpdateExistingProduct = async (id, newData) => {
-    const putOptions = {
-      method: 'PUT',
-      headers: {
-        'Content-type': 'application/json',
-      },
-      body: JSON.stringify(newData),
-    }
-    const res = await fetch(`http://localhost:5000/products/${id}`, putOptions)
-    const data = await res.json()
+    const data = await updateProduct(id, newData)
     setProducts(
       products.map((product) => (product.id === data.id ? data : product))
     )
-    setDataToEdit(null)
   }
 
   const handleEditProduct = async (id) => {
-    const productToEdit = await fetchSingleProduct(id)
+    const productToEdit = await getSingleProduct(id)
     setDataToEdit(productToEdit)
     handleOpenModal()
   }
 
   const handleDeleteProduct = async (id) => {
-    await fetch(`http://localhost:5000/products/${id}`, { method: 'DELETE' })
+    await deleteProduct(id)
     setProducts(products.filter((product) => product.id !== id))
   }
 
   const handleOpenModal = () => {
-    setConfirmModalIsOpen(false)
     setOpenModal(true)
   }
 
   const handleOpenConfirmationModal = () => {
-    setOpenModal(false)
+    handleCloseModal()
     setConfirmModalIsOpen(true)
   }
 
@@ -94,12 +75,20 @@ const MainSectionContent = () => {
 
   const handleCloseModal = () => {
     setOpenModal(false)
-    setDataToEdit(null)
   }
 
   const handlePartialEdit = (data) => {
     setDataToEdit(data)
     handleOpenConfirmationModal()
+  }
+
+  const handleKeepEditing = () => {
+    setConfirmModalIsOpen(false)
+    handleOpenModal()
+  }
+
+  const handleDataToEdit = (dataState) => {
+    setDataToEdit(dataState)
   }
 
   return (
@@ -111,8 +100,8 @@ const MainSectionContent = () => {
           handleCloseModal={handleCloseModal}
           handleAddNewProduct={handleAddNewProduct}
           handleUpdateExistingProduct={handleUpdateExistingProduct}
-          handleOpenConfirmationModal={handleOpenConfirmationModal}
           handlePartialEdit={handlePartialEdit}
+          handleDataToEdit={handleDataToEdit}
           dataToEdit={dataToEdit}
         />
       )}
@@ -121,7 +110,7 @@ const MainSectionContent = () => {
           handleCloseConfirmationModal={handleCloseConfirmationModal}
           dataToEdit={dataToEdit}
           handleUpdateExistingProduct={handleUpdateExistingProduct}
-          handleOpenModal={handleOpenModal}
+          handleKeepEditing={handleKeepEditing}
         />
       )}
       <ProductInventory

@@ -6,9 +6,15 @@ const NewProductModal = ({
   handleAddNewProduct,
   handleUpdateExistingProduct,
   handlePartialEdit,
+  handleDataToEdit,
   dataToEdit,
 }) => {
-  const { register, handleSubmit, getValues } = useForm({
+  const {
+    register,
+    handleSubmit,
+    getValues,
+    formState: { errors },
+  } = useForm({
     defaultValues: dataToEdit
       ? dataToEdit
       : {
@@ -23,12 +29,13 @@ const NewProductModal = ({
   })
 
   const handleData = (data) => {
-    if (dataToEdit) {
+    if (dataToEdit?.id) {
       handleUpdateExistingProduct(data.id, data)
     } else {
       handleAddNewProduct(data)
     }
     handleCloseModal()
+    handleDataToEdit(null)
   }
 
   const handleFormEditValues = () => {
@@ -41,7 +48,7 @@ const NewProductModal = ({
       <div className='modal-overlay' />
       <section className='modal'>
         <section className='modal-heading'>
-          {dataToEdit ? <h1>Edit Product</h1> : <h1>New Product</h1>}
+          {dataToEdit?.id ? <h1>Edit Product</h1> : <h1>New Product</h1>}
           <button
             className='close-button'
             name='close button'
@@ -52,41 +59,67 @@ const NewProductModal = ({
           <div className='left-section-container'>
             <label>
               Product name
-              <input {...register('name')} />
+              <input
+                type='text'
+                {...register('name', { required: 'Product name required' })}
+              />
             </label>
+            <p>{errors.name?.message}</p>
             <label>
               SKU
-              <input {...register('sku')} />
+              <input
+                type='text'
+                {...register('sku', { required: 'SKU required' })}
+              />
             </label>
+            <p>{errors.sku?.message}</p>
             <label>
               Description
-              <textarea {...register('description')} />
+              <textarea
+                {...register('description', { required: 'Quantity required' })}
+              />
             </label>
+            <p>{errors.description?.message}</p>
             <div className='price-quantity-container'>
               <label>
                 Price
-                <input {...register('price')} />
+                <input
+                  type='number'
+                  {...register('price', { required: 'Price required' })}
+                />
               </label>
+              <p>{errors.price?.message}</p>
               <label>
                 Quantity
-                <input {...register('quantity')} />
+                <input
+                  type='number'
+                  {...register('quantity', { required: 'Quantity required' })}
+                />
               </label>
+              <p>{errors.quantity?.message}</p>
             </div>
           </div>
           <div className='right-section-container'>
             <label>
               Photo
-              <input {...register('img')} type='text' />
+              <input
+                type='text'
+                {...register('img', { required: 'Image url required' })}
+              />
             </label>
+            <p>{errors.img?.message}</p>
             <label>
               Status
-              <select {...register('status')}>
+              <select
+                {...register('status', { required: 'Product status required' })}
+              >
                 <option value=''></option>
                 <option value='In stock'>In stock</option>
                 <option value='On order'>On order</option>
                 <option value='Low stock'>Low stock</option>
               </select>
             </label>
+            <p>{errors.status?.message}</p>
           </div>
           <button type='button' onClick={handleFormEditValues}>
             Cancel
