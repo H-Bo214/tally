@@ -16,6 +16,7 @@ import {
 const MainSectionContent = () => {
   const [products, setProducts] = useState([])
   const [error, setError] = useState('')
+  const [modalErrorMsg, setModalErrorMsg] = useState('')
   const [isLoading, setIsLoading] = useState(true)
   const [openModal, setOpenModal] = useState(false)
   const [dataToEdit, setDataToEdit] = useState(null)
@@ -37,26 +38,46 @@ const MainSectionContent = () => {
   }, [])
 
   const handleAddNewProduct = async (newProductData) => {
-    const data = await addNewProduct(newProductData)
-    setProducts([...products, data])
+    try {
+      const data = await addNewProduct(newProductData)
+      setProducts([...products, data])
+    } catch (error) {
+      console.error(error.message)
+      setError('An error occurred adding a new product, try again.')
+    }
   }
 
   const handleUpdateExistingProduct = async (id, newData) => {
-    const data = await updateProduct(id, newData)
-    setProducts(
-      products.map((product) => (product.id === data.id ? data : product))
-    )
+    try {
+      const data = await updateProduct(id, newData)
+      setProducts(
+        products.map((product) => (product.id === data.id ? data : product))
+      )
+    } catch (error) {
+      console.error(error.message)
+      setError('An error occurred updating the product, try again.')
+    }
   }
 
   const handleEditProduct = async (id) => {
-    const productToEdit = await getSingleProduct(id)
-    setDataToEdit(productToEdit)
+    try {
+      const productToEdit = await getSingleProduct(id)
+      setDataToEdit(productToEdit)
+    } catch (error) {
+      console.error(error.message)
+      setModalErrorMsg('An error occurred fetching your product, try again.')
+    }
     handleOpenModal()
   }
 
   const handleDeleteProduct = async (id) => {
-    await deleteProduct(id)
-    setProducts(products.filter((product) => product.id !== id))
+    try {
+      await deleteProduct(id)
+      setProducts(products.filter((product) => product.id !== id))
+    } catch (error) {
+      console.error(error.message)
+      setError('An error occurred attempting to delete a product, try again.')
+    }
   }
 
   const handleOpenModal = () => {
@@ -103,6 +124,7 @@ const MainSectionContent = () => {
           handlePartialEdit={handlePartialEdit}
           handleDataToEdit={handleDataToEdit}
           dataToEdit={dataToEdit}
+          modalErrorMsg={modalErrorMsg}
         />
       )}
       {confirmModalIsOpen && (

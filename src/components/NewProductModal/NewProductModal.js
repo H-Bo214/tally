@@ -8,6 +8,7 @@ const NewProductModal = ({
   handlePartialEdit,
   handleDataToEdit,
   dataToEdit,
+  modalErrorMsg,
 }) => {
   const {
     register,
@@ -55,6 +56,11 @@ const NewProductModal = ({
             onClick={handleFormEditValues}
           />
         </section>
+        {modalErrorMsg && (
+          <div>
+            <h1>{modalErrorMsg}</h1>
+          </div>
+        )}
         <form onSubmit={handleSubmit(handleData)}>
           <div className='left-section-container'>
             <label>
