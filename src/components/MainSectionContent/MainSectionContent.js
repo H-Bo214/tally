@@ -2,7 +2,7 @@ import './MainSectionContent.css'
 import Header from '../Header/Header'
 import ProductInventory from '../ProductInventory/ProductInventory'
 import AddNewProduct from '../AddNewProduct/AddNewProduct'
-import NewProductModal from '../NewProductModal/NewProductModal'
+import ProductFormModal from '../ProductFormModal/ProductFormModal'
 import { useState, useEffect } from 'react'
 import ConfirmationModal from '../ConfirmationModal/ConfirmationModal'
 import {
@@ -31,7 +31,9 @@ const MainSectionContent = () => {
       } catch (error) {
         console.error(error.message)
         setIsLoading(false)
-        setError('An error occurred, please refresh the page.')
+        setError(
+          'An error occurred getting your products, please refresh the page.'
+        )
       }
     }
     fetchProducts()
@@ -117,7 +119,7 @@ const MainSectionContent = () => {
       <Header />
       <AddNewProduct handleOpenModal={handleOpenModal} />
       {openModal && (
-        <NewProductModal
+        <ProductFormModal
           handleCloseModal={handleCloseModal}
           handleAddNewProduct={handleAddNewProduct}
           handleUpdateExistingProduct={handleUpdateExistingProduct}

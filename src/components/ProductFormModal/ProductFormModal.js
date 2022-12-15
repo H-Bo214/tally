@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
-import './NewProductModal.css'
+import './ProductFormModal.css'
 
-const NewProductModal = ({
+const ProductFormModal = ({
   handleCloseModal,
   handleAddNewProduct,
   handleUpdateExistingProduct,
@@ -137,4 +137,4 @@ const NewProductModal = ({
   )
 }
 
-export default NewProductModal
+export default ProductFormModal
