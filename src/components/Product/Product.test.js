@@ -50,7 +50,6 @@ describe('Product', () => {
   })
 
   it('should display a product status', () => {
-    // screen.debug()
     const status = screen.getByText('On order')
     expect(status).toBeInTheDocument()
   })
