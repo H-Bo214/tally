@@ -16,7 +16,7 @@ const ProductInventory = ({
   handleEditProduct,
   handleDeleteProduct,
 }) => {
-  const productList = products.map((product) => (
+  const productList = products?.map((product) => (
     <Product
       product={product}
       key={product.id}
@@ -37,8 +37,8 @@ const ProductInventory = ({
           cssOverride={override}
           speedMultiplier={0.5}
         />
-        {products && productList}
         {error && <h1 className='error-message'>{error}</h1>}
+        {products && productList}
       </section>
     </main>
   )

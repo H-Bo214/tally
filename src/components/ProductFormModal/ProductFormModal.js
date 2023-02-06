@@ -1,13 +1,14 @@
 import { useForm } from 'react-hook-form'
-import './NewProductModal.css'
+import './ProductFormModal.css'
 
-const NewProductModal = ({
+const ProductFormModal = ({
   handleCloseModal,
   handleAddNewProduct,
   handleUpdateExistingProduct,
   handlePartialEdit,
   handleDataToEdit,
   dataToEdit,
+  modalErrorMsg,
 }) => {
   const {
     register,
@@ -55,6 +56,11 @@ const NewProductModal = ({
             onClick={handleFormEditValues}
           />
         </section>
+        {modalErrorMsg && (
+          <div>
+            <h1>{modalErrorMsg}</h1>
+          </div>
+        )}
         <form onSubmit={handleSubmit(handleData)}>
           <div className='left-section-container'>
             <label>
@@ -131,4 +137,4 @@ const NewProductModal = ({
   )
 }
 
-export default NewProductModal
+export default ProductFormModal

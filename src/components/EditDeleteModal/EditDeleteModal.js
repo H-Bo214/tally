@@ -1,4 +1,5 @@
 import './EditDeleteModal.css'
+import Button from '../Button/Button'
 
 const EditDeleteModal = ({
   handleCloseEditModal,
@@ -17,14 +18,14 @@ const EditDeleteModal = ({
       onMouseLeave={handleCloseEditModal}
     >
       <div>
-        <button className='edit' onClick={handleModalClose}>
-          Edit
-        </button>
+        <Button name='Edit' className='edit' onClick={handleModalClose} />
       </div>
       <div>
-        <button className='delete' onClick={() => handleDeleteProduct(id)}>
-          Delete
-        </button>
+        <Button
+          name='Delete'
+          className='delete'
+          onClick={() => handleDeleteProduct(id)}
+        />
       </div>
     </section>
   )

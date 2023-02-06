@@ -43,8 +43,8 @@ const Product = ({ product, handleEditProduct, handleDeleteProduct }) => {
         <p className='stock-status'>{product.status}</p>
         <button
           className={isHovering ? 'edit-button' : 'no-display'}
-          name='edit menu button'
           onClick={handleOpenEditModal}
+          aria-label='edit or delete menu'
         />
       </div>
       {editDeleteModalOpen && (

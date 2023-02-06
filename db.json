@@ -4,9 +4,9 @@
       "id": 1,
       "img": "/productImages/iphone13.png",
       "name": "iPhone 511 Pro Max",
-      "sku": "10101",
+      "sku": "5555555",
       "description": "Hollywood-worthy video shooting made easy. A lightning-fast chip. And a big boost in battery life you’ll notice every day.",
-      "price": "2001",
+      "price": "5000",
       "quantity": "9",
       "status": "On order"
     },
@@ -61,14 +61,14 @@
       "status": "In stock"
     },
     {
-      "img": "https://i5.walmartimages.com/asr/4122a43d-a8ee-42c4-81da-2428810627d6_1.aea763d910708017eacab2c9010a6137.jpeg",
-      "name": "ipad Pro Rose Gold 2021",
-      "sku": "sdfjasjfkj242424",
-      "description": "Ipad 2021 version Rose Gold",
-      "price": "1000",
-      "quantity": "2",
-      "status": "Low stock",
-      "id": 9
+      "img": "ulr ",
+      "name": "blah",
+      "sku": "34",
+      "description": "lasjdfklj",
+      "price": "22",
+      "quantity": "99",
+      "status": "In stock",
+      "id": 8
     }
   ]
 }
