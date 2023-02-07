@@ -31,3 +31,63 @@
   width: 32px;
   height: 32px;
 }
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0.75rem 0 0.75rem 0;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.form-sections-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.left-section-container {
+  border: 1px solid red;
+}
+
+.right-section-container {
+  border: 1px solid limegreen;
+}
+
+.buttons-container-form {
+  border: 1px solid purple;
+}
+
+.price-quantity-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-error-message {
+  color: #fd0d0d;
+  line-height: 14px;
+  font-weight: 500;
+  min-height: 17px;
+  margin: 0;
+}
+
+.form-error-message::before {
+  content: url('../../assets/icons/alert-icon.svg') / 'warning';
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 4px;
+}
+
+.hidden-style {
+  visibility: hidden;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  color: #53545c;
+  font-weight: 500;
+  line-height: 19px;
+}

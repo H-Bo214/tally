@@ -62,75 +62,105 @@ const ProductFormModal = ({
           </div>
         )}
         <form onSubmit={handleSubmit(handleData)}>
-          <div className='left-section-container'>
-            <label>
-              Product name
-              <input
-                type='text'
-                {...register('name', { required: 'Product name required' })}
-              />
-            </label>
-            <p>{errors.name?.message}</p>
-            <label>
-              SKU
-              <input
-                type='text'
-                {...register('sku', { required: 'SKU required' })}
-              />
-            </label>
-            <p>{errors.sku?.message}</p>
-            <label>
-              Description
-              <textarea
-                {...register('description', { required: 'Quantity required' })}
-              />
-            </label>
-            <p>{errors.description?.message}</p>
-            <div className='price-quantity-container'>
+          <div className='form-sections-container'>
+            <div className='left-section-container'>
+              <h2>Information</h2>
               <label>
-                Price
+                Product name
                 <input
-                  type='number'
-                  {...register('price', { required: 'Price required' })}
+                  type='text'
+                  {...register('name', {
+                    required: 'Please enter a product name',
+                  })}
                 />
               </label>
-              <p>{errors.price?.message}</p>
+              <p
+                className={
+                  errors.name?.message
+                    ? 'form-error-message'
+                    : 'form-error-message hidden-style'
+                }
+              >
+                {errors.name?.message}
+              </p>
               <label>
-                Quantity
+                SKU
                 <input
-                  type='number'
-                  {...register('quantity', { required: 'Quantity required' })}
+                  type='text'
+                  {...register('sku', { required: 'SKU required' })}
                 />
               </label>
-              <p>{errors.quantity?.message}</p>
+              <p className='form-error-message'>{errors.sku?.message}</p>
+              <label>
+                Description
+                <textarea
+                  {...register('description', {
+                    required: 'Description required',
+                  })}
+                />
+              </label>
+              <p className='form-error-message'>
+                {errors.description?.message}
+              </p>
+              <div className='price-quantity-container'>
+                <div className='label-input-errorMsg-container'>
+                  <label>
+                    Price
+                    <input
+                      type='number'
+                      {...register('price', { required: 'Price required' })}
+                    />
+                  </label>
+                  <p className='form-error-message'>{errors.price?.message}</p>
+                </div>
+                <div className='label-input-errorMsg-container'>
+                  <label>
+                    Quantity
+                    <input
+                      type='number'
+                      {...register('quantity', {
+                        required: 'Quantity required',
+                      })}
+                    />
+                  </label>
+                  <p className='form-error-message'>
+                    {errors.quantity?.message}
+                  </p>
+                </div>
+              </div>
+              <label>
+                Status
+                <select
+                  {...register('status', {
+                    required: 'Product status required',
+                  })}
+                >
+                  <option value=''></option>
+                  <option value='In stock'>In stock</option>
+                  <option value='On order'>On order</option>
+                  <option value='Low stock'>Low stock</option>
+                </select>
+              </label>
+              <p className='form-error-message'>{errors.status?.message}</p>
+            </div>
+            <div className='right-section-container'>
+              <h2>Photo</h2>
+              <label>
+                Web address
+                <input
+                  type='text'
+                  {...register('img', { required: 'Image url required' })}
+                />
+              </label>
+              <p className='form-error-message'>{errors.img?.message}</p>
             </div>
           </div>
-          <div className='right-section-container'>
-            <label>
-              Photo
-              <input
-                type='text'
-                {...register('img', { required: 'Image url required' })}
-              />
-            </label>
-            <p>{errors.img?.message}</p>
-            <label>
-              Status
-              <select
-                {...register('status', { required: 'Product status required' })}
-              >
-                <option value=''></option>
-                <option value='In stock'>In stock</option>
-                <option value='On order'>On order</option>
-                <option value='Low stock'>Low stock</option>
-              </select>
-            </label>
-            <p>{errors.status?.message}</p>
+          <div className='buttons-container-form'>
+            <button type='button' onClick={handleFormEditValues}>
+              Cancel
+            </button>
+            <button type='submit'>Save</button>
           </div>
-          <button type='button' onClick={handleFormEditValues}>
-            Cancel
-          </button>
-          <button type='submit'>Save</button>
         </form>
       </section>
     </>
