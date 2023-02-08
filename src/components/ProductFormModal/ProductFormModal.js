@@ -65,12 +65,12 @@ const ProductFormModal = ({
           <div className='form-sections-container'>
             <div className='left-section-container'>
               <h2>Information</h2>
-              <label>
+              <label className={errors.name?.message && 'label-error-style'}>
                 Product name
                 <input
                   type='text'
                   {...register('name', {
-                    required: 'Please enter a product name',
+                    required: "Please enter the product's name",
                   })}
                 />
               </label>
@@ -83,56 +83,94 @@ const ProductFormModal = ({
               >
                 {errors.name?.message}
               </p>
-              <label>
+              <label className={errors.sku?.message && 'label-error-style'}>
                 SKU
                 <input
                   type='text'
-                  {...register('sku', { required: 'SKU required' })}
-                />
-              </label>
-              <p className='form-error-message'>{errors.sku?.message}</p>
-              <label>
-                Description
-                <textarea
-                  {...register('description', {
-                    required: 'Description required',
+                  {...register('sku', {
+                    required: "Please enter the product's SKU",
                   })}
                 />
               </label>
-              <p className='form-error-message'>
+              <p
+                className={
+                  errors.sku?.message
+                    ? 'form-error-message'
+                    : 'form-error-message hidden-style'
+                }
+              >
+                {errors.sku?.message}
+              </p>
+              <label
+                className={errors.description?.message && 'label-error-style'}
+              >
+                Description
+                <textarea
+                  {...register('description', {
+                    required: "Please enter the product's description",
+                  })}
+                />
+              </label>
+              <p
+                className={
+                  errors.description?.message
+                    ? 'form-error-message'
+                    : 'form-error-message hidden-style'
+                }
+              >
                 {errors.description?.message}
               </p>
               <div className='price-quantity-container'>
                 <div className='label-input-errorMsg-container'>
-                  <label>
+                  <label
+                    className={errors.price?.message && 'label-error-style'}
+                  >
                     Price
                     <input
-                      type='number'
-                      {...register('price', { required: 'Price required' })}
-                    />
-                  </label>
-                  <p className='form-error-message'>{errors.price?.message}</p>
-                </div>
-                <div className='label-input-errorMsg-container'>
-                  <label>
-                    Quantity
-                    <input
-                      type='number'
-                      {...register('quantity', {
-                        required: 'Quantity required',
+                      type='text'
+                      {...register('price', {
+                        required: "Please enter the product's price",
                       })}
                     />
                   </label>
-                  <p className='form-error-message'>
+                  <p
+                    className={
+                      errors.price?.message
+                        ? 'form-error-message'
+                        : 'form-error-message hidden-style'
+                    }
+                  >
+                    {errors.price?.message}
+                  </p>
+                </div>
+                <div className='label-input-errorMsg-container'>
+                  <label
+                    className={errors.quantity?.message && 'label-error-style'}
+                  >
+                    Quantity
+                    <input
+                      type='text'
+                      {...register('quantity', {
+                        required: "Please enter the product's quantity",
+                      })}
+                    />
+                  </label>
+                  <p
+                    className={
+                      errors.quantity?.message
+                        ? 'form-error-message'
+                        : 'form-error-message hidden-style'
+                    }
+                  >
                     {errors.quantity?.message}
                   </p>
                 </div>
               </div>
-              <label>
+              <label className={errors.status?.message && 'label-error-style'}>
                 Status
                 <select
                   {...register('status', {
-                    required: 'Product status required',
+                    required: "Please enter the product's status",
                   })}
                 >
                   <option value=''></option>
@@ -141,18 +179,36 @@ const ProductFormModal = ({
                   <option value='Low stock'>Low stock</option>
                 </select>
               </label>
-              <p className='form-error-message'>{errors.status?.message}</p>
+              <p
+                className={
+                  errors.status?.message
+                    ? 'form-error-message'
+                    : 'form-error-message hidden-style'
+                }
+              >
+                {errors.status?.message}
+              </p>
             </div>
             <div className='right-section-container'>
               <h2>Photo</h2>
-              <label>
+              <label className={errors.img?.message && 'label-error-style'}>
                 Web address
                 <input
                   type='text'
-                  {...register('img', { required: 'Image url required' })}
+                  {...register('img', {
+                    required: "Please enter the product's image url",
+                  })}
                 />
               </label>
-              <p className='form-error-message'>{errors.img?.message}</p>
+              <p
+                className={
+                  errors.img?.message
+                    ? 'form-error-message'
+                    : 'form-error-message hidden-style'
+                }
+              >
+                {errors.img?.message}
+              </p>
             </div>
           </div>
           <div className='buttons-container-form'>

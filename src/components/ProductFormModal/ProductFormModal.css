@@ -88,6 +88,10 @@ label {
   display: flex;
   flex-direction: column;
   color: #53545c;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 19px;
+}
+
+.label-error-style {
+  color: #fd0d0d;
 }
