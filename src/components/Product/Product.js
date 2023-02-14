@@ -40,7 +40,8 @@ const Product = ({ product, handleEditProduct, handleDeleteProduct }) => {
       <div className='single-product-status-container'>
         <p className='price'>${product.price}</p>
         <p className='quantity'>{product.quantity}</p>
-        <p className='stock-status'>{product.status}</p>
+        {/* <p className='stock-status'>{product.status}</p> */}
+        <p className='stock-status'>{product.status.value}</p>
         <button
           className={isHovering ? 'edit-button' : 'no-display'}
           onClick={handleOpenEditModal}

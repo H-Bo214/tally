@@ -18,7 +18,7 @@ const MainSectionContent = () => {
   const [error, setError] = useState('')
   const [modalErrorMsg, setModalErrorMsg] = useState('')
   const [isLoading, setIsLoading] = useState(true)
-  const [openModal, setOpenModal] = useState(false)
+  const [openModal, setOpenModal] = useState(false) // change back to false after styling
   const [dataToEdit, setDataToEdit] = useState(null)
   const [confirmModalIsOpen, setConfirmModalIsOpen] = useState(false)
 
@@ -26,8 +26,13 @@ const MainSectionContent = () => {
     const fetchProducts = async () => {
       try {
         const data = await getProducts()
-        setProducts(data)
-        setIsLoading(false)
+        if (data.length > 0) {
+          setProducts(data)
+          setIsLoading(false)
+        } else {
+          setError('No Products to display')
+          setIsLoading(false)
+        }
       } catch (error) {
         console.error(error.message)
         setIsLoading(false)

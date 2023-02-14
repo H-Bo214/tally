@@ -65,6 +65,10 @@ h2 {
   gap: 1rem;
 }
 
+.price-quantity-container > * {
+  width: 11.3rem;
+}
+
 .form-error-message {
   color: #fd0d0d;
   line-height: 14px;
@@ -88,10 +92,45 @@ label {
   display: flex;
   flex-direction: column;
   color: #53545c;
-  font-weight: 700;
   line-height: 19px;
+  padding-bottom: 0.3125rem;
 }
 
 .label-error-style {
   color: #fd0d0d;
+  font-weight: 700;
+}
+
+input,
+textarea {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  background: #f7fafb;
+  border: 2px solid #92bdff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 23.4375rem;
+}
+
+input {
+  height: 3.25rem;
+}
+
+textarea {
+  height: 7.75rem;
+  resize: none;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.price-quantity-input {
+  width: 11.34375rem;
+}
+
+.dot-container {
+  display: flex;
+  gap: 0.5rem;
 }

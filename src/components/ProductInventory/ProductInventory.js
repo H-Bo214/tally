@@ -16,15 +16,6 @@ const ProductInventory = ({
   handleEditProduct,
   handleDeleteProduct,
 }) => {
-  const productList = products?.map((product) => (
-    <Product
-      product={product}
-      key={product.id}
-      handleEditProduct={handleEditProduct}
-      handleDeleteProduct={handleDeleteProduct}
-    />
-  ))
-
   return (
     <main>
       <section className='products-container'>
@@ -38,7 +29,15 @@ const ProductInventory = ({
           speedMultiplier={0.5}
         />
         {error && <h1 className='error-message'>{error}</h1>}
-        {products && productList}
+        {products.length > 0 &&
+          products.map((product) => (
+            <Product
+              product={product}
+              key={product.id}
+              handleEditProduct={handleEditProduct}
+              handleDeleteProduct={handleDeleteProduct}
+            />
+          ))}
       </section>
     </main>
   )

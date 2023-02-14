@@ -6,9 +6,14 @@
       "name": "iPhone 511 Pro Max",
       "sku": "5555555",
       "description": "Hollywood-worthy video shooting made easy. A lightning-fast chip. And a big boost in battery life you’ll notice every day.",
-      "price": "5000",
+      "price": 5000,
       "quantity": "9",
-      "status": "On order"
+      "status": {
+        "value": "On order",
+        "label": "On order",
+        "icon": "/static/media/yellow-dot.9e2b4975eb21d08d16d31631d65ffa98.svg"
+      },
+      "imgUrl": "gjhjk"
     },
     {
       "id": 2,
@@ -18,7 +23,12 @@
       "description": "A super bright display in a durable design. Hollywood-worthy video shooting made easy. A lightning-fast chip. And a big boost in battery life you’ll notice every day.",
       "price": 200,
       "quantity": 120,
-      "status": "In stock"
+      "status": {
+        "value": "On order",
+        "label": "On order",
+        "icon": "/static/media/yellow-dot.9e2b4975eb21d08d16d31631d65ffa98.svg"
+      },
+      "imgUrl": "sdfs"
     },
     {
       "id": 3,
@@ -28,7 +38,12 @@
       "description": "A super bright display in a durable design. Hollywood-worthy video shooting made easy. A lightning-fast chip. And a big boost in battery life you’ll notice every day.",
       "price": 200,
       "quantity": 120,
-      "status": "In stock"
+      "status": {
+        "value": "Low stock",
+        "label": "Low stock",
+        "icon": "/static/media/red-dot.c1a4440ea5b487d00e4fcae595af23b2.svg"
+      },
+      "imgUrl": "werw"
     },
     {
       "id": 4,
@@ -36,9 +51,14 @@
       "name": "iPhone Pro navy blue",
       "sku": "00422001",
       "description": "A super bright display in a durable design. Hollywood-worthy video shooting made easy. A lightning-fast chip. And a big boost in battery life you’ll notice every day.",
-      "price": "250",
+      "price": 250,
       "quantity": 120,
-      "status": "In stock"
+      "status": {
+        "value": "On order",
+        "label": "On order",
+        "icon": "/static/media/yellow-dot.9e2b4975eb21d08d16d31631d65ffa98.svg"
+      },
+      "imgUrl": "sdfs"
     },
     {
       "id": 6,
@@ -48,7 +68,12 @@
       "description": "A super bright display in a durable design. Hollywood-worthy video shooting made easy. A lightning-fast chip. And a big boost in battery life you’ll notice every day.",
       "price": 200,
       "quantity": 120,
-      "status": "In stock"
+      "status": {
+        "value": "In stock",
+        "label": "In stock",
+        "icon": "/static/media/green-dot.ed4bc1b8989fb8f687ac7def1ad705fe.svg"
+      },
+      "imgUrl": "uuyui"
     },
     {
       "id": 7,
@@ -58,16 +83,25 @@
       "description": "A super bright display in a durable design. Hollywood-worthy video shooting made easy. A lightning-fast chip. And a big boost in battery life you’ll notice every day.",
       "price": 200,
       "quantity": 120,
-      "status": "In stock"
+      "status": {
+        "value": "On order",
+        "label": "On order",
+        "icon": "/static/media/yellow-dot.9e2b4975eb21d08d16d31631d65ffa98.svg"
+      },
+      "imgUrl": "dsfs"
     },
     {
-      "img": "ulr ",
-      "name": "blah",
-      "sku": "34",
-      "description": "lasjdfklj",
-      "price": "22",
-      "quantity": "99",
-      "status": "In stock",
+      "imgUrl": "fasdfasdf",
+      "name": "dfasdf",
+      "sku": "fasdfasdf",
+      "description": "sdfasdfasdf",
+      "price": 333,
+      "quantity": "33",
+      "status": {
+        "value": "On order",
+        "label": "On order",
+        "icon": "/static/media/yellow-dot.9e2b4975eb21d08d16d31631d65ffa98.svg"
+      },
       "id": 8
     }
   ]
