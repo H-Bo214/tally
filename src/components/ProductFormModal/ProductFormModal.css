@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(0.125rem);
   background-color: rgba(163, 163, 163, 0.2);
   z-index: 1000;
 }
@@ -15,7 +15,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  padding: 50px;
+  border-radius: 0.75rem;
+  padding: 3.125rem;
   z-index: 1000;
 }
 
@@ -28,8 +29,8 @@
 .close-button {
   background: url('../../assets/close-button.svg') no-repeat;
   border: none;
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
 }
 
 h1 {
@@ -49,15 +50,15 @@ h2 {
 }
 
 .left-section-container {
-  border: 1px solid red;
+  border: 0.0625rem solid red;
 }
 
 .right-section-container {
-  border: 1px solid limegreen;
+  border: 0.0625rem solid limegreen;
 }
 
 .buttons-container-form {
-  border: 1px solid purple;
+  border: 0.0625rem solid purple;
 }
 
 .price-quantity-container {
@@ -71,9 +72,9 @@ h2 {
 
 .form-error-message {
   color: #fd0d0d;
-  line-height: 14px;
+  line-height: 0.875rem;
   font-weight: 500;
-  min-height: 17px;
+  min-height: 1.0625rem;
   margin: 0;
 }
 
@@ -81,7 +82,7 @@ h2 {
   content: url('../../assets/icons/alert-icon.svg') / 'warning';
   display: inline-block;
   vertical-align: middle;
-  padding-right: 4px;
+  padding-right: 0.25rem;
 }
 
 .hidden-style {
@@ -92,7 +93,7 @@ label {
   display: flex;
   flex-direction: column;
   color: #53545c;
-  line-height: 19px;
+  line-height: 1.1875rem;
   padding-bottom: 0.3125rem;
 }
 
@@ -106,7 +107,7 @@ textarea {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   background: #f7fafb;
-  border: 2px solid #92bdff;
+  border: 0.125rem solid #92bdff;
   border-radius: 0.5rem;
   padding: 1rem;
   width: 23.4375rem;
