@@ -1,4 +1,5 @@
 import { useForm, Controller } from 'react-hook-form'
+import Button from '../Button/Button'
 import {
   OPTIONS,
   optionLabel,
@@ -233,10 +234,8 @@ const ProductFormModal = ({
             </div>
           </div>
           <div className='buttons-container-form'>
-            <button type='button' onClick={handleFormEditValues}>
-              Cancel
-            </button>
-            <button type='submit'>Save</button>
+            <Button onClick={handleFormEditValues} name='Cancel' />
+            <Button type='submit' name='Save' />
           </div>
         </form>
       </section>
