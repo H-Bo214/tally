@@ -16,7 +16,7 @@
   transform: translate(-50%, -50%);
   background-color: #fff;
   border-radius: 0.75rem;
-  padding: 3.125rem;
+  padding: 2rem;
   z-index: 1000;
 }
 
@@ -49,25 +49,29 @@ h2 {
   gap: 2rem;
 }
 
-.left-section-container {
+/* .left-section-container {
   border: 0.0625rem solid red;
 }
 
 .right-section-container {
   border: 0.0625rem solid limegreen;
-}
+} */
 
-.buttons-container-form {
+/* .buttons-container-form {
   border: 0.0625rem solid purple;
-}
+} */
 
 .price-quantity-container {
   display: flex;
   gap: 1rem;
 }
 
+.price-quantity-input {
+  width: 9rem;
+}
+
 .price-quantity-container > * {
-  width: 11.3rem;
+  width: 10rem;
 }
 
 .form-error-message {
@@ -75,7 +79,7 @@ h2 {
   line-height: 0.875rem;
   font-weight: 500;
   min-height: 1.0625rem;
-  margin: 0;
+  margin: 4px 0 4px 0;
 }
 
 .form-error-message::before {
@@ -94,7 +98,7 @@ label {
   flex-direction: column;
   color: #53545c;
   line-height: 1.1875rem;
-  padding-bottom: 0.3125rem;
+  /* padding-bottom: 0.3125rem; */
 }
 
 .label-error-style {
@@ -110,15 +114,15 @@ textarea {
   border: 0.125rem solid #92bdff;
   border-radius: 0.5rem;
   padding: 1rem;
-  width: 23.4375rem;
+  width: 20rem;
 }
 
 input {
-  height: 3.25rem;
+  height: 3rem;
 }
 
 textarea {
-  height: 7.75rem;
+  height: 6.75rem;
   resize: none;
 }
 
@@ -127,11 +131,49 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.price-quantity-input {
-  width: 11.34375rem;
-}
 
 .dot-container {
   display: flex;
   gap: 0.5rem;
+}
+
+.buttons-container-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.form-button {
+  border-radius: 0.75rem;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.product-form-button-light {
+  color: #1162dd;
+  background-color: #fff;
+  border: 2px solid #1162dd;
+  padding: 8px 36px;
+}
+
+.product-form-button-light:hover {
+  background-color: #deebff;
+}
+
+.product-form-button-dark {
+  color: #fff;
+  background-color: #1162dd;
+  border: 2px solid #1162dd;
+  padding: 8px 43.5px;
+}
+
+.product-form-button-dark:hover {
+  background-color: #5c9dff;
+}
+
+.image-preview {
+  width: 100%;
+  object-fit: cover;
 }

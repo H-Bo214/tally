@@ -60,6 +60,7 @@ const customStyles = {
     ...provided,
     border: '2px solid #92BDFF',
     borderRadius: '0.5rem',
+    width: '20rem',
   }),
   menu: (provided) => ({
     ...provided,

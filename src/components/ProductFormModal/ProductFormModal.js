@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import Button from '../Button/Button'
+import placeHolderImg from '../../assets/image-preview.svg'
 import {
   OPTIONS,
   optionLabel,
@@ -26,6 +28,15 @@ const ProductFormModal = ({
     control,
     formState: { errors },
   } = useForm({ defaultValues: dataToEdit ? dataToEdit : defaultFormValues })
+  const [image, setImage] = useState('')
+  const [imageUpdated, setImageUpdated] = useState(false)
+
+  const handlePreview = (e) => {
+    setImageUpdated(true)
+    setImage(e.target.value)
+  }
+
+  console.log('dataToEdit', dataToEdit)
 
   const handleData = (data) => {
     if (dataToEdit?.id) {
@@ -74,7 +85,7 @@ const ProductFormModal = ({
                 type='text'
                 id='product-name'
                 {...register('name', {
-                  required: 'Product name required',
+                  required: 'Name required',
                 })}
               />
               <p
@@ -96,7 +107,7 @@ const ProductFormModal = ({
                 type='text'
                 id='sku'
                 {...register('sku', {
-                  required: 'Product SKU required',
+                  required: 'SKU required',
                 })}
               />
               <p
@@ -117,7 +128,7 @@ const ProductFormModal = ({
               <textarea
                 id='description'
                 {...register('description', {
-                  required: 'Product description required',
+                  required: 'Description required',
                 })}
               />
               <p
@@ -142,7 +153,7 @@ const ProductFormModal = ({
                     type='number'
                     className='price-quantity-input'
                     {...register('price', {
-                      required: 'Product price required',
+                      required: 'Price required',
                       valueAsNumber: true,
                     })}
                   />
@@ -168,7 +179,7 @@ const ProductFormModal = ({
                     type='text'
                     className='price-quantity-input'
                     {...register('quantity', {
-                      required: 'Product quantity required',
+                      required: 'Quantity required',
                     })}
                   />
                   <p
@@ -182,7 +193,12 @@ const ProductFormModal = ({
                   </p>
                 </div>
               </div>
-              <label>Status</label>
+              <label
+                htmlFor='status'
+                className={errors.status?.message && 'label-error-style'}
+              >
+                Status
+              </label>
               <Controller
                 name='status'
                 control={control}
@@ -194,6 +210,7 @@ const ProductFormModal = ({
                     placeholder='Choose an option'
                     styles={customStyles}
                     formatOptionLabel={optionLabel}
+                    id='status'
                   />
                 )}
               />
@@ -221,6 +238,7 @@ const ProductFormModal = ({
                 {...register('imgUrl', {
                   required: 'Product image URL required',
                 })}
+                onChange={handlePreview}
               />
               <p
                 className={
@@ -231,11 +249,29 @@ const ProductFormModal = ({
               >
                 {errors.imgUrl?.message}
               </p>
+              <section className='image-preview-container'>
+                <h3>Preview</h3>
+                <div>
+                  <img
+                    src={imageUpdated ? image : dataToEdit?.imgUrl}
+                    alt={dataToEdit ? dataToEdit.name : ''}
+                    className='image-preview'
+                  />
+                </div>
+              </section>
             </div>
           </div>
           <div className='buttons-container-form'>
-            <Button onClick={handleFormEditValues} name='Cancel' />
-            <Button type='submit' name='Save' />
+            <Button
+              onClick={handleFormEditValues}
+              name='Cancel'
+              className='form-button product-form-button-light'
+            />
+            <Button
+              type='submit'
+              name='Save'
+              className='form-button product-form-button-dark'
+            />
           </div>
         </form>
       </section>

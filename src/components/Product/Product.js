@@ -5,7 +5,7 @@ import EditDeleteModal from '../EditDeleteModal/EditDeleteModal'
 const Product = ({ product, handleEditProduct, handleDeleteProduct }) => {
   const [isHovering, setIsHovering] = useState(false)
   const [editDeleteModalOpen, setEditDeleteModalOpen] = useState(false)
-
+  // console.log('product', product)
   const handleMouseEnter = () => {
     setIsHovering(true)
   }
@@ -29,7 +29,7 @@ const Product = ({ product, handleEditProduct, handleDeleteProduct }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <img src={product.img} alt={product.name} width='54' height='50' />
+      <img src={product.imgUrl} alt={product.name} width='54' height='50' />
       <div className='product-container'>
         <h3>{product.name}</h3>
         <p>{product.sku}</p>
