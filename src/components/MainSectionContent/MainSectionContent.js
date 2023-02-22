@@ -74,7 +74,7 @@ const MainSectionContent = () => {
       console.error(error.message)
       setModalErrorMsg('An error occurred fetching your product, try again.')
     }
-    handleOpenModal()
+    setOpenModal(true)
   }
 
   const handleDeleteProduct = async (id) => {
@@ -91,11 +91,6 @@ const MainSectionContent = () => {
     setOpenModal(true)
   }
 
-  const handleOpenConfirmationModal = () => {
-    handleCloseModal()
-    setConfirmModalIsOpen(true)
-  }
-
   const handleCloseConfirmationModal = () => {
     setDataToEdit(null)
     setConfirmModalIsOpen(false)
@@ -107,12 +102,13 @@ const MainSectionContent = () => {
 
   const handlePartialEdit = (data) => {
     setDataToEdit(data)
-    handleOpenConfirmationModal()
+    setOpenModal(false)
+    setConfirmModalIsOpen(true)
   }
 
   const handleKeepEditing = () => {
     setConfirmModalIsOpen(false)
-    handleOpenModal()
+    setOpenModal(true)
   }
 
   const handleDataToEdit = (dataState) => {
