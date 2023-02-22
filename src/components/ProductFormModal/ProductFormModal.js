@@ -244,7 +244,7 @@ const ProductFormModal = ({
               </p>
               <section className='image-preview-container'>
                 <p className='preview-heading'>Preview</p>
-                <div>
+                <div className='image-preview-container'>
                   <img
                     src={imageProps[0] ? imageProps[0] : placeHolderImg}
                     alt={imageProps[0] ? imageProps[1] : 'placeholder'}
