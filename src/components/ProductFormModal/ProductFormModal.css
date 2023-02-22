@@ -49,18 +49,6 @@ h2 {
   gap: 2rem;
 }
 
-/* .left-section-container {
-  border: 0.0625rem solid red;
-}
-
-.right-section-container {
-  border: 0.0625rem solid limegreen;
-} */
-
-/* .buttons-container-form {
-  border: 0.0625rem solid purple;
-} */
-
 .price-quantity-container {
   display: flex;
   gap: 1rem;
@@ -93,12 +81,10 @@ h2 {
   visibility: hidden;
 }
 
-label {
-  display: flex;
-  flex-direction: column;
+label,
+.preview-heading {
   color: #53545c;
   line-height: 1.1875rem;
-  /* padding-bottom: 0.3125rem; */
 }
 
 .label-error-style {
@@ -173,7 +159,13 @@ input[type='number']::-webkit-outer-spin-button {
   background-color: #5c9dff;
 }
 
+.preview-heading {
+  margin: 0;
+}
+
 .image-preview {
   width: 100%;
   object-fit: cover;
+  border: 0.125rem solid #92bdff;
+  border-radius: 0.5rem;
 }
