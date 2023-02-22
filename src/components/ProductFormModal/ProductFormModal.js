@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import Button from '../Button/Button'
 import placeHolderImg from '../../assets/image-preview.svg'
@@ -25,32 +24,27 @@ const ProductFormModal = ({
     register,
     handleSubmit,
     getValues,
+    watch,
     control,
     formState: { errors },
   } = useForm({ defaultValues: dataToEdit ? dataToEdit : defaultFormValues })
-  const [image, setImage] = useState('')
-  const [imageUpdated, setImageUpdated] = useState(false)
 
-  const handlePreview = (e) => {
-    setImageUpdated(true)
-    setImage(e.target.value)
-  }
-
-  console.log('dataToEdit', dataToEdit)
+  const imageProps = watch(['imgUrl', 'name'])
 
   const handleData = (data) => {
     if (dataToEdit?.id) {
       handleUpdateExistingProduct(data.id, data)
-    } else {
-      handleAddNewProduct(data)
+      handleCloseModal()
+      handleDataToEdit(null)
+      return
     }
+    handleAddNewProduct(data)
     handleCloseModal()
     handleDataToEdit(null)
   }
 
   const handleFormEditValues = () => {
     const values = getValues()
-    console.log('values', values)
     handlePartialEdit(values)
   }
 
@@ -238,7 +232,6 @@ const ProductFormModal = ({
                 {...register('imgUrl', {
                   required: 'Product image URL required',
                 })}
-                onChange={handlePreview}
               />
               <p
                 className={
@@ -250,11 +243,11 @@ const ProductFormModal = ({
                 {errors.imgUrl?.message}
               </p>
               <section className='image-preview-container'>
-                <h3>Preview</h3>
+                <p className='preview-heading'>Preview</p>
                 <div>
                   <img
-                    src={imageUpdated ? image : dataToEdit?.imgUrl}
-                    alt={dataToEdit ? dataToEdit.name : ''}
+                    src={imageProps[0] ? imageProps[0] : placeHolderImg}
+                    alt={imageProps[0] ? imageProps[1] : 'placeholder'}
                     className='image-preview'
                   />
                 </div>

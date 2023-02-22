@@ -1,95 +1,95 @@
 {
   "products": [
     {
-      "imgUrl": "https://getunited.com/wp-content/uploads/2022/06/iphone_13_pro_alpine_green_1200x1200.png",
-      "name": "Iphone 13 Pro Forest Green",
+      "imgUrl": "https://cdnprod.mafretailproxy.com/sys-master-root/hff/h01/15199253528606/1831013_main.jpg_1700Wx1700H",
+      "name": "Iphone 13 White",
       "sku": "7373837837ASDFGHJK",
       "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).",
       "price": 699,
       "quantity": "10",
       "status": {
-        "value": "Out of stock",
-        "label": "Out of stock",
-        "icon": "/static/media/gray-dot.5f64c59c831a2ed96a122ab4de7e51a1.svg"
+        "value": "In stock",
+        "label": "In stock",
+        "icon": "/static/media/green-dot.ed4bc1b8989fb8f687ac7def1ad705fe.svg"
       },
       "id": 2
     },
     {
       "imgUrl": "https://store.uniqbe.com/images/product/c2ef2bf8-f690-4525-8d71-1b3601087c6a.png",
-      "name": "test 2",
-      "sku": "989",
-      "description": "today sucks",
-      "price": 22,
+      "name": "Iphone 13 Pro Forest Green",
+      "sku": "7373837837ASDFGHJK",
+      "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
+      "price": 699,
       "quantity": "33",
-      "status": {
-        "value": "On order",
-        "label": "On order",
-        "icon": "/static/media/yellow-dot.9e2b4975eb21d08d16d31631d65ffa98.svg"
-      },
-      "id": 3
-    },
-    {
-      "imgUrl": "https://cdnprod.mafretailproxy.com/sys-master-root/hff/h01/15199253528606/1831013_main.jpg_1700Wx1700H",
-      "name": "blah",
-      "sku": "sjdfklasj",
-      "description": "sldjfklasjdfkljsdklf",
-      "price": 333,
-      "quantity": "22",
       "status": {
         "value": "Out of stock",
         "label": "Out of stock",
         "icon": "/static/media/gray-dot.5f64c59c831a2ed96a122ab4de7e51a1.svg"
+      },
+      "id": 3
+    },
+    {
+      "imgUrl": "https://store.uniqbe.com/images/product/c2ef2bf8-f690-4525-8d71-1b3601087c6a.png",
+      "name": "Iphone 13 Pro Space Gray",
+      "sku": "7373837837ASDFGHJK",
+      "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
+      "price": 699,
+      "quantity": "22",
+      "status": {
+        "value": "On order",
+        "label": "On order",
+        "icon": "/static/media/yellow-dot.9e2b4975eb21d08d16d31631d65ffa98.svg"
       },
       "id": 5
     },
     {
       "imgUrl": "https://cdnprod.mafretailproxy.com/sys-master-root/hff/h01/15199253528606/1831013_main.jpg_1700Wx1700H",
-      "name": "fdasd",
-      "sku": "fsadf",
-      "description": "sdfasdf",
-      "price": 23,
+      "name": "Iphone 13 Pro Forest Poop",
+      "sku": "7373837837ASDFGHJK",
+      "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
+      "price": 699,
       "quantity": "33",
       "status": {
-        "value": "On order",
-        "label": "On order",
-        "icon": "/static/media/yellow-dot.9e2b4975eb21d08d16d31631d65ffa98.svg"
+        "value": "In stock",
+        "label": "In stock",
+        "icon": "/static/media/green-dot.ed4bc1b8989fb8f687ac7def1ad705fe.svg"
       },
       "id": 6
     },
     {
       "imgUrl": "https://cdnprod.mafretailproxy.com/sys-master-root/hff/h01/15199253528606/1831013_main.jpg_1700Wx1700H",
-      "name": "dfasdf",
-      "sku": "333",
-      "description": "dfasef",
-      "price": 33,
+      "name": "Iphone 13 Pro Forest Green",
+      "sku": "7373837837ASDFGHJK",
+      "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
+      "price": 699,
       "quantity": "33",
       "status": {
-        "value": "Out of stock",
-        "label": "Out of stock",
-        "icon": "/static/media/gray-dot.5f64c59c831a2ed96a122ab4de7e51a1.svg"
+        "value": "Low stock",
+        "label": "Low stock",
+        "icon": "/static/media/red-dot.c1a4440ea5b487d00e4fcae595af23b2.svg"
       },
       "id": 7
     },
     {
       "imgUrl": "https://store.uniqbe.com/images/product/c2ef2bf8-f690-4525-8d71-1b3601087c6a.png",
-      "name": "sdf",
-      "sku": "sddf",
-      "description": "dfs",
-      "price": 22,
+      "name": "Iphone 13 Pro Space Gray",
+      "sku": "XXXXXXXXXXXXXXXXXXXXX",
+      "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
+      "price": 699,
       "quantity": "22",
       "status": {
-        "value": "On order",
-        "label": "On order",
-        "icon": "/static/media/yellow-dot.9e2b4975eb21d08d16d31631d65ffa98.svg"
+        "value": "Out of stock",
+        "label": "Out of stock",
+        "icon": "/static/media/gray-dot.5f64c59c831a2ed96a122ab4de7e51a1.svg"
       },
       "id": 8
     },
     {
       "imgUrl": "https://www.powerplanetonline.com/cdnassets/apple_iphone_13_pro_max_128gb_oro_01_l.jpg",
-      "name": "dfs",
-      "sku": "sdfasdf",
-      "description": "dfasdfas",
-      "price": 11,
+      "name": "Iphone 13 Pro Forest Green",
+      "sku": "7373837837ASDFGHJK",
+      "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
+      "price": 699,
       "quantity": "11",
       "status": {
         "value": "On order",
@@ -100,10 +100,10 @@
     },
     {
       "imgUrl": "https://www.powerplanetonline.com/cdnassets/apple_iphone_13_pro_max_128gb_oro_01_l.jpg",
-      "name": "dfasdf",
-      "sku": "2322",
-      "description": "2222",
-      "price": 11,
+      "name": "Iphone 13 Pro Forest Green",
+      "sku": "7373837837ASDFGHJK",
+      "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
+      "price": 699,
       "quantity": "11",
       "status": {
         "value": "Out of stock",
@@ -111,6 +111,48 @@
         "icon": "/static/media/gray-dot.5f64c59c831a2ed96a122ab4de7e51a1.svg"
       },
       "id": 10
+    },
+    {
+      "imgUrl": "https://www.powerplanetonline.com/cdnassets/apple_iphone_13_pro_max_128gb_oro_01_l.jpg",
+      "name": "Iphone 13 Pro Forest Green",
+      "sku": "7373837837ASDFGHJK",
+      "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
+      "price": 699,
+      "quantity": "22",
+      "status": {
+        "value": "On order",
+        "label": "On order",
+        "icon": "/static/media/yellow-dot.9e2b4975eb21d08d16d31631d65ffa98.svg"
+      },
+      "id": 11
+    },
+    {
+      "imgUrl": "https://store.uniqbe.com/images/product/c2ef2bf8-f690-4525-8d71-1b3601087c6a.png",
+      "name": "blah blah blah",
+      "sku": "blah",
+      "description": "blah",
+      "price": 112,
+      "quantity": "122",
+      "status": {
+        "value": "On order",
+        "label": "On order",
+        "icon": "/static/media/yellow-dot.9e2b4975eb21d08d16d31631d65ffa98.svg"
+      },
+      "id": 12
+    },
+    {
+      "imgUrl": "https://www.bhphotovideo.com/images/images1000x1000/sony_3005718_playstation_5_gaming_console_1595083.jpg",
+      "name": "sony PS5",
+      "sku": "fhashdfjhsdhfjjhjh",
+      "description": "Next Generation gaming console, color White, with 2 duel sense controllers.",
+      "price": 499,
+      "quantity": "10",
+      "status": {
+        "value": "Out of stock",
+        "label": "Out of stock",
+        "icon": "/static/media/gray-dot.5f64c59c831a2ed96a122ab4de7e51a1.svg"
+      },
+      "id": 13
     }
   ]
 }
