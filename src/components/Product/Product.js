@@ -2,9 +2,10 @@ import './Product.css'
 import { useState } from 'react'
 import EditDeleteModal from '../EditDeleteModal/EditDeleteModal'
 
-const Product = ({ product, handleEditProduct, handleDeleteProduct }) => {
+const Product = ({ product, handleEditProduct, handleConfirmedDelete }) => {
   const [isHovering, setIsHovering] = useState(false)
   const [editDeleteModalOpen, setEditDeleteModalOpen] = useState(false)
+
   const handleMouseEnter = () => {
     setIsHovering(true)
   }
@@ -50,7 +51,7 @@ const Product = ({ product, handleEditProduct, handleDeleteProduct }) => {
         <EditDeleteModal
           handleCloseEditModal={handleCloseEditModal}
           handleEditProduct={handleEditProduct}
-          handleDeleteProduct={handleDeleteProduct}
+          handleConfirmedDelete={handleConfirmedDelete}
           id={product.id}
         />
       )}

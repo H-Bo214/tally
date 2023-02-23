@@ -1,10 +1,14 @@
 import './MainSectionContent.css'
 import Header from '../Header/Header'
-import ProductInventory from '../ProductInventory/ProductInventory'
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
+import Product from '../Product/Product'
+import Error from '../Error/Error'
+import ProductHeadings from '../ProductHeadings/ProductHeadings'
 import AddNewProduct from '../AddNewProduct/AddNewProduct'
 import ProductFormModal from '../ProductFormModal/ProductFormModal'
-import { useState, useEffect } from 'react'
 import ConfirmationModal from '../ConfirmationModal/ConfirmationModal'
+import DeleteConfirmationModal from '../DeleteConfirmationModal/DeleteConfirmationModal'
+import { useState, useEffect } from 'react'
 import {
   deleteProduct,
   getProducts,
@@ -18,9 +22,11 @@ const MainSectionContent = () => {
   const [error, setError] = useState('')
   const [modalErrorMsg, setModalErrorMsg] = useState('')
   const [isLoading, setIsLoading] = useState(true)
-  const [openModal, setOpenModal] = useState(false) // change back to false after styling
+  const [openModal, setOpenModal] = useState(false)
   const [dataToEdit, setDataToEdit] = useState(null)
   const [confirmModalIsOpen, setConfirmModalIsOpen] = useState(false)
+  const [confirmedDelete, setConfirmedDelete] = useState(false)
+  const [productToDelete, setProductToDelete] = useState('')
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -87,6 +93,11 @@ const MainSectionContent = () => {
     }
   }
 
+  const handleConfirmedDelete = (id) => {
+    setConfirmedDelete(true)
+    setProductToDelete(id)
+  }
+
   const handleOpenModal = () => {
     setOpenModal(true)
   }
@@ -138,13 +149,31 @@ const MainSectionContent = () => {
           handleKeepEditing={handleKeepEditing}
         />
       )}
-      <ProductInventory
-        products={products}
-        error={error}
-        isLoading={isLoading}
-        handleEditProduct={handleEditProduct}
-        handleDeleteProduct={handleDeleteProduct}
-      />
+      {confirmedDelete && (
+        <DeleteConfirmationModal
+          setConfirmedDelete={setConfirmedDelete}
+          productToDelete={productToDelete}
+          handleDeleteProduct={handleDeleteProduct}
+          confirmedDelete={confirmedDelete}
+        />
+      )}
+      <main>
+        <section className='products-container'>
+          <ProductHeadings />
+          <LoadingSpinner isLoading={isLoading} />
+          {error && <Error error={error} />}
+          {products.length > 0 &&
+            products.map((product) => (
+              <Product
+                product={product}
+                key={product.id}
+                handleEditProduct={handleEditProduct}
+                handleConfirmedDelete={handleConfirmedDelete}
+                setConfirmedDelete={setConfirmedDelete}
+              />
+            ))}
+        </section>
+      </main>
     </section>
   )
 }

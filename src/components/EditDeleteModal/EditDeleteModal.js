@@ -4,7 +4,7 @@ import Button from '../Button/Button'
 const EditDeleteModal = ({
   handleCloseEditModal,
   handleEditProduct,
-  handleDeleteProduct,
+  handleConfirmedDelete,
   id,
 }) => {
   const handleModalClose = () => {
@@ -24,7 +24,7 @@ const EditDeleteModal = ({
         <Button
           name='Delete'
           className='delete'
-          onClick={() => handleDeleteProduct(id)}
+          onClick={() => handleConfirmedDelete(id)}
         />
       </div>
     </section>
