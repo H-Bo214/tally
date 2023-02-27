@@ -19,10 +19,6 @@ const Product = ({ product, handleEditProduct, handleConfirmedDelete }) => {
     setEditDeleteModalOpen(true)
   }
 
-  const handleCloseEditModal = () => {
-    setEditDeleteModalOpen(false)
-  }
-
   return (
     <section
       className='single-product-container'
@@ -49,7 +45,7 @@ const Product = ({ product, handleEditProduct, handleConfirmedDelete }) => {
       </div>
       {editDeleteModalOpen && (
         <EditDeleteModal
-          handleCloseEditModal={handleCloseEditModal}
+          setEditDeleteModalOpen={setEditDeleteModalOpen}
           handleEditProduct={handleEditProduct}
           handleConfirmedDelete={handleConfirmedDelete}
           id={product.id}
