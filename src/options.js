@@ -1,18 +1,37 @@
-import greenDot from '../src/assets/icons/green-dot.svg'
-import grayDot from '../src/assets/icons/gray-dot.svg'
-import yellowDot from '../src/assets/icons/yellow-dot.svg'
-import redDot from '../src/assets/icons/red-dot.svg'
-
 const OPTIONS = [
-  { value: 'In stock', label: 'In stock', icon: greenDot },
-  { value: 'Out of stock', label: 'Out of stock', icon: grayDot },
-  { value: 'On order', label: 'On order', icon: yellowDot },
-  { value: 'Low stock', label: 'Low stock', icon: redDot },
+  {
+    value: 'In stock',
+    label: 'In stock',
+    labelColor: '#9BF2B4',
+  },
+  {
+    value: 'Out of stock',
+    label: 'Out of stock',
+    labelColor: '#E2E1E1',
+  },
+  {
+    value: 'On order',
+    label: 'On order',
+    labelColor: '#E6F29B',
+  },
+  {
+    value: 'Low stock',
+    label: 'Low stock',
+    labelColor: '#FF9E9E',
+  },
 ]
 
 const optionLabel = (option) => (
-  <div className='dot-container'>
-    <img src={option.icon} alt='' width='20px' height='20px' />
+  <div style={{ display: 'flex', caretColor: 'rgba(0,0,0,0)' }}>
+    <div
+      style={{
+        backgroundColor: option.labelColor,
+        width: '1.5rem',
+        height: '1.5rem',
+        borderRadius: '1.5rem',
+        marginRight: '1rem',
+      }}
+    />
     <span>{option.label}</span>
   </div>
 )
@@ -36,6 +55,7 @@ const customStyles = {
     ...provided,
     borderBottom: '1px solid #DADADA',
     padding: '12px 12px',
+    color: '#2B2F32',
   }),
   control: () => ({
     display: 'flex',
