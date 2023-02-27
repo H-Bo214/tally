@@ -8,9 +8,9 @@
       "price": 699,
       "quantity": "22",
       "status": {
-        "value": "Out of stock",
-        "label": "Out of stock",
-        "labelColor": "#E2E1E1"
+        "value": "Low stock",
+        "label": "Low stock",
+        "labelColor": "#FF9E9E"
       },
       "id": 5
     },
@@ -36,9 +36,9 @@
       "price": 699,
       "quantity": "33",
       "status": {
-        "value": "On order",
-        "label": "On order",
-        "labelColor": "#E6F29B"
+        "value": "Out of stock",
+        "label": "Out of stock",
+        "labelColor": "#E2E1E1"
       },
       "id": 7
     },
@@ -83,36 +83,6 @@
         "labelColor": "#E2E1E1"
       },
       "id": 11
-    },
-    {
-      "imgUrl": "https://store.uniqbe.com/images/product/c2ef2bf8-f690-4525-8d71-1b3601087c6a.png",
-      "name": "3",
-      "sku": "3",
-      "description": "33",
-      "price": 11,
-      "quantity": "3",
-      "status": {
-        "value": "On order",
-        "label": "On order",
-        "icon": "/static/media/yellow-dot.9e2b4975eb21d08d16d31631d65ffa98.svg",
-        "labelColor": "#E6F29B"
-      },
-      "id": 12
-    },
-    {
-      "imgUrl": "https://store.uniqbe.com/images/product/c2ef2bf8-f690-4525-8d71-1b3601087c6a.png",
-      "name": "2",
-      "sku": "2",
-      "description": "2",
-      "price": 2,
-      "quantity": "2",
-      "status": {
-        "value": "On order",
-        "label": "On order",
-        "icon": "/static/media/yellow-dot.9e2b4975eb21d08d16d31631d65ffa98.svg",
-        "labelColor": "#E6F29B"
-      },
-      "id": 13
     }
   ]
 }

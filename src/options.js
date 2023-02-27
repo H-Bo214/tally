@@ -85,6 +85,9 @@ const customStyles = {
   menu: (provided) => ({
     ...provided,
     border: '2px solid #92BDFF',
+    position: 'fixed',
+    top: '50%',
+    width: 'inherit',
   }),
   input: (provided) => ({
     ...provided,
