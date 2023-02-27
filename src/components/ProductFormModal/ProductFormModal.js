@@ -237,7 +237,7 @@ const ProductFormModal = ({
                   required: 'Product image URL required',
                   pattern: {
                     value: /^(ftp|http|https):\/\/[^ "]+$/,
-                    message: 'Invalid URL Pattern',
+                    message: 'Enter a valid image url',
                   },
                 })}
               />
