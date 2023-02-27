@@ -14,12 +14,19 @@ const DeleteConfirmationModal = ({
     <>
       <div className='delete-confirmation-modal-overlay' />
       <section className='delete-confirmation-modal'>
-        <h3 className='delete-confirmation-heading'>
-          Are you sure you want to delete this product?
-        </h3>
-        <section>
-          <Button name='Cancel' onClick={() => setConfirmedDelete(false)} />
-          <Button name='Delete' onClick={handleProductDeletion} />
+        <h3 className='delete-confirmation-heading'>Delete this product?</h3>
+        <p>Your product will be permanently deleted. </p>
+        <section className='delete-buttons-container'>
+          <Button
+            name='Cancel'
+            className='cancel-button'
+            onClick={() => setConfirmedDelete(false)}
+          />
+          <Button
+            name='Delete'
+            className='delete-button'
+            onClick={handleProductDeletion}
+          />
         </section>
       </section>
     </>

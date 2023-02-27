@@ -15,18 +15,71 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  padding: 30px;
+  padding: 1.25rem 1.875rem;
   z-index: 1000;
+  border-radius: 0.75rem;
+  line-height: 1.5rem;
 }
 
 .confirmation-heading::before {
   content: url('../../assets/icons/blue-warning.svg');
   display: inline-block;
   vertical-align: middle;
-  padding: 0;
+  padding-right: 0.5rem;
 }
 
 .confirmation-heading {
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.confirmation-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0 1.75rem 0;
+}
+
+.keep-editing-button,
+.discard-button,
+.save-button {
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 0.75rem;
+  border: 2px solid #1162dd;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  cursor: pointer;
+}
+
+.keep-editing-button,
+.discard-button {
+  color: #1162dd;
+  background-color: #fff;
+}
+
+.keep-editing-button:hover,
+.discard-button:hover {
+  background-color: #deebff;
+}
+
+.keep-editing-button {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.discard-button {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.save-button {
+  color: #fff;
+  background-color: #1162dd;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.save-button:hover {
+  background-color: #5c9dff;
 }

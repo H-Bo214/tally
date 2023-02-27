@@ -13,7 +13,7 @@ const ConfirmationModal = ({
       <section className='confirmation-modal'>
         <h3 className='confirmation-heading'>Save your edits?</h3>
         <p>Your changes to this product will be lost if you don't save them.</p>
-        <section className='buttons-container'>
+        <section className='confirmation-buttons-container'>
           <Button
             name='Keep editing'
             className='keep-editing-button'
