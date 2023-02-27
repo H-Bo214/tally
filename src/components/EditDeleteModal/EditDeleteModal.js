@@ -2,29 +2,32 @@ import './EditDeleteModal.css'
 import Button from '../Button/Button'
 
 const EditDeleteModal = ({
-  handleCloseEditModal,
+  setEditDeleteModalOpen,
   handleEditProduct,
-  handleDeleteProduct,
+  handleConfirmedDelete,
   id,
 }) => {
-  const handleModalClose = () => {
-    handleCloseEditModal()
+  const closeModalToEdit = () => {
+    setEditDeleteModalOpen(false)
     handleEditProduct(id)
   }
 
   return (
     <section
       className='edit-delete-modal-container'
-      onMouseLeave={handleCloseEditModal}
+      onMouseLeave={() => setEditDeleteModalOpen(false)}
     >
       <div>
-        <Button name='Edit' className='edit' onClick={handleModalClose} />
+        <Button name='Edit' className='edit' onClick={closeModalToEdit} />
       </div>
       <div>
         <Button
           name='Delete'
           className='delete'
-          onClick={() => handleDeleteProduct(id)}
+          onClick={() => {
+            handleConfirmedDelete(id)
+            setEditDeleteModalOpen(false)
+          }}
         />
       </div>
     </section>

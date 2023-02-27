@@ -1,4 +1,4 @@
-.confirmation-modal-overlay {
+.delete-confirmation-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,77 +9,66 @@
   z-index: 1000;
 }
 
-.confirmation-modal {
+.delete-confirmation-modal {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  padding: 1.25rem 1.875rem;
+  padding: 1.25rem 2rem;
   z-index: 1000;
   border-radius: 0.75rem;
   line-height: 1.5rem;
 }
 
-.confirmation-heading::before {
+.delete-confirmation-heading::before {
   content: url('../../assets/icons/blue-warning.svg');
   display: inline-block;
   vertical-align: middle;
   padding-right: 0.5rem;
 }
 
-.confirmation-heading {
+.delete-confirmation-heading {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-top: 1rem;
 }
 
-.confirmation-buttons-container {
+.delete-buttons-container {
   display: flex;
-  justify-content: space-between;
-  margin: 2rem 0 1.75rem 0;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1.75rem;
 }
 
-.keep-editing-button,
-.discard-button,
-.save-button {
+.cancel-button,
+.delete-button {
   font-weight: 500;
   font-size: 1.1rem;
   border-radius: 0.75rem;
   border: 2px solid #1162dd;
-  padding-top: 12px;
+  padding-top: 10px;
   padding-bottom: 12px;
   cursor: pointer;
 }
 
-.keep-editing-button,
-.discard-button {
+.cancel-button {
   color: #1162dd;
   background-color: #fff;
-}
-
-.keep-editing-button:hover,
-.discard-button:hover {
-  background-color: #deebff;
-}
-
-.keep-editing-button {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.discard-button {
   padding-left: 2rem;
   padding-right: 2rem;
 }
 
-.save-button {
+.cancel-button:hover {
+  background-color: #deebff;
+}
+.delete-button {
   color: #fff;
   background-color: #1162dd;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
-.save-button:hover {
+.delete-button:hover {
   background-color: #5c9dff;
 }

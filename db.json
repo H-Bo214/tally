@@ -1,74 +1,88 @@
 {
   "products": [
     {
-      "id": 1,
-      "img": "/productImages/iphone13.png",
-      "name": "iPhone 511 Pro Max",
-      "sku": "5555555",
-      "description": "Hollywood-worthy video shooting made easy. A lightning-fast chip. And a big boost in battery life you’ll notice every day.",
-      "price": "5000",
-      "quantity": "9",
-      "status": "On order"
+      "imgUrl": "https://store.uniqbe.com/images/product/c2ef2bf8-f690-4525-8d71-1b3601087c6a.png",
+      "name": "Iphone 13 Pro Purple",
+      "sku": "7373837837ASDFGHJK",
+      "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
+      "price": 699,
+      "quantity": "22",
+      "status": {
+        "value": "Low stock",
+        "label": "Low stock",
+        "labelColor": "#FF9E9E"
+      },
+      "id": 5
     },
     {
-      "id": 2,
-      "img": "/productImages/iphone13.png",
-      "name": "iPhone AR brain implant",
-      "sku": "00422001",
-      "description": "A super bright display in a durable design. Hollywood-worthy video shooting made easy. A lightning-fast chip. And a big boost in battery life you’ll notice every day.",
-      "price": 200,
-      "quantity": 120,
-      "status": "In stock"
+      "imgUrl": "https://cdnprod.mafretailproxy.com/sys-master-root/hff/h01/15199253528606/1831013_main.jpg_1700Wx1700H",
+      "name": "Iphone 13 Pro Forest Poop",
+      "sku": "7373837837ASDFGHJK",
+      "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
+      "price": 699,
+      "quantity": "33",
+      "status": {
+        "value": "Low stock",
+        "label": "Low stock",
+        "labelColor": "#FF9E9E"
+      },
+      "id": 6
     },
     {
-      "id": 3,
-      "img": "/productImages/iphone13.png",
-      "name": "iPhone 13 Pro Rose Gold",
-      "sku": "00422001",
-      "description": "A super bright display in a durable design. Hollywood-worthy video shooting made easy. A lightning-fast chip. And a big boost in battery life you’ll notice every day.",
-      "price": 200,
-      "quantity": 120,
-      "status": "In stock"
+      "imgUrl": "https://cdnprod.mafretailproxy.com/sys-master-root/hff/h01/15199253528606/1831013_main.jpg_1700Wx1700H",
+      "name": "Iphone 13 Pro Forest Green",
+      "sku": "7373837837ASDFGHJK",
+      "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
+      "price": 699,
+      "quantity": "33",
+      "status": {
+        "value": "Out of stock",
+        "label": "Out of stock",
+        "labelColor": "#E2E1E1"
+      },
+      "id": 7
     },
     {
-      "id": 4,
-      "img": "/productImages/iphone13.png",
-      "name": "iPhone Pro navy blue",
-      "sku": "00422001",
-      "description": "A super bright display in a durable design. Hollywood-worthy video shooting made easy. A lightning-fast chip. And a big boost in battery life you’ll notice every day.",
-      "price": "250",
-      "quantity": 120,
-      "status": "In stock"
+      "imgUrl": "https://www.powerplanetonline.com/cdnassets/apple_iphone_13_pro_max_128gb_oro_01_l.jpg",
+      "name": "Iphone 13 Pro Rose Gold So Fancy!!!",
+      "sku": "7373837837ASDFGHJK",
+      "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
+      "price": 699,
+      "quantity": "11",
+      "status": {
+        "value": "On order",
+        "label": "On order",
+        "labelColor": "#E6F29B"
+      },
+      "id": 9
     },
     {
-      "id": 6,
-      "img": "/productImages/iphone13.png",
-      "name": "iPhone 800 Pro Rose Gold",
-      "sku": "00422001",
-      "description": "A super bright display in a durable design. Hollywood-worthy video shooting made easy. A lightning-fast chip. And a big boost in battery life you’ll notice every day.",
-      "price": 200,
-      "quantity": 120,
-      "status": "In stock"
+      "imgUrl": "https://store.uniqbe.com/images/product/c2ef2bf8-f690-4525-8d71-1b3601087c6a.png",
+      "name": "iphone space gray",
+      "sku": "dfkjaskl9298",
+      "description": "a smartphone",
+      "price": 333,
+      "quantity": "22",
+      "status": {
+        "value": "Out of stock",
+        "label": "Out of stock",
+        "labelColor": "#E2E1E1"
+      },
+      "id": 10
     },
     {
-      "id": 7,
-      "img": "/productImages/iphone13.png",
-      "name": "iPhone 6000 Pro Rose Gold",
-      "sku": "00422001",
-      "description": "A super bright display in a durable design. Hollywood-worthy video shooting made easy. A lightning-fast chip. And a big boost in battery life you’ll notice every day.",
-      "price": 200,
-      "quantity": 120,
-      "status": "In stock"
-    },
-    {
-      "img": "ulr ",
-      "name": "blah",
-      "sku": "34",
-      "description": "lasjdfklj",
-      "price": "22",
-      "quantity": "99",
-      "status": "In stock",
-      "id": 8
+      "imgUrl": "https://cdnprod.mafretailproxy.com/sys-master-root/hff/h01/15199253528606/1831013_main.jpg_1700Wx1700H",
+      "name": "gray water bottle",
+      "sku": "ksjdfklj1984298",
+      "description": "skdjfiidfjis",
+      "price": 11,
+      "quantity": "11",
+      "status": {
+        "value": "Out of stock",
+        "label": "Out of stock",
+        "labelColor": "#E2E1E1"
+      },
+      "id": 11
     }
   ]
 }

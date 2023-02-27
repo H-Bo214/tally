@@ -2,7 +2,7 @@ import './Product.css'
 import { useState } from 'react'
 import EditDeleteModal from '../EditDeleteModal/EditDeleteModal'
 
-const Product = ({ product, handleEditProduct, handleDeleteProduct }) => {
+const Product = ({ product, handleEditProduct, handleConfirmedDelete }) => {
   const [isHovering, setIsHovering] = useState(false)
   const [editDeleteModalOpen, setEditDeleteModalOpen] = useState(false)
 
@@ -19,17 +19,13 @@ const Product = ({ product, handleEditProduct, handleDeleteProduct }) => {
     setEditDeleteModalOpen(true)
   }
 
-  const handleCloseEditModal = () => {
-    setEditDeleteModalOpen(false)
-  }
-
   return (
     <section
       className='single-product-container'
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <img src={product.img} alt={product.name} width='54' height='50' />
+      <img src={product.imgUrl} alt={product.name} width='54' height='50' />
       <div className='product-container'>
         <h3>{product.name}</h3>
         <p>{product.sku}</p>
@@ -40,7 +36,12 @@ const Product = ({ product, handleEditProduct, handleDeleteProduct }) => {
       <div className='single-product-status-container'>
         <p className='price'>${product.price}</p>
         <p className='quantity'>{product.quantity}</p>
-        <p className='stock-status'>{product.status}</p>
+        <p
+          className='stock-status'
+          style={{ backgroundColor: product.status.labelColor }}
+        >
+          {product.status.value}
+        </p>
         <button
           className={isHovering ? 'edit-button' : 'no-display'}
           onClick={handleOpenEditModal}
@@ -49,9 +50,9 @@ const Product = ({ product, handleEditProduct, handleDeleteProduct }) => {
       </div>
       {editDeleteModalOpen && (
         <EditDeleteModal
-          handleCloseEditModal={handleCloseEditModal}
+          setEditDeleteModalOpen={setEditDeleteModalOpen}
           handleEditProduct={handleEditProduct}
-          handleDeleteProduct={handleDeleteProduct}
+          handleConfirmedDelete={handleConfirmedDelete}
           id={product.id}
         />
       )}

@@ -2,5 +2,20 @@
   border-left: 0.188rem solid #92bdff;
   border-top: 0.188rem solid #92bdff;
   background: #f7fafb;
-  /* width: 100%; */
+}
+
+main {
+  margin-left: 2.188rem;
+  margin-right: 2rem;
+  width: 96%;
+}
+
+.products-container {
+  box-shadow: 0px 0px 4px 1px #dadada;
+  border-radius: 12px;
+  height: 40rem;
+  max-height: 49rem;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }

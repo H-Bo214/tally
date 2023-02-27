@@ -1,10 +1,14 @@
 import './MainSectionContent.css'
 import Header from '../Header/Header'
-import ProductInventory from '../ProductInventory/ProductInventory'
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
+import Product from '../Product/Product'
+import Error from '../Error/Error'
+import ProductHeadings from '../ProductHeadings/ProductHeadings'
 import AddNewProduct from '../AddNewProduct/AddNewProduct'
 import ProductFormModal from '../ProductFormModal/ProductFormModal'
-import { useState, useEffect } from 'react'
 import ConfirmationModal from '../ConfirmationModal/ConfirmationModal'
+import DeleteConfirmationModal from '../DeleteConfirmationModal/DeleteConfirmationModal'
+import { useState, useEffect } from 'react'
 import {
   deleteProduct,
   getProducts,
@@ -21,13 +25,20 @@ const MainSectionContent = () => {
   const [openModal, setOpenModal] = useState(false)
   const [dataToEdit, setDataToEdit] = useState(null)
   const [confirmModalIsOpen, setConfirmModalIsOpen] = useState(false)
+  const [confirmedDelete, setConfirmedDelete] = useState(false)
+  const [productToDelete, setProductToDelete] = useState('')
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const data = await getProducts()
-        setProducts(data)
-        setIsLoading(false)
+        if (data.length > 0) {
+          setProducts(data)
+          setIsLoading(false)
+        } else {
+          setError('No Products to display')
+          setIsLoading(false)
+        }
       } catch (error) {
         console.error(error.message)
         setIsLoading(false)
@@ -69,7 +80,7 @@ const MainSectionContent = () => {
       console.error(error.message)
       setModalErrorMsg('An error occurred fetching your product, try again.')
     }
-    handleOpenModal()
+    setOpenModal(true)
   }
 
   const handleDeleteProduct = async (id) => {
@@ -82,13 +93,13 @@ const MainSectionContent = () => {
     }
   }
 
-  const handleOpenModal = () => {
-    setOpenModal(true)
+  const handleConfirmedDelete = (id) => {
+    setConfirmedDelete(true)
+    setProductToDelete(id)
   }
 
-  const handleOpenConfirmationModal = () => {
-    handleCloseModal()
-    setConfirmModalIsOpen(true)
+  const handleOpenModal = () => {
+    setOpenModal(true)
   }
 
   const handleCloseConfirmationModal = () => {
@@ -102,12 +113,13 @@ const MainSectionContent = () => {
 
   const handlePartialEdit = (data) => {
     setDataToEdit(data)
-    handleOpenConfirmationModal()
+    setOpenModal(false)
+    setConfirmModalIsOpen(true)
   }
 
   const handleKeepEditing = () => {
     setConfirmModalIsOpen(false)
-    handleOpenModal()
+    setOpenModal(true)
   }
 
   const handleDataToEdit = (dataState) => {
@@ -137,13 +149,31 @@ const MainSectionContent = () => {
           handleKeepEditing={handleKeepEditing}
         />
       )}
-      <ProductInventory
-        products={products}
-        error={error}
-        isLoading={isLoading}
-        handleEditProduct={handleEditProduct}
-        handleDeleteProduct={handleDeleteProduct}
-      />
+      {confirmedDelete && (
+        <DeleteConfirmationModal
+          setConfirmedDelete={setConfirmedDelete}
+          productToDelete={productToDelete}
+          handleDeleteProduct={handleDeleteProduct}
+          confirmedDelete={confirmedDelete}
+        />
+      )}
+      <main>
+        <section className='products-container'>
+          <ProductHeadings />
+          <LoadingSpinner isLoading={isLoading} />
+          {error && <Error error={error} />}
+          {products.length > 0 &&
+            products.map((product) => (
+              <Product
+                product={product}
+                key={product.id}
+                handleEditProduct={handleEditProduct}
+                handleConfirmedDelete={handleConfirmedDelete}
+                setConfirmedDelete={setConfirmedDelete}
+              />
+            ))}
+        </section>
+      </main>
     </section>
   )
 }
