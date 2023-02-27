@@ -48,6 +48,10 @@ const ProductFormModal = ({
     handlePartialEdit(values)
   }
 
+  const handleImgError = (e) => {
+    e.target.src = placeHolderImg
+  }
+
   return (
     <>
       <div className='modal-overlay' />
@@ -231,6 +235,10 @@ const ProductFormModal = ({
                 type='text'
                 {...register('imgUrl', {
                   required: 'Product image URL required',
+                  pattern: {
+                    value: /^(ftp|http|https):\/\/[^ "]+$/,
+                    message: 'Invalid URL Pattern',
+                  },
                 })}
               />
               <p
@@ -249,6 +257,7 @@ const ProductFormModal = ({
                     src={imageProps[0] ? imageProps[0] : placeHolderImg}
                     alt={imageProps[0] ? imageProps[1] : 'placeholder'}
                     className='image-preview'
+                    onError={handleImgError}
                   />
                 </div>
               </section>
