@@ -15,7 +15,7 @@ const DeleteConfirmationModal = ({
       <div className='delete-confirmation-modal-overlay' />
       <section className='delete-confirmation-modal'>
         <h3 className='delete-confirmation-heading'>
-          Are you sure you would like to delete this product?
+          Are you sure you want to delete this product?
         </h3>
         <section>
           <Button name='Cancel' onClick={() => setConfirmedDelete(false)} />
