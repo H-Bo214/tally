@@ -10,6 +10,8 @@ const DeleteConfirmationModal = ({
     handleDeleteProduct(productToDelete)
   }
 
+  //refactor to combine DeleteConfirmationModal and ConfirmationModal into a single reuseable component
+
   return (
     <>
       <div className='delete-confirmation-modal-overlay' />

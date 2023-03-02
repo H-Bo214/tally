@@ -1,0 +1,58 @@
+.label-error-style {
+  color: #fd0d0d;
+  font-weight: 700;
+}
+
+.form-error-message {
+  color: #fd0d0d;
+  line-height: 0.875rem;
+  font-weight: 500;
+  min-height: 1.0625rem;
+  margin: 4px 0 4px 0;
+  display: block;
+}
+
+.form-error-message::before {
+  content: url('../../assets/icons/alert-icon.svg') / 'warning';
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 0.25rem;
+}
+
+.hidden-style {
+  visibility: hidden;
+}
+
+label,
+.preview-heading {
+  color: #53545c;
+  line-height: 1.1875rem;
+}
+
+input,
+textarea {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  background: #f7fafb;
+  border: 0.125rem solid #92bdff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 20rem;
+  height: 6.75rem;
+  resize: none;
+}
+
+input {
+  height: 3rem;
+}
+
+textarea {
+  height: 6.75rem;
+  resize: none;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
