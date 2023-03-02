@@ -1,6 +1,8 @@
 import { useForm, Controller } from 'react-hook-form'
+import FormInput from '../FormInput/FormInput'
 import Button from '../Button/Button'
 import placeHolderImg from '../../assets/image-preview.svg'
+import Error from '../Error/Error'
 import {
   OPTIONS,
   optionLabel,
@@ -59,136 +61,67 @@ const ProductFormModal = ({
         <section className='modal-heading'>
           {dataToEdit?.id ? <h1>Edit Product</h1> : <h1>New Product</h1>}
           <button
-            className='close-button'
+            className='close-button-x'
             name='close button'
             onClick={handleFormEditValues}
           />
         </section>
         {modalErrorMsg && (
           <div>
-            <h1>{modalErrorMsg}</h1>
+            <Error error={modalErrorMsg} />
           </div>
         )}
         <form onSubmit={handleSubmit(handleData)}>
           <div className='form-sections-container'>
             <div className='left-section-container'>
               <h2>Information</h2>
-              <label
-                htmlFor='product-name'
-                className={errors.name?.message && 'label-error-style'}
-              >
-                Product name
-              </label>
-              <input
+              <FormInput
+                name='name'
                 type='text'
-                id='product-name'
-                {...register('name', {
-                  required: 'Name required',
-                })}
+                register={register}
+                validationSchema={{ required: 'Name required' }}
+                errors={errors}
               />
-              <p
-                className={
-                  errors.name?.message
-                    ? 'form-error-message'
-                    : 'form-error-message hidden-style'
-                }
-              >
-                {errors.name?.message}
-              </p>
-              <label
-                htmlFor='sku'
-                className={errors.sku?.message && 'label-error-style'}
-              >
-                SKU
-              </label>
-              <input
+              <FormInput
+                name='sku'
                 type='text'
-                id='sku'
-                {...register('sku', {
-                  required: 'SKU required',
-                })}
+                register={register}
+                validationSchema={{ required: 'SKU required' }}
+                errors={errors}
               />
-              <p
-                className={
-                  errors.sku?.message
-                    ? 'form-error-message'
-                    : 'form-error-message hidden-style'
-                }
-              >
-                {errors.sku?.message}
-              </p>
-              <label
-                htmlFor='description'
-                className={errors.description?.message && 'label-error-style'}
-              >
-                Description
-              </label>
-              <textarea
-                id='description'
-                {...register('description', {
-                  required: 'Description required',
-                })}
+              <FormInput
+                name='description'
+                register={register}
+                validationSchema={{ required: 'Description required' }}
+                errors={errors}
               />
-              <p
-                className={
-                  errors.description?.message
-                    ? 'form-error-message'
-                    : 'form-error-message hidden-style'
-                }
-              >
-                {errors.description?.message}
-              </p>
               <div className='price-quantity-container'>
-                <div className='label-input-errorMsg-container'>
-                  <label
-                    htmlFor='price'
-                    className={errors.price?.message && 'label-error-style'}
-                  >
-                    Price
-                  </label>
-                  <input
-                    id='price'
+                <div>
+                  <FormInput
+                    name='price'
                     type='number'
+                    step='any'
+                    register={register}
+                    errors={errors}
                     className='price-quantity-input'
-                    {...register('price', {
+                    validationSchema={{
                       required: 'Price required',
                       valueAsNumber: true,
-                    })}
+                    }}
                   />
-                  <p
-                    className={
-                      errors.price?.message
-                        ? 'form-error-message'
-                        : 'form-error-message hidden-style'
-                    }
-                  >
-                    {errors.price?.message}
-                  </p>
                 </div>
-                <div className='label-input-errorMsg-container'>
-                  <label
-                    htmlFor='quantity'
-                    className={errors.quantity?.message && 'label-error-style'}
-                  >
-                    Quantity
-                  </label>
-                  <input
-                    id='quantity'
-                    type='text'
+                <div>
+                  <FormInput
+                    name='quantity'
+                    type='number'
+                    register={register}
+                    errors={errors}
                     className='price-quantity-input'
-                    {...register('quantity', {
+                    validationSchema={{
                       required: 'Quantity required',
-                    })}
+                      valueAsNumber: true,
+                    }}
                   />
-                  <p
-                    className={
-                      errors.quantity?.message
-                        ? 'form-error-message'
-                        : 'form-error-message hidden-style'
-                    }
-                  >
-                    {errors.quantity?.message}
-                  </p>
                 </div>
               </div>
               <label
@@ -212,44 +145,32 @@ const ProductFormModal = ({
                   />
                 )}
               />
-              <p
+              <label
+                htmlFor='status'
                 className={
                   errors.status?.message
                     ? 'form-error-message'
                     : 'form-error-message hidden-style'
                 }
               >
-                {errors?.status?.message}
-              </p>
+                {errors.status?.message}
+              </label>
             </div>
             <div className='right-section-container'>
               <h2>Photo</h2>
-              <label
-                htmlFor='imgUrl'
-                className={errors.imgUrl?.message && 'label-error-style'}
-              >
-                Web address
-              </label>
-              <input
-                id='imgUrl'
+              <FormInput
+                name='imgUrl'
                 type='text'
-                {...register('imgUrl', {
+                register={register}
+                errors={errors}
+                validationSchema={{
                   required: 'Product image URL required',
                   pattern: {
                     value: /^(ftp|http|https):\/\/[^ "]+$/,
                     message: 'Enter a valid image url',
                   },
-                })}
+                }}
               />
-              <p
-                className={
-                  errors.imgUrl?.message
-                    ? 'form-error-message'
-                    : 'form-error-message hidden-style'
-                }
-              >
-                {errors.imgUrl?.message}
-              </p>
               <section className='image-preview-container'>
                 <p className='preview-heading'>Preview</p>
                 <div className='image-preview-container'>
