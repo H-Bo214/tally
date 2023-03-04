@@ -7,8 +7,8 @@ import ProductHeadings from '../ProductHeadings/ProductHeadings'
 import AddNewProduct from '../AddNewProduct/AddNewProduct'
 import ProductFormModal from '../ProductFormModal/ProductFormModal'
 import ConfirmationModal from '../ConfirmationModal/ConfirmationModal'
-import DeleteConfirmationModal from '../DeleteConfirmationModal/DeleteConfirmationModal'
-import { useState, useEffect } from 'react'
+import Button from '../Button/Button'
+import { useState, useEffect, useRef } from 'react'
 import {
   deleteProduct,
   getProducts,
@@ -98,23 +98,19 @@ const MainSectionContent = () => {
     setProductToDelete(id)
   }
 
-  const handleOpenModal = () => {
-    setOpenModal(true)
-  }
-
   const handleCloseConfirmationModal = () => {
     setDataToEdit(null)
     setConfirmModalIsOpen(false)
   }
 
-  const handleCloseModal = () => {
-    setOpenModal(false)
-  }
-
   const handlePartialEdit = (data) => {
-    setDataToEdit(data)
+    if (!modalErrorMsg) {
+      setDataToEdit(data)
+      setOpenModal(false)
+      setConfirmModalIsOpen(true)
+      return
+    }
     setOpenModal(false)
-    setConfirmModalIsOpen(true)
   }
 
   const handleKeepEditing = () => {
@@ -126,13 +122,18 @@ const MainSectionContent = () => {
     setDataToEdit(dataState)
   }
 
+  const handleProductDeletion = () => {
+    setConfirmedDelete(false)
+    handleDeleteProduct(productToDelete)
+  }
+
   return (
     <section className='main-section-content-container'>
       <Header />
-      <AddNewProduct handleOpenModal={handleOpenModal} />
+      <AddNewProduct setOpenModal={setOpenModal} />
       {openModal && (
         <ProductFormModal
-          handleCloseModal={handleCloseModal}
+          setOpenModal={setOpenModal}
           handleAddNewProduct={handleAddNewProduct}
           handleUpdateExistingProduct={handleUpdateExistingProduct}
           handlePartialEdit={handlePartialEdit}
@@ -143,19 +144,45 @@ const MainSectionContent = () => {
       )}
       {confirmModalIsOpen && (
         <ConfirmationModal
-          handleCloseConfirmationModal={handleCloseConfirmationModal}
-          dataToEdit={dataToEdit}
-          handleUpdateExistingProduct={handleUpdateExistingProduct}
-          handleKeepEditing={handleKeepEditing}
-        />
+          heading='Save your edits?'
+          prompt='Your changes to this product will be lost if not saved.'
+        >
+          <Button
+            name='Keep editing'
+            className='keep-editing-button'
+            onClick={handleKeepEditing}
+          />
+          <Button
+            name='Discard'
+            className='discard-button'
+            onClick={handleCloseConfirmationModal}
+          />
+          <Button
+            name='Save'
+            className='save-button'
+            onClick={() => {
+              handleUpdateExistingProduct(dataToEdit.id, dataToEdit)
+              handleCloseConfirmationModal()
+            }}
+          />
+        </ConfirmationModal>
       )}
       {confirmedDelete && (
-        <DeleteConfirmationModal
-          setConfirmedDelete={setConfirmedDelete}
-          productToDelete={productToDelete}
-          handleDeleteProduct={handleDeleteProduct}
-          confirmedDelete={confirmedDelete}
-        />
+        <ConfirmationModal
+          heading='Delete this product?'
+          prompt='Your product will be permanently deleted.'
+        >
+          <Button
+            name='Cancel'
+            className='cancel-button'
+            onClick={() => setConfirmedDelete(false)}
+          />
+          <Button
+            name='Delete'
+            className='delete-button'
+            onClick={handleProductDeletion}
+          />
+        </ConfirmationModal>
       )}
       <main>
         <section className='products-container'>

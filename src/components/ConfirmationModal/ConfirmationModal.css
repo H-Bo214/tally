@@ -86,3 +86,36 @@
 .save-button:hover {
   background-color: #5c9dff;
 }
+
+.cancel-button,
+.delete-button {
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 0.75rem;
+  border: 2px solid #1162dd;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  color: #1162dd;
+  background-color: #fff;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.cancel-button:hover {
+  background-color: #deebff;
+}
+
+.delete-button {
+  color: #fff;
+  background-color: #1162dd;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.delete-button:hover {
+  background-color: #5c9dff;
+}

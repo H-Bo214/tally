@@ -19,6 +19,7 @@
 }
 
 .nav-list > li {
+  display: flex;
   list-style: none;
   list-style-position: inside;
   padding: 0.8rem 3rem 0.5rem 1rem;

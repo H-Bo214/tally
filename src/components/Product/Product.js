@@ -1,5 +1,5 @@
 import './Product.css'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import EditDeleteModal from '../EditDeleteModal/EditDeleteModal'
 
 const Product = ({ product, handleEditProduct, handleConfirmedDelete }) => {
@@ -42,11 +42,13 @@ const Product = ({ product, handleEditProduct, handleConfirmedDelete }) => {
         >
           {product.status.value}
         </p>
-        <button
-          className={isHovering ? 'edit-button' : 'no-display'}
-          onClick={handleOpenEditModal}
-          aria-label='edit or delete menu'
-        />
+        <div className='edit-button-container'>
+          <button
+            className={isHovering ? 'edit-button' : 'no-display'}
+            onClick={handleOpenEditModal}
+            aria-label='edit or delete menu'
+          />
+        </div>
       </div>
       {editDeleteModalOpen && (
         <EditDeleteModal

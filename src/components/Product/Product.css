@@ -83,6 +83,11 @@
   display: none;
 }
 
+.edit-button-container {
+  min-width: 2.1875rem;
+  margin-right: 2rem;
+}
+
 .edit-button {
   background: url('../../assets/edit-button.svg') no-repeat;
   border: none;

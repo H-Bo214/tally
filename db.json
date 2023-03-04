@@ -2,15 +2,15 @@
   "products": [
     {
       "imgUrl": "https://store.uniqbe.com/images/product/c2ef2bf8-f690-4525-8d71-1b3601087c6a.png",
-      "name": "Iphone 13 Pro Purple",
+      "name": "Iphone 13 ",
       "sku": "7373837837ASDFGHJK",
       "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
       "price": 699,
-      "quantity": "22",
+      "quantity": 22,
       "status": {
-        "value": "Low stock",
-        "label": "Low stock",
-        "labelColor": "#FF9E9E"
+        "value": "On order",
+        "label": "On order",
+        "labelColor": "#E6F29B"
       },
       "id": 5
     },
@@ -20,7 +20,7 @@
       "sku": "7373837837ASDFGHJK",
       "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
       "price": 699,
-      "quantity": "33",
+      "quantity": 33,
       "status": {
         "value": "Low stock",
         "label": "Low stock",
@@ -33,8 +33,8 @@
       "name": "Iphone 13 Pro Forest Green",
       "sku": "7373837837ASDFGHJK",
       "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
-      "price": 699,
-      "quantity": "33",
+      "price": 700,
+      "quantity": 33,
       "status": {
         "value": "Out of stock",
         "label": "Out of stock",
@@ -69,20 +69,6 @@
         "labelColor": "#E2E1E1"
       },
       "id": 10
-    },
-    {
-      "imgUrl": "https://cdnprod.mafretailproxy.com/sys-master-root/hff/h01/15199253528606/1831013_main.jpg_1700Wx1700H",
-      "name": "gray water bottle",
-      "sku": "ksjdfklj1984298",
-      "description": "skdjfiidfjis",
-      "price": 11,
-      "quantity": "11",
-      "status": {
-        "value": "Out of stock",
-        "label": "Out of stock",
-        "labelColor": "#E2E1E1"
-      },
-      "id": 11
     }
   ]
 }
