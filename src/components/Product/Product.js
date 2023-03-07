@@ -1,17 +1,17 @@
 import './Product.css'
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import EditDeleteModal from '../EditDeleteModal/EditDeleteModal'
 
 const Product = ({ product, handleEditProduct, handleConfirmedDelete }) => {
-  const [isHovering, setIsHovering] = useState(false)
+  const [isFocused, setIsFocused] = useState(false)
   const [editDeleteModalOpen, setEditDeleteModalOpen] = useState(false)
 
   const handleMouseEnter = () => {
-    setIsHovering(true)
+    setIsFocused(true)
   }
 
-  const handleMouseLeave = () => {
-    setIsHovering(false)
+  const handleRemoveFocus = () => {
+    setIsFocused(false)
     setEditDeleteModalOpen(false)
   }
 
@@ -23,7 +23,7 @@ const Product = ({ product, handleEditProduct, handleConfirmedDelete }) => {
     <section
       className='single-product-container'
       onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseLeave={handleRemoveFocus}
     >
       <img src={product.imgUrl} alt={product.name} width='54' height='50' />
       <div className='product-container'>
@@ -44,7 +44,7 @@ const Product = ({ product, handleEditProduct, handleConfirmedDelete }) => {
         </p>
         <div className='edit-button-container'>
           <button
-            className={isHovering ? 'edit-button' : 'no-display'}
+            className={isFocused ? 'edit-button' : 'no-display'}
             onClick={handleOpenEditModal}
             aria-label='edit or delete menu'
           />
@@ -56,6 +56,7 @@ const Product = ({ product, handleEditProduct, handleConfirmedDelete }) => {
           handleEditProduct={handleEditProduct}
           handleConfirmedDelete={handleConfirmedDelete}
           id={product.id}
+          handleRemoveFocus={handleRemoveFocus}
         />
       )}
     </section>
