@@ -6,10 +6,12 @@ const EditDeleteModal = ({
   handleEditProduct,
   handleConfirmedDelete,
   id,
+  setTabIndex,
 }) => {
   const closeModalToEdit = () => {
     setEditDeleteModalOpen(false)
     handleEditProduct(id)
+    setTabIndex('-1')
   }
 
   return (

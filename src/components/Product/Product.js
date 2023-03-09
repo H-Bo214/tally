@@ -2,58 +2,53 @@ import './Product.css'
 import { useState } from 'react'
 import EditDeleteModal from '../EditDeleteModal/EditDeleteModal'
 
-const Product = ({ product, handleEditProduct, handleConfirmedDelete }) => {
-  const [isHovering, setIsHovering] = useState(false)
+const Product = ({
+  product,
+  handleEditProduct,
+  handleConfirmedDelete,
+  tabIndex,
+  setTabIndex,
+}) => {
   const [editDeleteModalOpen, setEditDeleteModalOpen] = useState(false)
-
-  const handleMouseEnter = () => {
-    setIsHovering(true)
-  }
-
-  const handleMouseLeave = () => {
-    setIsHovering(false)
-    setEditDeleteModalOpen(false)
-  }
-
-  const handleOpenEditModal = () => {
-    setEditDeleteModalOpen(true)
-  }
-
+  const { imgUrl, name, sku, description, price, quantity, id } = product
   return (
     <section
       className='single-product-container'
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      tabIndex={tabIndex}
+      onMouseLeave={() => setEditDeleteModalOpen(false)}
     >
-      <img src={product.imgUrl} alt={product.name} width='54' height='50' />
+      <img src={imgUrl} alt={name} width='54' height='50' />
       <div className='product-container'>
-        <h3>{product.name}</h3>
-        <p>{product.sku}</p>
+        <h3>{name}</h3>
+        <p>{sku}</p>
       </div>
       <div className='product-description-container'>
-        <p>{product.description}</p>
+        <p>{description}</p>
       </div>
       <div className='single-product-status-container'>
-        <p className='price'>${product.price}</p>
-        <p className='quantity'>{product.quantity}</p>
+        <p className='price'>${price}</p>
+        <p className='quantity'>{quantity}</p>
         <p
           className='stock-status'
           style={{ backgroundColor: product.status.labelColor }}
         >
           {product.status.value}
         </p>
-        <button
-          className={isHovering ? 'edit-button' : 'no-display'}
-          onClick={handleOpenEditModal}
-          aria-label='edit or delete menu'
-        />
+        <div className='edit-button-container'>
+          <button
+            className='edit-button'
+            onClick={() => setEditDeleteModalOpen(true)}
+            aria-label='edit or delete menu'
+          />
+        </div>
       </div>
       {editDeleteModalOpen && (
         <EditDeleteModal
           setEditDeleteModalOpen={setEditDeleteModalOpen}
           handleEditProduct={handleEditProduct}
           handleConfirmedDelete={handleConfirmedDelete}
-          id={product.id}
+          id={id}
+          setTabIndex={setTabIndex}
         />
       )}
     </section>

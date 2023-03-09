@@ -1,3 +1,8 @@
+.input-label-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .label-error-style {
   color: #fd0d0d;
   font-weight: 700;

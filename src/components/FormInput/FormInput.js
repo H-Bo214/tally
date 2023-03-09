@@ -11,7 +11,7 @@ const FormInput = ({
 }) => {
   const labelName = name.split('')[0].toUpperCase() + name.slice(1)
   return (
-    <>
+    <div className='input-label-container'>
       <label
         htmlFor={name}
         className={errors[name]?.message && 'label-error-style'}
@@ -39,7 +39,7 @@ const FormInput = ({
       >
         {errors[name]?.message}
       </label>
-    </>
+    </div>
   )
 }
 

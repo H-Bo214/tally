@@ -5,17 +5,29 @@
 }
 
 main {
-  margin-left: 2.188rem;
-  margin-right: 2rem;
-  width: 96%;
+  padding-bottom: 2rem;
 }
 
 .products-container {
   box-shadow: 0px 0px 4px 1px #dadada;
   border-radius: 12px;
-  height: 40rem;
+  height: 36rem;
   max-height: 49rem;
   overflow: scroll;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.products-container
+  > .single-product-container:last-child
+  > .edit-delete-modal-container {
+  top: -62px;
+}
+
+.products-container
+  > .single-product-container:nth-last-child(2)
+  > .edit-delete-modal-container {
+  top: -62px;
 }
