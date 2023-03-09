@@ -12,15 +12,15 @@ import {
 } from '../../options'
 import Select from 'react-select'
 import './ProductFormModal.css'
-
 const ProductFormModal = ({
-  setOpenModal,
+  setFormModalIsOpen,
   handleAddNewProduct,
   handleUpdateExistingProduct,
   handlePartialEdit,
   handleDataToEdit,
   dataToEdit,
   modalErrorMsg,
+  setTabIndex,
 }) => {
   const {
     register,
@@ -35,18 +35,21 @@ const ProductFormModal = ({
   const handleData = (data) => {
     if (dataToEdit?.id) {
       handleUpdateExistingProduct(data.id, data)
-      setOpenModal(false)
+      setFormModalIsOpen(false)
       handleDataToEdit(null)
+      setTabIndex('0')
       return
     }
     handleAddNewProduct(data)
-    setOpenModal(false)
+    setFormModalIsOpen(false)
     handleDataToEdit(null)
+    setTabIndex('0')
   }
 
   const handleFormEditValues = () => {
     const values = getValues()
     handlePartialEdit(values)
+    setTabIndex('0')
   }
 
   const handleImgError = (e) => {

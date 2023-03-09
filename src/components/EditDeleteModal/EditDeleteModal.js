@@ -6,12 +6,12 @@ const EditDeleteModal = ({
   handleEditProduct,
   handleConfirmedDelete,
   id,
-  handleRemoveFocus,
+  setTabIndex,
 }) => {
   const closeModalToEdit = () => {
     setEditDeleteModalOpen(false)
     handleEditProduct(id)
-    handleRemoveFocus()
+    setTabIndex('-1')
   }
 
   return (
@@ -29,7 +29,6 @@ const EditDeleteModal = ({
           onClick={() => {
             handleConfirmedDelete(id)
             setEditDeleteModalOpen(false)
-            handleRemoveFocus()
           }}
         />
       </div>

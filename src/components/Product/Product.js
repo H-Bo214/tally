@@ -2,40 +2,32 @@ import './Product.css'
 import { useState } from 'react'
 import EditDeleteModal from '../EditDeleteModal/EditDeleteModal'
 
-const Product = ({ product, handleEditProduct, handleConfirmedDelete }) => {
-  const [isFocused, setIsFocused] = useState(false)
+const Product = ({
+  product,
+  handleEditProduct,
+  handleConfirmedDelete,
+  tabIndex,
+  setTabIndex,
+}) => {
   const [editDeleteModalOpen, setEditDeleteModalOpen] = useState(false)
-
-  const handleMouseEnter = () => {
-    setIsFocused(true)
-  }
-
-  const handleRemoveFocus = () => {
-    setIsFocused(false)
-    setEditDeleteModalOpen(false)
-  }
-
-  const handleOpenEditModal = () => {
-    setEditDeleteModalOpen(true)
-  }
-
+  const { imgUrl, name, sku, description, price, quantity, id } = product
   return (
     <section
       className='single-product-container'
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleRemoveFocus}
+      tabIndex={tabIndex}
+      onMouseLeave={() => setEditDeleteModalOpen(false)}
     >
-      <img src={product.imgUrl} alt={product.name} width='54' height='50' />
+      <img src={imgUrl} alt={name} width='54' height='50' />
       <div className='product-container'>
-        <h3>{product.name}</h3>
-        <p>{product.sku}</p>
+        <h3>{name}</h3>
+        <p>{sku}</p>
       </div>
       <div className='product-description-container'>
-        <p>{product.description}</p>
+        <p>{description}</p>
       </div>
       <div className='single-product-status-container'>
-        <p className='price'>${product.price}</p>
-        <p className='quantity'>{product.quantity}</p>
+        <p className='price'>${price}</p>
+        <p className='quantity'>{quantity}</p>
         <p
           className='stock-status'
           style={{ backgroundColor: product.status.labelColor }}
@@ -44,8 +36,8 @@ const Product = ({ product, handleEditProduct, handleConfirmedDelete }) => {
         </p>
         <div className='edit-button-container'>
           <button
-            className={isFocused ? 'edit-button' : 'no-display'}
-            onClick={handleOpenEditModal}
+            className='edit-button'
+            onClick={() => setEditDeleteModalOpen(true)}
             aria-label='edit or delete menu'
           />
         </div>
@@ -55,8 +47,8 @@ const Product = ({ product, handleEditProduct, handleConfirmedDelete }) => {
           setEditDeleteModalOpen={setEditDeleteModalOpen}
           handleEditProduct={handleEditProduct}
           handleConfirmedDelete={handleConfirmedDelete}
-          id={product.id}
-          handleRemoveFocus={handleRemoveFocus}
+          id={id}
+          setTabIndex={setTabIndex}
         />
       )}
     </section>

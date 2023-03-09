@@ -8,7 +8,7 @@ import AddNewProduct from '../AddNewProduct/AddNewProduct'
 import ProductFormModal from '../ProductFormModal/ProductFormModal'
 import ConfirmationModal from '../ConfirmationModal/ConfirmationModal'
 import Button from '../Button/Button'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import {
   deleteProduct,
   getProducts,
@@ -22,11 +22,12 @@ const MainSectionContent = () => {
   const [error, setError] = useState('')
   const [modalErrorMsg, setModalErrorMsg] = useState('')
   const [isLoading, setIsLoading] = useState(true)
-  const [openModal, setOpenModal] = useState(false)
+  const [formModalIsOpen, setFormModalIsOpen] = useState(false)
   const [dataToEdit, setDataToEdit] = useState(null)
-  const [confirmModalIsOpen, setConfirmModalIsOpen] = useState(false)
+  const [editModalIsOpen, setEditModalIsOpen] = useState(false)
   const [confirmedDelete, setConfirmedDelete] = useState(false)
   const [productToDelete, setProductToDelete] = useState('')
+  const [tabIndex, setTabIndex] = useState('0')
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -80,7 +81,7 @@ const MainSectionContent = () => {
       console.error(error.message)
       setModalErrorMsg('An error occurred fetching your product, try again.')
     }
-    setOpenModal(true)
+    setFormModalIsOpen(true)
   }
 
   const handleDeleteProduct = async (id) => {
@@ -100,22 +101,22 @@ const MainSectionContent = () => {
 
   const handleCloseConfirmationModal = () => {
     setDataToEdit(null)
-    setConfirmModalIsOpen(false)
+    setEditModalIsOpen(false)
   }
 
   const handlePartialEdit = (data) => {
     if (!modalErrorMsg) {
       setDataToEdit(data)
-      setOpenModal(false)
-      setConfirmModalIsOpen(true)
+      setFormModalIsOpen(false)
+      setEditModalIsOpen(true)
       return
     }
-    setOpenModal(false)
+    setFormModalIsOpen(false)
   }
 
   const handleKeepEditing = () => {
-    setConfirmModalIsOpen(false)
-    setOpenModal(true)
+    setEditModalIsOpen(false)
+    setFormModalIsOpen(true)
   }
 
   const handleDataToEdit = (dataState) => {
@@ -130,19 +131,20 @@ const MainSectionContent = () => {
   return (
     <section className='main-section-content-container'>
       <Header />
-      <AddNewProduct setOpenModal={setOpenModal} />
-      {openModal && (
+      <AddNewProduct setFormModalIsOpen={setFormModalIsOpen} />
+      {formModalIsOpen && (
         <ProductFormModal
-          setOpenModal={setOpenModal}
+          setFormModalIsOpen={setFormModalIsOpen}
           handleAddNewProduct={handleAddNewProduct}
           handleUpdateExistingProduct={handleUpdateExistingProduct}
           handlePartialEdit={handlePartialEdit}
           handleDataToEdit={handleDataToEdit}
           dataToEdit={dataToEdit}
           modalErrorMsg={modalErrorMsg}
+          setTabIndex={setTabIndex}
         />
       )}
-      {confirmModalIsOpen && (
+      {editModalIsOpen && (
         <ConfirmationModal
           heading='Save your edits?'
           prompt='Your changes to this product will be lost if not saved.'
@@ -197,6 +199,8 @@ const MainSectionContent = () => {
                 handleEditProduct={handleEditProduct}
                 handleConfirmedDelete={handleConfirmedDelete}
                 setConfirmedDelete={setConfirmedDelete}
+                tabIndex={tabIndex}
+                setTabIndex={setTabIndex}
               />
             ))}
         </section>
