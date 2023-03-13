@@ -18,4 +18,10 @@ describe('ConfirmationModal', () => {
     )
     expect(text).toBeInTheDocument()
   })
+
+  it('should contain a children', () => {
+    render(<ConfirmationModal children={<Button name='Test Button' />} />)
+    const button = screen.getByRole('button', { name: 'Test Button' })
+    expect(button).toBeInTheDocument()
+  })
 })
