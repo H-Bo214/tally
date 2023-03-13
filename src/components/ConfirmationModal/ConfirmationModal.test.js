@@ -19,7 +19,7 @@ describe('ConfirmationModal', () => {
     expect(text).toBeInTheDocument()
   })
 
-  it('should contain a children', () => {
+  it('should contain a child', () => {
     render(<ConfirmationModal children={<Button name='Test Button' />} />)
     const button = screen.getByRole('button', { name: 'Test Button' })
     expect(button).toBeInTheDocument()
@@ -41,5 +41,17 @@ describe('ConfirmationModal', () => {
     expect(button).toBeInTheDocument()
     expect(button2).toBeInTheDocument()
     expect(button3).toBeInTheDocument()
+  })
+
+  it('should fire an event when a button is clicked', () => {
+    const keepEditing = jest.fn()
+    render(
+      <ConfirmationModal
+        children={<Button name='Keep Editing' key='1' onClick={keepEditing} />}
+      />
+    )
+    const button = screen.getByRole('button', { name: 'Keep Editing' })
+    fireEvent.click(button)
+    expect(keepEditing).toHaveBeenCalledTimes(1)
   })
 })
