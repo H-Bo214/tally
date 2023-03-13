@@ -24,4 +24,22 @@ describe('ConfirmationModal', () => {
     const button = screen.getByRole('button', { name: 'Test Button' })
     expect(button).toBeInTheDocument()
   })
+
+  it('should be able to contain multiple children', () => {
+    render(
+      <ConfirmationModal
+        children={[
+          <Button name='Test Button' key='1' />,
+          <Button name='Test Button2' key='2' />,
+          <Button name='Test Button3' key='3' />,
+        ]}
+      />
+    )
+    const button = screen.getByRole('button', { name: 'Test Button' })
+    const button2 = screen.getByRole('button', { name: 'Test Button2' })
+    const button3 = screen.getByRole('button', { name: 'Test Button3' })
+    expect(button).toBeInTheDocument()
+    expect(button2).toBeInTheDocument()
+    expect(button3).toBeInTheDocument()
+  })
 })
