@@ -12,7 +12,11 @@ describe('Product', () => {
         'Hollywood-worthy video shooting made easy. A lightning-fast chip. And a big boost in battery life you’ll notice every day.',
       price: '1000',
       quantity: '9',
-      status: 'On order',
+      status: {
+        value: 'On order',
+        label: 'On order',
+        labelColor: '#FF9E9E',
+      },
     }
     render(<Product product={singleProduct} />)
   })
