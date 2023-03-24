@@ -71,7 +71,6 @@ describe('MainSectionContent', () => {
     expect(imageUrl).toBeInTheDocument()
     expect(imagePreview).toBeInTheDocument()
     expect(status).toBeInTheDocument()
-    screen.debug()
     cleanup()
   })
 })

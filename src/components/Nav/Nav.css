@@ -32,6 +32,9 @@
 .nav-list > li:hover {
   background-color: #5c9dff;
   transition: all 0.3s ease;
+}
+
+.inventory {
   cursor: pointer;
 }
 
@@ -44,6 +47,11 @@
 
 .inventory:hover::before {
   content: url('../../assets/icons/inventory-icon-active.svg');
+}
+
+.orders:hover,
+.customers:hover {
+  cursor: not-allowed;
 }
 
 .orders::before {

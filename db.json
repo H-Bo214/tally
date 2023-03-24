@@ -8,9 +8,9 @@
       "price": 699,
       "quantity": 22,
       "status": {
-        "value": "On order",
-        "label": "On order",
-        "labelColor": "#E6F29B"
+        "value": "Low stock",
+        "label": "Low stock",
+        "labelColor": "#FF9E9E"
       },
       "id": 5
     },
