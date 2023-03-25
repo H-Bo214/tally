@@ -1,12 +1,12 @@
 import { products } from '../../testData'
 import MainSectionContent from './MainSectionContent'
 import {
-  cleanup,
   fireEvent,
   render,
   screen,
   waitFor,
   act,
+  waitForElementToBeRemoved,
 } from '@testing-library/react'
 import { getProducts } from '../../apiCalls'
 jest.mock('../../apiCalls')
@@ -18,17 +18,14 @@ describe('MainSectionContent', () => {
     await act(() => productsFetch)
     await waitFor(() => expect(getProducts).toHaveBeenCalledTimes(1))
     expect(products).toHaveLength(3)
-    cleanup()
   })
 
   it('should display a product on page load', async () => {
     const productsFetch = getProducts.mockResolvedValueOnce(products)
     render(<MainSectionContent />)
     await act(() => productsFetch)
-    const product = await waitFor(() => screen.findByText(/iPhone 13 Pro/i))
-    await act(() => product)
+    const product = await screen.findByText(/iPhone 13 Pro/i)
     expect(product).toBeInTheDocument()
-    cleanup()
   })
 
   it('should display multiple products on page load', async () => {
@@ -43,11 +40,12 @@ describe('MainSectionContent', () => {
     expect(product1).toBeInTheDocument()
     expect(product2).toBeInTheDocument()
     expect(product3).toBeInTheDocument()
-    cleanup()
   })
 
-  it('should display a product form when adding a new product', () => {
+  it('should display a product form when adding a new product', async () => {
+    const productsFetch = getProducts.mockResolvedValueOnce(products)
     render(<MainSectionContent />)
+    await act(() => productsFetch)
     const newProductButton = screen.getByRole('button', {
       name: /new product/i,
     })
@@ -89,11 +87,12 @@ describe('MainSectionContent', () => {
     expect(quantityInput).toBeInTheDocument()
     expect(descriptionInput).toBeInTheDocument()
     expect(statusDropDown).toBeInTheDocument()
-    cleanup()
   })
 
-  it('should not contain form input values when adding a new product', () => {
+  it('should not contain form input values when adding a new product', async () => {
+    const productsFetch = getProducts.mockResolvedValueOnce(products)
     render(<MainSectionContent />)
+    await act(() => productsFetch)
     const newProductButton = screen.getByRole('button', {
       name: /new product/i,
     })
@@ -115,11 +114,12 @@ describe('MainSectionContent', () => {
     expect(priceInput.value).toBe('')
     expect(quantityInput.value).toBe('')
     expect(descriptionInput.value).toBe('')
-    cleanup()
   })
 
-  it('should be able to fill out the product form', () => {
+  it('should be able to fill out the product form', async () => {
+    const productsFetch = getProducts.mockResolvedValueOnce(products)
     render(<MainSectionContent />)
+    await act(() => productsFetch)
     const newProductButton = screen.getByRole('button', {
       name: /new product/i,
     })
@@ -157,6 +157,48 @@ describe('MainSectionContent', () => {
       'Ipad Pro 12th generation blah blah blah'
     )
     expect(statusDropDown.value).toBe('In stock')
-    cleanup()
+  })
+
+  it('should be able to cancel the form submission via cancel button', async () => {
+    const productsFetch = getProducts.mockResolvedValueOnce(products)
+    render(<MainSectionContent />)
+    await act(() => productsFetch)
+    const newProductButton = screen.getByRole('button', {
+      name: /new product/i,
+    })
+    expect(newProductButton).toBeInTheDocument()
+    fireEvent.click(newProductButton)
+    const cancelButton = screen.getByRole('button', { name: 'Cancel' })
+    expect(cancelButton).toBeInTheDocument()
+    fireEvent.click(cancelButton)
+    const confirmationHeading = screen.getByRole('heading', {
+      name: /Save your edits?/i,
+    })
+    expect(confirmationHeading).toBeInTheDocument()
+  })
+
+  it('should be able to cancel the form submission via X icon', async () => {
+    const productsFetch = getProducts.mockResolvedValueOnce(products)
+    render(<MainSectionContent />)
+    await act(() => productsFetch)
+    const newProductButton = screen.getByRole('button', {
+      name: /new product/i,
+    })
+    expect(newProductButton).toBeInTheDocument()
+    fireEvent.click(newProductButton)
+    const xIcon = screen.getByAltText(/cancel form icon/i)
+    expect(xIcon).toBeInTheDocument()
+    fireEvent.click(xIcon)
+    const confirmationHeading = screen.getByRole('heading', {
+      name: /Save your edits?/i,
+    })
+    expect(confirmationHeading).toBeInTheDocument()
   })
 })
+
+/// Next tests
+// cancel form and click keep editing to return to filled out form
+// cancel form and click discard to return to home page
+// cancel form and save changes confirming a new product has been added to the DOM
+
+// save form submission directly from the Product Form UI
