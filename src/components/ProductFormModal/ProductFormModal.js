@@ -11,6 +11,7 @@ import {
   customStyles,
 } from '../../options'
 import Select from 'react-select'
+import xIcon from '../../assets/close-button.svg'
 import './ProductFormModal.css'
 const ProductFormModal = ({
   setFormModalIsOpen,
@@ -66,7 +67,9 @@ const ProductFormModal = ({
             className='close-button-x'
             name='close button'
             onClick={handleFormEditValues}
-          />
+          >
+            <img src={xIcon} alt='cancel form icon' />
+          </button>
         </section>
         {modalErrorMsg && (
           <div>
