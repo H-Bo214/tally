@@ -15,10 +15,10 @@ describe('AddNewProduct', () => {
   })
 
   it('should call a function when clicking + New Product', () => {
-    const handleOpenModal = jest.fn()
-    render(<AddNewProduct handleOpenModal={handleOpenModal} />)
+    const setFormModalIsOpen = jest.fn()
+    render(<AddNewProduct setFormModalIsOpen={setFormModalIsOpen} />)
     const button = screen.getByRole('button', { name: 'New product' })
     fireEvent.click(button)
-    expect(handleOpenModal).toHaveBeenCalledTimes(1)
+    expect(setFormModalIsOpen).toHaveBeenCalledTimes(1)
   })
 })

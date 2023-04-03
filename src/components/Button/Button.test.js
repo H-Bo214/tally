@@ -20,7 +20,7 @@ describe('Button', () => {
     expect(element.length).toBe(1)
   })
 
-  it('should fire and event when clicked', () => {
+  it('should fire an event when clicked', () => {
     const addNewProduct = jest.fn()
     render(<Button name={'New Product'} onClick={addNewProduct} />)
     const button = screen.getByRole('button', { name: 'New Product' })

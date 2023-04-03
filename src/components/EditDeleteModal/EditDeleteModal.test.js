@@ -25,24 +25,35 @@ describe('EditDeleteModal', () => {
 
   it('should trigger an event when the Edit button is clicked', () => {
     const handleEditProduct = jest.fn()
-    const handleCloseEditModal = jest.fn()
+    const setEditDeleteModalOpen = jest.fn()
+    const setTabIndex = jest.fn()
     render(
       <EditDeleteModal
-        handleCloseEditModal={handleCloseEditModal}
+        setEditDeleteModalOpen={setEditDeleteModalOpen}
         handleEditProduct={handleEditProduct}
+        setTabIndex={setTabIndex}
       />
     )
     const editButton = screen.getByText('Edit')
     fireEvent.click(editButton)
-    expect(handleCloseEditModal).toHaveBeenCalledTimes(1)
+    expect(setEditDeleteModalOpen).toHaveBeenCalledTimes(1)
     expect(handleEditProduct).toHaveBeenCalledTimes(1)
   })
 
   it('should trigger an event when the Delete button is clicked', () => {
-    const handleDeleteProduct = jest.fn()
-    render(<EditDeleteModal handleDeleteProduct={handleDeleteProduct} />)
+    const handleConfirmedDelete = jest.fn()
+    const setEditDeleteModalOpen = jest.fn()
+    const setTabIndex = jest.fn()
+    render(
+      <EditDeleteModal
+        handleConfirmedDelete={handleConfirmedDelete}
+        setEditDeleteModalOpen={setEditDeleteModalOpen}
+        setTabIndex={setTabIndex}
+      />
+    )
     const deleteButton = screen.getByText('Delete')
     fireEvent.click(deleteButton)
-    expect(handleDeleteProduct).toHaveBeenCalledTimes(1)
+    expect(handleConfirmedDelete).toHaveBeenCalledTimes(1)
+    expect(setEditDeleteModalOpen).toHaveBeenCalledTimes(1)
   })
 })

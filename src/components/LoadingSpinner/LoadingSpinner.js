@@ -1,12 +1,11 @@
 import MoonLoader from 'react-spinners/MoonLoader'
-import { CSSProperties } from 'react'
-
-const override: CSSProperties = {
-  display: 'block',
-  margin: '5rem auto',
-}
 
 const LoadingSpinner = ({ isLoading }) => {
+  const override = {
+    display: 'block',
+    margin: '5rem auto',
+  }
+
   return (
     <MoonLoader
       loading={isLoading}

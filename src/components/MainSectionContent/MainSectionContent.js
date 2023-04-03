@@ -33,7 +33,7 @@ const MainSectionContent = () => {
     const fetchProducts = async () => {
       try {
         const data = await getProducts()
-        if (data.length > 0) {
+        if (data) {
           setProducts(data)
           setIsLoading(false)
         } else {
