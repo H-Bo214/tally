@@ -1,13 +1,6 @@
 import { products } from '../../testData'
 import MainSectionContent from './MainSectionContent'
-import {
-  fireEvent,
-  render,
-  screen,
-  waitFor,
-  act,
-  waitForElementToBeRemoved,
-} from '@testing-library/react'
+import { fireEvent, render, screen, waitFor, act } from '@testing-library/react'
 import { getProducts } from '../../apiCalls'
 jest.mock('../../apiCalls')
 
@@ -193,6 +186,29 @@ describe('MainSectionContent', () => {
       name: /Save your edits?/i,
     })
     expect(confirmationHeading).toBeInTheDocument()
+  })
+
+  it('should be able to fill form fields cancel submission, click keep editing and return to the filled form', async () => {
+    const productsFetch = getProducts.mockResolvedValueOnce(products)
+    render(<MainSectionContent />)
+    await act(() => productsFetch)
+    const newProductButton = screen.getByRole('button', {
+      name: /new product/i,
+    })
+    expect(newProductButton).toBeInTheDocument()
+    fireEvent.click(newProductButton)
+    const nameField = screen.getByRole('textbox', { name: /name/i })
+    fireEvent.change(nameField, { target: { value: 'Ipad Pro' } })
+    expect(nameField.value).toBe('Ipad Pro')
+    const cancelButton = screen.getByRole('button', { name: 'Cancel' })
+    expect(cancelButton).toBeInTheDocument()
+    fireEvent.click(cancelButton)
+    const keepEditingButton = screen.getByRole('button', {
+      name: /Keep editing/i,
+    })
+    expect(keepEditingButton).toBeInTheDocument()
+    fireEvent.click(keepEditingButton)
+    expect(nameField.value).toBe('Ipad Pro')
   })
 })
 
