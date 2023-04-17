@@ -1,11 +1,11 @@
 const getProducts = async () => {
-  const res = await fetch('http://localhost:5000/products')
+  const res = await fetch('/products')
   const data = await res.json()
   return data
 }
 
 const getSingleProduct = async (id) => {
-  const res = await fetch(`http://localhost:5000/products/${id}`)
+  const res = await fetch(`/products/${id}`)
   const data = await res.json()
   return data
 }
@@ -18,7 +18,7 @@ const updateProduct = async (id, newData) => {
     },
     body: JSON.stringify(newData),
   }
-  const res = await fetch(`http://localhost:5000/products/${id}`, putOptions)
+  const res = await fetch(`/products/${id}`, putOptions)
   const data = await res.json()
   return data
 }
@@ -31,14 +31,14 @@ const addNewProduct = async (newProductData) => {
     },
     body: JSON.stringify(newProductData),
   }
-  const res = await fetch(`http://localhost:5000/products`, postOptions)
+  const res = await fetch(`/products`, postOptions)
   const data = await res.json()
   return data
 }
 
 const deleteProduct = async (id) => {
   const deleteOptions = { method: 'DELETE' }
-  await fetch(`http://localhost:5000/products/${id}`, deleteOptions)
+  await fetch(`/products/${id}`, deleteOptions)
 }
 
 export {
