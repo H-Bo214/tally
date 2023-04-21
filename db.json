@@ -97,6 +97,20 @@
         "labelColor": "#E6F29B"
       },
       "id": 18
+    },
+    {
+      "imgUrl": "https://www.bhphotovideo.com/images/images2500x2500/netgear_xr500_100nas_xr500_nighthawk_pro_gaming_1383790.jpg",
+      "name": "Netgear Nighthawk Pro Gaming  XR500",
+      "sku": "93377DJDHDJUI900",
+      "description": "Make every millisecond count by using Geo filtering to connect to the closest servers and players so you can respond and dominate. Minimize ping and maximize performance with four 1 Gigabit Ethernet ports for lag free, wired connectivity and 1.7 GHz dual core processor network efficiency",
+      "price": 299,
+      "quantity": 5,
+      "status": {
+        "value": "On order",
+        "label": "On order",
+        "labelColor": "#E6F29B"
+      },
+      "id": 19
     }
   ]
 }

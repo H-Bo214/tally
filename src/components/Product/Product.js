@@ -17,7 +17,7 @@ const Product = ({
       tabIndex={tabIndex}
       onMouseLeave={() => setEditDeleteModalOpen(false)}
     >
-      <img src={imgUrl} alt={name} width='54' height='50' />
+      <img src={imgUrl} alt={name} width='54' height='50' className='thumbnail'/>  
       <div className='product-container'>
         <h3>{name}</h3>
         <p>{sku}</p>
