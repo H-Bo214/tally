@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+<div align="center">
+  <!-- Add your project logo if you have any -->
+  <img width=200px height=200px src="src/assets/tally-logo.svg" alt="Project logo">
+</div> 
+  <h1 align="center">Tally</h1>
+  <p align="center">
+    <!-- Add your tagline or very short intro of your project -->
+   A desktop CRUD inventory tracking application
+  <br />
+  </p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br/>
 
-## Available Scripts
+<div align="center">
 
-In the project directory, you can run:
+[![Status](https://img.shields.io/badge/JavaScript%20-grey?style=flat-square&logo=javascript)]() [![Status](https://img.shields.io/badge/HTML%20-grey?style=flat-square&logo=html5)]() [![Status](https://img.shields.io/badge/CSS%20-grey?style=flat-square&logo=css3&logoColor=1572B6)]() [![Status](https://img.shields.io/badge/React%20-grey?style=flat-square&logo=react)](https://reactjs.org/)
+[![Status](https://img.shields.io/badge/Figma%20-grey?style=flat-square&logo=figma)](https://www.figma.com/) [![Status](https://img.shields.io/badge/Emotion%20-grey?style=flat-square)](https://emotion.sh/docs/introduction) [![Status](https://img.shields.io/badge/React%20Select-grey?style=flat-square)](https://react-select.com/home) [![Status](https://img.shields.io/badge/React%20Spinners-grey?style=flat-square)](https://www.npmjs.com/package/react-spinners)
 
-### `npm start`
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b5683752-bdc7-46f4-8525-68528da3245a/deploy-status)](https://app.netlify.com/sites/a-money-co-currency-converter/deploys?branch=main)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<hr />
+<br />
 
-### `npm test`
+<div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- Add your project demo gif here -->
+  <h4 align="center">Demo</h4>
+  <br/>
+  <div align="center">
+    <img width=640px src="./tally-add-product.gif" alt="tally application gif"/>
+  </div>
+  <br/>
+  <div align="center">
+    <img width=640px src="./tally-delete-product.gif" alt="tally application gif 2"/>
+  </div>
+  <br/>
+  <div align="center">
+    <img width=640px src="./tally-edit-product.gif" alt="tally application gif 2"/>
+  </div>
+  <br/>
+  <div align="center">
+    <img width=640px src="./tally-form-error-handling.gif" alt="tally application gif 2"/>
+  </div>
+  <br/>
+  <div align="center">
+    <img width=640px src="./tally-user-flow-control.gif" alt="tally application gif 2"/>
+  </div>
+  <br/>
 
-### `npm run build`
+  <hr />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+</div>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- You may write notes in your readme this way if you want to, it looks good and also different from other text -->
+<br/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<hr />
 
-### `npm run eject`
+<h3 align="center">Tally - Inventory Tracker</h3>
+<br/>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🧐About
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Tally is an inventory tracking application with CRUD functionality. The Front-end was created with React, React Hook Form, and React Select. I used JSON server for the mock Back-end.
+<br/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 💡Features
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Add, edit, delete and update products from a list
+- Several modals to control the user flow ensuring confirmation of changes
+- Form error handling with minimal re-renders provided by React-Hook-Form
+- Visually pleasing select drop down form menus provided by React-Select
 
-## Learn More
+<br/>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ⛏️Built with
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- JavaScript
+- HTML
+- CSS
+- React
+- Git VCS
+- React-Hook-Form
+- React-Select
+- React-Spinners
+- Figma
 
-### Code Splitting
+## 🏁Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Clone this repository
+2. Open two terminal windows
+3. `cd` into the project directory in one window
+4. run `npm install` - in the project directory
+5. run `npm start` - to start up the Front-end
+6. `cd` into the project directory in the second terminal window
+7. run `npm run server`- to start the development server
+8. The app should be running on `http://localhost:3000/`in your browser
+   <br/>
 
-### Analyzing the Bundle Size
+## 🗓Planning and challenges
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+I began planning by reviewing the API documentation provided by Fixer Currency. The purpose of the application was fairly straight forward, provide conversion rates based on a specific amount. This project didn't present many technical challenges regarding data retrieval. However, I was faced with stylistic challenges mostly in regards to adding images within the select input in a dynamic way. After reviewing React-Select documentation as well as other online resources I was able to find a solution. Throughout the project, I reviewed and refactored several parts of my code in order to minimize the size of certain components.
 
-### Making a Progressive Web App
+<br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<br />
 
-### Advanced Configuration
+## 🔧Mock up, planning tools and scores
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<br/>
 
-### Deployment
+<div align="center">
+  <h2>Currency Converter comp</h2>
+  <img src="./cc.mock.png" alt="Currency converter comp">
+  <h2>Lighthouse scores</h2>
+  <img src="./cc-lighthouse.png" alt="Google Lighthouse scores">
+</div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🎉Acknowledgement
 
-### `npm run build` fails to minify
+- [Fixer API](https://rapidapi.com/fixer/api/fixer-currency/)
+- [React-Select](https://react-select.com/home)
+- [React Spinners](https://www.npmjs.com/package/react-spinners)
+- [Emotion/React](https://emotion.sh/docs/@emotion/react)
+- [Country Flag Images by Jonas Bröms - Graphical assets, files, code and documentation released under the MIT.Docs released under Creative Commons.](https://www.figma.com/@jonasbroms)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> \_**NOTE:** Please do not make excessive API calls as this is not a free API. API in use for application demonstration purposes only.

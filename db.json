@@ -20,7 +20,7 @@
       "sku": "7373837837ASDFGHJK",
       "description": "The iPhone 14 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).",
       "price": 999,
-      "quantity": 15,
+      "quantity": 14,
       "status": {
         "value": "In stock",
         "label": "In stock",
@@ -29,35 +29,35 @@
       "id": 13
     },
     {
-      "imgUrl": "http://brain-images.cdn.dixons.com/9/1/10154319/u_10154319.jpg",
+      "imgUrl": "https://technabob.com/blog/wp-content/uploads/2016/06/playstation_vr_2.jpg",
       "name": "PlayStation VR",
       "sku": "8370CHJKLD09J",
       "description": "Sit back and immerse yourself with a range of stunning virtual reality experiences, from scaling Mount Everest to exploring the ocean floor.",
       "price": 199,
       "quantity": 10,
       "status": {
-        "value": "On order",
-        "label": "On order",
-        "labelColor": "#E6F29B"
+        "value": "Out of stock",
+        "label": "Out of stock",
+        "labelColor": "#E2E1E1"
       },
       "id": 14
     },
     {
-      "imgUrl": "https://www.bhphotovideo.com/images/images1000x1000/lg_oled77a1pua_a1pu_77_class_hdr_1632401.jpg",
+      "imgUrl": "https://www.lg.com/nz/images/tvs/md07504915/gallery/dm-02.jpg",
       "name": "LG 77 Inch Class B3 series OLED 4K UHD TV",
       "sku": "KDHKFGHK876543358",
       "description": "LG OLED has over 8.3 million self-lit pixels that turn on and off individually for perfect black and incredible colors, with contrast you can't get from anywhere else but OLED. Take in the action with a native 120Hz refresh rate for smooth, lifelike movement whether you love sports, movies, games or all of the above.",
       "price": 3299.99,
       "quantity": 5,
       "status": {
-        "value": "In stock",
-        "label": "In stock",
-        "labelColor": "#9BF2B4"
+        "value": "On order",
+        "label": "On order",
+        "labelColor": "#E6F29B"
       },
       "id": 15
     },
     {
-      "imgUrl": "https://i0.wp.com/thefinexpress.com/wp-content/uploads/2018/04/Canon-EOS-M50-Mirrorless-Camera-launched-in-India-Know-specifications-Price.jpg?fit=720%2C480&ssl=1",
+      "imgUrl": "https://www.ec-mall.com/wp-content/uploads/2020/10/Canon-EOS-M50-Mark-II-2.jpg",
       "name": "Canon - EOS M50 Mark II Mirrorless Camera",
       "sku": "8675663788399",
       "description": "The EOS M50 Mark II carries and builds on the strong performance of the popular EOS M50 with improvements that will be especially notable for content creators like vloggers and more. You still get the impressive image quality of the 24.1 Megapixel CMOS sensor, power of the DIGIC 8 image processor, 4K UHD 24p and HD 120p for slow motion video and more, along with some additional boosts. The autofocus locks onto the subject faster, and Eye Detection is improved so it recognizes the eyes and face further away. Eye Detection can now even be used during video with Movie Servo AF, and you can use both Eye and Face Detection during Servo AF. What you get is added versatility and stability to keep the subject(s) in focus and as the center of attention. For content creators, you can use the EOS M50 Mark II to livestream your content with built-in Wi-Fi®, and use with EOS Webcam Utility software for an easy webcam alternative. When a different angle is needed, you can shoot vertically in addition to horizontally, and the camera even offers clean HDMI output for high-resolution, high frame-rate streaming. When it comes to content, whether stills or video, the EOS M50 Mark II goes far beyond letting you just scratch the surface of your vision.",
