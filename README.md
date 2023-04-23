@@ -1,10 +1,8 @@
 <div align="center">
-  <!-- Add your project logo if you have any -->
   <img width=200px height=200px src="src/assets/tally-logo.svg" alt="Project logo">
 </div> 
   <h1 align="center">Tally</h1>
   <p align="center">
-    <!-- Add your tagline or very short intro of your project -->
    A desktop CRUD inventory tracking application
   <br />
   </p>
@@ -53,7 +51,6 @@
 
 </div>
 
-<!-- You may write notes in your readme this way if you want to, it looks good and also different from other text -->
 <br/>
 
 <hr />
@@ -63,15 +60,17 @@
 
 ## 🧐About
 
-Tally is an inventory tracking application with CRUD functionality. The Front-end was created with React, React Hook Form, and React Select. I used JSON server for the mock Back-end.
+Tally is an app that helps you keep track of your inventory! With its CRUD (create, read, update, delete) functionality, you can easily manage your inventory. The front-end of Tally is built with React, React Hook Form, and React Select. To simulate the back-end, I used JSON server. This app is currently only designed for desktop. I think a mobile redesign would be best for presenting the inventory information in a more user-friendly way.
+
 <br/>
 
 ## 💡Features
 
-- Add, edit, delete and update products from a list
-- Several modals to control the user flow ensuring confirmation of changes
-- Form error handling with minimal re-renders provided by React-Hook-Form
-- Visually pleasing select drop down form menus provided by React-Select
+- Easily manage your products with the ability to view, add, update and delete
+- View and add specific product details
+- Several modals guide users and provide clear confirmation making changes
+- Minimal re-renders and better performance brought to you by React Hook Form
+- Visually pleasing a accessible select dropdown menus using React Select
 
 <br/>
 
@@ -82,9 +81,12 @@ Tally is an inventory tracking application with CRUD functionality. The Front-en
 - CSS
 - React
 - Git VCS
+- Github
 - React-Hook-Form
 - React-Select
 - React-Spinners
+- React Testing Library
+- Jest
 - Figma
 
 ## 🏁Getting Started
@@ -101,9 +103,19 @@ Tally is an inventory tracking application with CRUD functionality. The Front-en
 
 ## 🗓Planning and challenges
 
-I began planning by reviewing the API documentation provided by Fixer Currency. The purpose of the application was fairly straight forward, provide conversion rates based on a specific amount. This project didn't present many technical challenges regarding data retrieval. However, I was faced with stylistic challenges mostly in regards to adding images within the select input in a dynamic way. After reviewing React-Select documentation as well as other online resources I was able to find a solution. Throughout the project, I reviewed and refactored several parts of my code in order to minimize the size of certain components.
+I opted for an inventory tracking application since this is the would be a perfect fit for a CRUD application. My first step was to hunt online for a bit of inspiration and research features for inventory tracking applications. The Figma designed application was my guide for feature and design implementation. Although I made a few tweaks along the way, I stuck to the design layout as much as possible.
+
+This was my first experience using React Hook Form. React Hook Form is an amazing form library that reduces form component re-renders allowing components to mount faster than traditional controlled components. It's also highly customizable and integrates well with other libraries. After reading through the documentation, watching videos and other online sources I was able to implement this form library along with React Select.
+
+Throughout my project, I encountered several obstacles. From control flow issues to accessibility problems and code readability. As the code base grew, it became harder to understand. I consolidated separate modal components into one streamlined component. To improve the project, I had to solve specific problems in different ways. I didn't want to rely entirely on application state to solve all of my issues. I also broke down larger components into smaller reusable pieces. My inexperience posed visual design challenges, but every new project is a learning opportunity. With the valuable experience gained from this project, I'll take these lessons with me to the next one.
 
 <br/>
+
+### Continued development
+
+<br/>
+
+I'm not currently planning on adding anything new to this project. However, I am looking to make some improvements to the existing functionality. Specifically, how manage the application state. Right now, the MainSectionContent.js component has quite a few state setters. I think I could streamline things and make it more efficient with useReducer instead of useState.
 
 <br />
 
@@ -112,18 +124,17 @@ I began planning by reviewing the API documentation provided by Fixer Currency. 
 <br/>
 
 <div align="center">
-  <h2>Currency Converter comp</h2>
-  <img src="./cc.mock.png" alt="Currency converter comp">
+  <h2>Tally comp</h2>
+<img src='./tally-figma-mock.png' alt='tally mock up screenshot'/>
   <h2>Lighthouse scores</h2>
-  <img src="./cc-lighthouse.png" alt="Google Lighthouse scores">
+<img src='./tally-lighthouse.png' alt='google lighthouse accessibility scores'/>
 </div>
 
 ## 🎉Acknowledgement
 
-- [Fixer API](https://rapidapi.com/fixer/api/fixer-currency/)
+- [React](https://react.dev/)
+- [React Hook Form](https://react-hook-form.com/)
 - [React-Select](https://react-select.com/home)
 - [React Spinners](https://www.npmjs.com/package/react-spinners)
-- [Emotion/React](https://emotion.sh/docs/@emotion/react)
-- [Country Flag Images by Jonas Bröms - Graphical assets, files, code and documentation released under the MIT.Docs released under Creative Commons.](https://www.figma.com/@jonasbroms)
 
-> \_**NOTE:** Please do not make excessive API calls as this is not a free API. API in use for application demonstration purposes only.
+> \_**NOTE:** All product images were sourced via random image search. I claim no ownership and use these images only for development practice.
