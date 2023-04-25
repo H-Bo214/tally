@@ -6,7 +6,7 @@ const Nav = () => {
     <nav className='nav'>
       <div className='nav-children-container'>
         <section className='title-container'>
-          <img src={tallyLogo} alt='Tally inventory tracker logo' />
+          <img src={tallyLogo} alt='Tally inventory tracker logo' width='132' height='47' />
         </section>
         <ul className='nav-list'>
           <li className='inventory'>Inventory</li>

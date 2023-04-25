@@ -9,6 +9,10 @@
   cursor: pointer;
 }
 
+.thumbnail {
+  object-fit: contain;
+}
+
 .single-product-container:hover {
   background-color: #dff7ff;
   box-shadow: 0px 0px 10px 1px #dadada;

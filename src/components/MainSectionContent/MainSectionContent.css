@@ -31,3 +31,9 @@ main {
   > .edit-delete-modal-container {
   top: -62px;
 }
+
+.products-container
+  > .single-product-container:nth-last-child(3)
+  > .edit-delete-modal-container {
+  top: -62px;
+}

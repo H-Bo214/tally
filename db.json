@@ -3,7 +3,7 @@
     {
       "imgUrl": "https://store.uniqbe.com/images/product/c2ef2bf8-f690-4525-8d71-1b3601087c6a.png",
       "name": "Iphone 13 Blue",
-      "sku": "7373837837ASDFGHJK",
+      "sku": "7373837837ASDFGHJ",
       "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
       "price": 699,
       "quantity": 22,
@@ -15,88 +15,102 @@
       "id": 5
     },
     {
-      "imgUrl": "https://cdnprod.mafretailproxy.com/sys-master-root/hff/h01/15199253528606/1831013_main.jpg_1700Wx1700H",
-      "name": "Iphone 13 Pro White",
+      "imgUrl": "https://raylo.imgix.net/iphone-14-pro-max-space-black.png",
+      "name": "Iphone 14 Pro Space Black",
       "sku": "7373837837ASDFGHJK",
-      "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
-      "price": 699,
-      "quantity": 33,
+      "description": "The iPhone 14 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).",
+      "price": 999,
+      "quantity": 14,
       "status": {
-        "value": "Low stock",
-        "label": "Low stock",
-        "labelColor": "#FF9E9E"
-      },
-      "id": 6
-    },
-    {
-      "imgUrl": "https://cdnprod.mafretailproxy.com/sys-master-root/hff/h01/15199253528606/1831013_main.jpg_1700Wx1700H",
-      "name": "Iphone 13 Pro Forest Green",
-      "sku": "7373837837ASDFGHJK",
-      "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
-      "price": 700,
-      "quantity": 33,
-      "status": {
-        "value": "Out of stock",
-        "label": "Out of stock",
-        "labelColor": "#E2E1E1"
-      },
-      "id": 7
-    },
-    {
-      "imgUrl": "https://www.powerplanetonline.com/cdnassets/apple_iphone_13_pro_max_128gb_oro_01_l.jpg",
-      "name": "Iphone 13 Pro Rose Gold So Fancy!!!",
-      "sku": "7373837837ASDFGHJK",
-      "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
-      "price": 699,
-      "quantity": 11,
-      "status": {
-        "value": "On order",
-        "label": "On order",
-        "labelColor": "#E6F29B"
-      },
-      "id": 9
-    },
-    {
-      "imgUrl": "https://getunited.com/wp-content/uploads/2022/06/iphone_13_pro_alpine_green_1200x1200.png",
-      "name": "Iphone 13 Pro Forest Green",
-      "sku": "7373837837ASDFGHJK",
-      "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).",
-      "price": 699,
-      "quantity": 10,
-      "status": {
-        "value": "On order",
-        "label": "On order",
-        "labelColor": "#E6F29B"
-      },
-      "id": 12
-    },
-    {
-      "imgUrl": "https://getunited.com/wp-content/uploads/2022/06/iphone_13_pro_alpine_green_1200x1200.png",
-      "name": "Iphone 13 Pro Forest Green",
-      "sku": "7373837837ASDFGHJK",
-      "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).",
-      "price": 699,
-      "quantity": 11,
-      "status": {
-        "value": "Out of stock",
-        "label": "Out of stock",
-        "labelColor": "#E2E1E1"
+        "value": "In stock",
+        "label": "In stock",
+        "labelColor": "#9BF2B4"
       },
       "id": 13
     },
     {
-      "imgUrl": "https://getunited.com/wp-content/uploads/2022/06/iphone_13_pro_alpine_green_1200x1200.png",
-      "name": "Iphone 13 Pro Forest Green",
-      "sku": "7373837837ASDFGHJK",
-      "description": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).\n",
-      "price": 699,
+      "imgUrl": "https://technabob.com/blog/wp-content/uploads/2016/06/playstation_vr_2.jpg",
+      "name": "PlayStation VR",
+      "sku": "8370CHJKLD09J",
+      "description": "Sit back and immerse yourself with a range of stunning virtual reality experiences, from scaling Mount Everest to exploring the ocean floor.",
+      "price": 199,
+      "quantity": 10,
+      "status": {
+        "value": "Out of stock",
+        "label": "Out of stock",
+        "labelColor": "#E2E1E1"
+      },
+      "id": 14
+    },
+    {
+      "imgUrl": "https://www.lg.com/nz/images/tvs/md07504915/gallery/dm-02.jpg",
+      "name": "LG 77 Inch Class B3 series OLED 4K UHD TV",
+      "sku": "KDHKFGHK876543358",
+      "description": "LG OLED has over 8.3 million self-lit pixels that turn on and off individually for perfect black and incredible colors, with contrast you can't get from anywhere else but OLED. Take in the action with a native 120Hz refresh rate for smooth, lifelike movement whether you love sports, movies, games or all of the above.",
+      "price": 3299.99,
+      "quantity": 5,
+      "status": {
+        "value": "On order",
+        "label": "On order",
+        "labelColor": "#E6F29B"
+      },
+      "id": 15
+    },
+    {
+      "imgUrl": "https://www.ec-mall.com/wp-content/uploads/2020/10/Canon-EOS-M50-Mark-II-2.jpg",
+      "name": "Canon - EOS M50 Mark II Mirrorless Camera",
+      "sku": "8675663788399",
+      "description": "The EOS M50 Mark II carries and builds on the strong performance of the popular EOS M50 with improvements that will be especially notable for content creators like vloggers and more. You still get the impressive image quality of the 24.1 Megapixel CMOS sensor, power of the DIGIC 8 image processor, 4K UHD 24p and HD 120p for slow motion video and more, along with some additional boosts. The autofocus locks onto the subject faster, and Eye Detection is improved so it recognizes the eyes and face further away. Eye Detection can now even be used during video with Movie Servo AF, and you can use both Eye and Face Detection during Servo AF. What you get is added versatility and stability to keep the subject(s) in focus and as the center of attention. For content creators, you can use the EOS M50 Mark II to livestream your content with built-in Wi-Fi®, and use with EOS Webcam Utility software for an easy webcam alternative. When a different angle is needed, you can shoot vertically in addition to horizontally, and the camera even offers clean HDMI output for high-resolution, high frame-rate streaming. When it comes to content, whether stills or video, the EOS M50 Mark II goes far beyond letting you just scratch the surface of your vision.",
+      "price": 699.99,
+      "quantity": 6,
+      "status": {
+        "value": "Out of stock",
+        "label": "Out of stock",
+        "labelColor": "#E2E1E1"
+      },
+      "id": 16
+    },
+    {
+      "imgUrl": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6300/6300711cv20d.jpg",
+      "name": "Dell - Inspiron 2-in-1 14” FHD+ Touch Laptop",
+      "sku": "6504381",
+      "description": "Description\nOptimized with technology that simplifies your life, Inspiron 2-in-1 laptops offer a range of easy-to-use features all packaged in a minimalist and modern design. You won’t have to sacrifice screen size for a mobile design, and with multiple technologies that help your eyes work or play in comfort, the new Inspiron 14 2-in-1’s display is made to please. With a 16:10 FHD+ display and 360 lift hinge, the new Inspiron 14 2-in-1 lets you experience amazing visuals in any mode. Your world is closer with powerful 12th Generation Intel Core processors. It also has a 360 degree hinge that allows you to work in 4 different modes - laptop, tablet, tent and stand. And if that’s not all, your Inspiron features environmentally-conscious designs that complement not just your style but also your values.\n",
+      "price": 849.99,
+      "quantity": 3,
+      "status": {
+        "value": "In stock",
+        "label": "In stock",
+        "labelColor": "#9BF2B4"
+      },
+      "id": 17
+    },
+    {
+      "imgUrl": "https://www.colo.co.in/wp-content/uploads/2022/03/Sony-WH-XB910N-EXTRA-BASS-Noise-Cancelling-Headphones-7-600x604.jpg",
+      "name": "Sony - WH-XB910N Wireless Noise Cancelling Over-The-Ear Headphones - Black",
+      "sku": "836826799KDJKDM",
+      "description": "Get even closer to your favorite music with the exceptional bass performance and noise cancellation of the WH-XB910N wireless headphones with EXTRA BASS™ and Dual Noise Canceling technologies. ",
+      "price": 249.99,
       "quantity": 10,
       "status": {
         "value": "On order",
         "label": "On order",
         "labelColor": "#E6F29B"
       },
-      "id": 14
+      "id": 18
+    },
+    {
+      "imgUrl": "https://www.bhphotovideo.com/images/images2500x2500/netgear_xr500_100nas_xr500_nighthawk_pro_gaming_1383790.jpg",
+      "name": "Netgear Nighthawk Pro Gaming  XR500",
+      "sku": "93377DJDHDJUI900",
+      "description": "Make every millisecond count by using Geo filtering to connect to the closest servers and players so you can respond and dominate. Minimize ping and maximize performance with four 1 Gigabit Ethernet ports for lag free, wired connectivity and 1.7 GHz dual core processor network efficiency",
+      "price": 299,
+      "quantity": 5,
+      "status": {
+        "value": "On order",
+        "label": "On order",
+        "labelColor": "#E6F29B"
+      },
+      "id": 19
     }
   ]
 }
