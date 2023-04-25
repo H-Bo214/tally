@@ -23,7 +23,7 @@
 <div>
 
 <!-- Add your project demo gif here -->
-  <h4 align="center">Demo</h4>
+  <h4 align="center">Demos</h4>
   <br/>
   <div align="center">
     <p>Add a product</p>
@@ -31,18 +31,22 @@
   </div>
   <br/>
   <div align="center">
+    <p>Delete a product</p>
     <img width=640px src="./tally-delete-product.gif" alt="tally application gif 2"/>
   </div>
   <br/>
   <div align="center">
+    <p>Edit an existing product</p>
     <img width=640px src="./tally-edit-product.gif" alt="tally application gif 2"/>
   </div>
   <br/>
   <div align="center">
+    <p>Form error handling</p>
     <img width=640px src="./tally-form-error-handling.gif" alt="tally application gif 2"/>
   </div>
   <br/>
   <div align="center">
+    <p>User flow control</p>
     <img width=640px src="./tally-user-flow-control.gif" alt="tally application gif 2"/>
   </div>
   <br/>
