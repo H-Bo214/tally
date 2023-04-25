@@ -26,6 +26,7 @@
   <h4 align="center">Demo</h4>
   <br/>
   <div align="center">
+    <p>Add a product</p>
     <img width=640px src="./tally-add-product.gif" alt="tally application gif"/>
   </div>
   <br/>
