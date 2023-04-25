@@ -57,8 +57,6 @@
 
 <br/>
 
-<hr />
-
 <h3 align="center">Tally - Inventory Tracker</h3>
 
 ## 🧐About
