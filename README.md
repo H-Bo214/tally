@@ -12,7 +12,7 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/JavaScript%20-grey?style=flat-square&logo=javascript)]() [![Status](https://img.shields.io/badge/HTML%20-grey?style=flat-square&logo=html5)]() [![Status](https://img.shields.io/badge/CSS%20-grey?style=flat-square&logo=css3&logoColor=1572B6)]() [![Status](https://img.shields.io/badge/React%20-grey?style=flat-square&logo=react)](https://reactjs.org/)
-[![Status](https://img.shields.io/badge/Figma%20-grey?style=flat-square&logo=figma)](https://www.figma.com/) [![Status](https://img.shields.io/badge/Emotion%20-grey?style=flat-square)](https://emotion.sh/docs/introduction) [![Status](https://img.shields.io/badge/React%20Select-grey?style=flat-square)](https://react-select.com/home) [![Status](https://img.shields.io/badge/React%20Spinners-grey?style=flat-square)](https://www.npmjs.com/package/react-spinners)
+[![Status](https://img.shields.io/badge/Figma%20-grey?style=flat-square&logo=figma)](https://www.figma.com/) [![Status](https://img.shields.io/badge/-React%20Hook%20Form-lightgray?style=flat&logo=react-hook-form)](https://react-hook-form.com/) [![Status](https://img.shields.io/badge/React%20Select-grey?style=flat-square)](https://react-select.com/home) [![Status](https://img.shields.io/badge/React%20Spinners-grey?style=flat-square)](https://www.npmjs.com/package/react-spinners)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b5683752-bdc7-46f4-8525-68528da3245a/deploy-status)](https://app.netlify.com/sites/a-money-co-currency-converter/deploys?branch=main)
 
@@ -60,7 +60,7 @@
 
 ## 🧐About
 
-Tally is an app that helps you keep track of your inventory! With its CRUD (create, read, update, delete) functionality, you can easily manage your inventory. The front-end of Tally is built with React, React Hook Form, and React Select. To simulate the back-end, I used JSON server. This app is currently only designed for desktop. I think a mobile redesign would be best for presenting the inventory information in a more user-friendly way.
+Tally is an app that helps you keep track of your inventory! With its CRUD (create, read, update, delete) functionality, you can easily manage your inventory. The front end is built with React, React Hook Form, and React Select. To simulate the back end, I used JSON server. This app is currently only designed for desktops. I think a mobile redesign would be best for presenting the inventory information in a more user-friendly way.
 
 <br/>
 
@@ -68,7 +68,7 @@ Tally is an app that helps you keep track of your inventory! With its CRUD (crea
 
 - Easily manage your products with the ability to view, add, update and delete
 - View and add specific product details
-- Several modals guide users and provide clear confirmation making changes
+- Several modals guide users and provide clear confirmation when making changes
 - Minimal re-renders and better performance brought to you by React Hook Form
 - Visually pleasing a accessible select dropdown menus using React Select
 
@@ -103,11 +103,11 @@ Tally is an app that helps you keep track of your inventory! With its CRUD (crea
 
 ## 🗓Planning and challenges
 
-I opted for an inventory tracking application since this is the would be a perfect fit for a CRUD application. My first step was to hunt online for a bit of inspiration and research features for inventory tracking applications. The Figma designed application was my guide for feature and design implementation. Although I made a few tweaks along the way, I stuck to the design layout as much as possible.
+I opted for an inventory tracking application since this would be a perfect fit for a CRUD application. My first step was to hunt online for inspiration and research features for inventory tracking applications. The Figma-designed application was my guide for design and feature implementation. Although I made a few tweaks, I stuck to the design layout as much as possible.
 
-This was my first experience using React Hook Form. React Hook Form is an amazing form library that reduces form component re-renders allowing components to mount faster than traditional controlled components. It's also highly customizable and integrates well with other libraries. After reading through the documentation, watching videos and other online sources I was able to implement this form library along with React Select.
+It was my first experience using React Hook Form. React Hook Form is a form library that reduces form component re-renders allowing components to mount faster than traditionally controlled components. It's also highly customizable and integrates well with other libraries. After reading through the documentation, watching videos, as well as other online resources, I was able to implement this form library along with React Select.
 
-Throughout my project, I encountered several obstacles. From control flow issues to accessibility problems and code readability. As the code base grew, it became harder to understand. I consolidated separate modal components into one streamlined component. To improve the project, I had to solve specific problems in different ways. I didn't want to rely entirely on application state to solve all of my issues. I also broke down larger components into smaller reusable pieces. My inexperience posed visual design challenges, but every new project is a learning opportunity. With the valuable experience gained from this project, I'll take these lessons with me to the next one.
+Throughout my project, I encountered several obstacles. I ran into form control flow issues, accessibility problems and code readability. As the code base grew, it became harder to understand. To improve the project, I consolidated separate modal components into one. I refactored some portions of the code base to achive the desired outcome with conditional rendering instead of creating additional application states. I also broke down components into smaller reusable pieces. My inexperience posed visual design challenges, but every new project is a learning opportunity. With the valuable experience gained from this project, I'll take these lessons with me to the next one.
 
 <br/>
 
@@ -115,7 +115,7 @@ Throughout my project, I encountered several obstacles. From control flow issues
 
 <br/>
 
-I'm not currently planning on adding anything new to this project. However, I am looking to make some improvements to the existing functionality. Specifically, how manage the application state. Right now, the MainSectionContent.js component has quite a few state setters. I think I could streamline things and make it more efficient with useReducer instead of useState.
+I'm not currently planning any additions to this project. However, I am looking to make some improvements to the existing functionality. At the moment, the MainSectionContent.js component has quite a few state setters. I could streamline things and make it more efficient with useReducer instead of useState.
 
 <br />
 
