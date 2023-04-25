@@ -11,7 +11,7 @@
 
 <div align="center">
 
-[[](https://img.shields.io/badge/JavaScript%20-grey?style=flat-square&logo=javascript)]() [![Status](https://img.shields.io/badge/HTML%20-grey?style=flat-square&logo=html5)]() [![Status](https://img.shields.io/badge/CSS%20-grey?style=flat-square&logo=css3&logoColor=1572B6)]() [![Status](https://img.shields.io/badge/React%20-grey?style=flat-square&logo=react)](https://reactjs.org/)
+[![](https://img.shields.io/badge/JavaScript%20-grey?style=flat-square&logo=javascript)]() [![Status](https://img.shields.io/badge/HTML%20-grey?style=flat-square&logo=html5)]() [![Status](https://img.shields.io/badge/CSS%20-grey?style=flat-square&logo=css3&logoColor=1572B6)]() [![Status](https://img.shields.io/badge/React%20-grey?style=flat-square&logo=react)](https://reactjs.org/)
 [![Status](https://img.shields.io/badge/Figma%20-grey?style=flat-square&logo=figma)](https://www.figma.com/) [![Status](https://img.shields.io/badge/-React%20Hook%20Form-gray?style=flat&logo=react-hook-form)](https://react-hook-form.com/) [![Status](https://img.shields.io/badge/React%20Select-grey?style=flat-square)](https://react-select.com/home) [![Status](https://img.shields.io/badge/React%20Spinners-grey?style=flat-square)](https://www.npmjs.com/package/react-spinners)
 
 
